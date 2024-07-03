@@ -1,0 +1,42 @@
+.about_me {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.my_img,
+h2,
+p {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about_me .my_img {
+  width: 35%;
+  padding: 0 1rem;
+}
+
+.about_me .my_img img {
+  max-width: 100%;
+}
+
+.about_me .content {
+  width: 65%;
+  padding: 0 1rem;
+}
+
+.about_me h2 {
+  font-size: 3rem;
+}
+
+.about_me p {
+  padding: 10px 0;
+  font-size: 1.2rem;
+  line-height: 1.5; /* 문장 간격 */
+}

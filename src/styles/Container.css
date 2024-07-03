@@ -1,0 +1,6 @@
+.Container {
+  margin: auto;
+  max-width: 1200px;
+  min-width: 800px;
+  /* padding: 100px 50px; */
+}
