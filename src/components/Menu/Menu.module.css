@@ -1,8 +1,9 @@
 .Menu {
-  position: fixed;
+  position: absolute;
   width: 100%;
 }
 .Menu ul {
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;

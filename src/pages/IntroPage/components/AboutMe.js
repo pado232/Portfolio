@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import "../../styles/AboutMe.css";
+import styles from "./AboutMe.module.css";
 
 const AboutMe = () => {
   const imgRef = useRef(null);
@@ -10,7 +10,7 @@ const AboutMe = () => {
     const handleObserver = (entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("appear");
+          entry.target.classList.add(styles.appear);
           observer.unobserve(entry.target);
         }
       });
@@ -21,29 +21,33 @@ const AboutMe = () => {
       threshold: 0.1,
     });
 
-    if (imgRef.current) observer.observe(imgRef.current);
-    if (titleRef.current) observer.observe(titleRef.current);
+    const imgElement = imgRef.current;
+    const titleElement = titleRef.current;
+    const paragraphElements = paragraphsRef.current;
 
-    paragraphsRef.current.forEach((p) => {
+    if (imgElement) observer.observe(imgElement);
+    if (titleElement) observer.observe(titleElement);
+
+    paragraphElements.forEach((p) => {
       if (p) observer.observe(p);
     });
 
     return () => {
-      if (imgRef.current) observer.unobserve(imgRef.current);
-      if (titleRef.current) observer.unobserve(titleRef.current);
+      if (imgElement) observer.unobserve(imgElement);
+      if (titleElement) observer.unobserve(titleElement);
 
-      paragraphsRef.current.forEach((p) => {
+      paragraphElements.forEach((p) => {
         if (p) observer.unobserve(p);
       });
     };
   }, []);
 
   return (
-    <section className="about_me">
-      <div className="my_img" ref={imgRef}>
+    <section className={styles.about_me}>
+      <div className={styles.my_img} ref={imgRef}>
         <img src={process.env.PUBLIC_URL + `/images/Dony.jpg`} alt="Profile" />
       </div>
-      <div className="content">
+      <div className={styles.content}>
         <h2 ref={titleRef}>Front Developer</h2>
         <div>
           <p ref={(el) => (paragraphsRef.current[0] = el)}>

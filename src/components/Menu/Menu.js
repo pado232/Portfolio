@@ -1,9 +1,9 @@
 import { useNavigate } from "react-router-dom";
-import "../styles/Menu.css";
+import styles from "./Menu.module.css";
 const Menu = () => {
   const navigate = useNavigate();
   return (
-    <div className="Menu">
+    <div className={styles.Menu}>
       <ul>
         <li>
           <button onClick={() => navigate("/")}>INTRODUCTION</button>

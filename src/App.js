@@ -1,10 +1,9 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Menu from "./components/Menu";
-import Intro from "./pages/Intro";
-import Context from "./pages/Context";
-import Project from "./pages/Project";
-
+import Menu from "./components/Menu/Menu";
+import Intro from "./pages/IntroPage/Intro";
+import Project from "./pages/ProjectPage/Project";
+import Context from "./pages/ContextPage/Context";
 function App() {
   return (
     <div className="App">
