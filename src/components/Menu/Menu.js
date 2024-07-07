@@ -6,7 +6,7 @@ const Menu = () => {
     <div className={styles.Menu}>
       <ul>
         <li>
-          <button onClick={() => navigate("/")}>INTRODUCTION</button>
+          <button onClick={() => navigate("/intro")}>INTRODUCTION</button>
         </li>
         <li>
           <button onClick={() => navigate("/project")}>PROJECT</button>

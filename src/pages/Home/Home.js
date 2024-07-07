@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import styles from "./Main.module.css";
+import styles from "./Home.module.css";
 
-const Main = ({ titleText }) => {
+const Home = () => {
   useEffect(() => {
     const title = document.querySelector(`.${styles.title} h1`);
     const portfolio = document.querySelector(`.${styles.portfolio}`);
@@ -59,10 +59,10 @@ const Main = ({ titleText }) => {
     <main id="main" className={styles.main}>
       <div className={styles.title}>
         <h1>DONY's</h1>
-        <h1 className={styles.portfolio}>{titleText}</h1>
+        <h1 className={styles.portfolio}>Portfolio</h1>
       </div>
     </main>
   );
 };
 
-export default Main;
+export default Home;

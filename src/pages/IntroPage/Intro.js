@@ -21,7 +21,7 @@ const Intro = () => {
 
   return (
     <div className={styles.Intro}>
-      <Main />
+      <Main titleText={"Introduction"} />
 
       <MenuSub
         menuItems={menuItems}
