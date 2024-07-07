@@ -3,20 +3,29 @@
   width: 100%;
 }
 .Menu ul {
+  position: absolute;
+  display: flex;
+  width: 100%; /* ul 요소가 부모 요소의 전체 너비를 차지하도록 설정 */
+  margin: 0;
   padding: 0;
+  height: 80px;
+}
+.Menu ul li {
+  flex: 1; /* 각 li 요소가 균등한 너비를 가지도록 설정 */
+  list-style-type: none;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.Menu ul li {
-  list-style-type: none;
-  margin: 20px;
-}
 .Menu ul li button {
-  background: transparent;
+  font-size: 17px;
+  color: #141414;
+  padding: 0 3px;
+  font-size: 16px;
+  background: none;
   border: none;
-  font-size: 1.2rem;
   cursor: pointer;
+  position: relative; /* ::after 요소를 상대적으로 위치시키기 위해 필요 */
 }
 
 .Menu ul li button:hover {

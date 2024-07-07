@@ -1,0 +1,56 @@
+.MenuSub {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  width: 100%; /* 부모 요소가 화면 전체를 차지하도록 설정 */
+}
+
+.MenuSub .menu_ul {
+  position: absolute;
+  display: flex;
+  width: 100%; /* ul 요소가 부모 요소의 전체 너비를 차지하도록 설정 */
+  margin: 0;
+  padding: 0;
+}
+
+.MenuSub .menu_ul .menu_li {
+  flex: 1; /* 각 li 요소가 균등한 너비를 가지도록 설정 */
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.MenuSub .menu_ul .menu_li .menu_button {
+  font-size: 17px;
+  color: #141414;
+  margin: 10px;
+  padding: 0 3px;
+  font-size: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative; /* ::after 요소를 상대적으로 위치시키기 위해 필요 */
+}
+
+.MenuSub .menu_ul .menu_li .menu_button::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -1px;
+  left: 0;
+  background-color: #373e9e;
+  transition: width 0.5s ease-out; /* 밑줄 애니메이션 추가 */
+}
+
+.MenuSub .menu_ul .menu_li .menu_button:hover::after,
+.MenuSub .menu_ul .menu_li .menu_button.active::after {
+  width: 100%; /* 활성화된 버튼의 밑줄을 전체 너비로 확장 */
+}
+
+.MenuSub .menu_ul .menu_li .menu_button:hover,
+.MenuSub .menu_ul .menu_li .menu_button.active {
+  font-weight: bold;
+  color: #373e9e;
+}

@@ -1,0 +1,30 @@
+/* LogoSlide.module.css */
+
+.LogoSlide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.arrow_icon_warpper {
+}
+.logo_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo_wrapper {
+  text-align: center;
+  margin: 10px;
+}
+.logo {
+  max-width: 5rem;
+  margin: 1rem;
+}
+
+.logo_name {
+  margin-top: 5px;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #5a99d4;
+}

@@ -1,4 +1,5 @@
-main {
+/* Main.module.css */
+.main {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -7,23 +8,23 @@ main {
   background-color: rgb(77, 77, 77);
 }
 
-main .title {
+.title {
   text-align: center;
 }
 
-main .title h1 {
+.title h1 {
   letter-spacing: 10px;
   font-size: 5rem;
   margin: 0;
 }
 
-main .title .portfolio {
+.portfolio {
   font-size: 5rem;
   margin-top: 1rem; /* 위와 간격 조정 */
   font-weight: lighter;
 }
 
-main .title .char {
+.char {
   display: inline-block;
   animation: bounce 0.7s ease forwards;
   animation-iteration-count: 1;
