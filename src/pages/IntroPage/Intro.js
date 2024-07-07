@@ -5,19 +5,11 @@ import AboutMe from "./components/AboutMe/AboutMe";
 import Skill from "./components/Skill/Skill";
 
 import styles from "./intro.module.css";
+
 const Intro = () => {
   const menuItems = ["About Me", "Skill"];
   const menuRef = useRef([]);
   const [activeIndex, setActiveIndex] = useState(0);
-  const scrollToSection = (index) => {
-    if (menuRef.current[index]) {
-      window.scrollTo({
-        top: menuRef.current[index].offsetTop,
-        behavior: "smooth",
-      });
-      setActiveIndex(index);
-    }
-  };
 
   return (
     <div className={styles.Intro}>
@@ -26,7 +18,8 @@ const Intro = () => {
       <MenuSub
         menuItems={menuItems}
         activeIndex={activeIndex}
-        onClick={scrollToSection}
+        setActiveIndex={setActiveIndex}
+        menuRef={menuRef}
       />
       <section ref={(el) => (menuRef.current[0] = el)}>
         <AboutMe />

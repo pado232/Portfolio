@@ -6,7 +6,7 @@
   background-color: rgb(24, 24, 24);
 }
 #footer .text {
-  color: rgb(122, 122, 122);
+  color: rgb(110, 110, 110);
 }
 #footer .icon_container {
   margin: 0 20px;
@@ -22,5 +22,5 @@
   color: rgb(61, 61, 61);
 }
 #footer .icon_container .icon .a:hover {
-  color: rgb(104, 104, 104);
+  color: rgb(110, 110, 110);
 }

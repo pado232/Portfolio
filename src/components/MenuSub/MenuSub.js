@@ -1,6 +1,16 @@
 import styles from "./MenuSub.module.css";
 
-const MenuSub = ({ menuItems, activeIndex, onClick }) => {
+const MenuSub = ({ menuItems, activeIndex, setActiveIndex, menuRef }) => {
+  const scrollToSection = (index) => {
+    if (menuRef.current[index]) {
+      window.scrollTo({
+        top: menuRef.current[index].offsetTop,
+        behavior: "smooth",
+      });
+      setActiveIndex(index);
+    }
+  };
+
   return (
     <div className={styles.MenuSub}>
       <ul className={styles.menu_ul}>
@@ -12,7 +22,7 @@ const MenuSub = ({ menuItems, activeIndex, onClick }) => {
                   ? `${styles.menu_button} ${styles.active}`
                   : styles.menu_button
               }
-              onClick={() => onClick(index)}
+              onClick={() => scrollToSection(index)}
             >
               {item}
             </button>
