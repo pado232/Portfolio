@@ -1,0 +1,26 @@
+#footer {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(24, 24, 24);
+}
+#footer .text {
+  color: rgb(122, 122, 122);
+}
+#footer .icon_container {
+  margin: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#footer .icon_container .icon {
+  padding: 10px;
+  color: rgb(61, 61, 61);
+}
+#footer .icon_container .icon .a {
+  color: rgb(61, 61, 61);
+}
+#footer .icon_container .icon .a:hover {
+  color: rgb(104, 104, 104);
+}
