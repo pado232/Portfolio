@@ -2,7 +2,7 @@
   margin: auto;
   max-width: 1200px;
   min-width: 800px;
-  height: 100vh; /* 화면을 꽉 채운 높이 설정 */
+  min-height: 100vh; /* 화면을 꽉 채운 높이 설정 */
   display: flex;
   flex-direction: column; /* 필요에 따라 추가 */
   justify-content: space-between; /* 필요에 따라 추가 */

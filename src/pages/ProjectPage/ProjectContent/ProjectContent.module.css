@@ -1,0 +1,35 @@
+.content_container {
+}
+.content_container table {
+  width: 100%;
+}
+.content_container table td {
+  padding: 1rem 0.5rem;
+  text-align: center;
+  border-bottom: 1px solid #d3d3d3;
+}
+.content_container table td.link_td {
+  text-align: start;
+}
+.content_container .image {
+  padding: 0 1rem;
+  width: 100%;
+}
+.content_container .icon {
+  color: #242424;
+}
+.content_container td.link_td a {
+  color: rgb(207, 207, 207);
+}
+.content_container td.link_td a:hover {
+  color: rgb(255, 255, 255);
+}
+.content_container td.link_td h4 {
+  margin: 0.5rem;
+}
+.content_container td.link_td .link_warpper {
+  background-color: #242424;
+  padding: 15px;
+  border-radius: 10px;
+  color: yellow;
+}
