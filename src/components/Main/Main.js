@@ -14,7 +14,7 @@ const Main = ({ titleText }) => {
         .map(
           (char, index) =>
             `<span class="${styles.char}" style="animation-delay: ${
-              index * 0.1
+              index * 0.2
             }s;">${char}</span>`
         )
         .join("");
@@ -23,7 +23,7 @@ const Main = ({ titleText }) => {
         .map(
           (char, index) =>
             `<span class="${styles.char}" style="animation-delay: ${
-              (titleChars.length + index) * 0.1
+              (titleChars.length + index) * 0.2
             }s;">${char}</span>`
         )
         .join("");
@@ -39,14 +39,14 @@ const Main = ({ titleText }) => {
         setTimeout(() => {
           chars.forEach((char, index) => {
             char.style.animation = "";
-            char.style.animationDelay = `${index * 0.1}s`;
+            char.style.animationDelay = `${index * 0.2}s`;
           });
         }, 100);
       };
 
       const intervalId = setInterval(
         resetAnimation,
-        totalCharsLength * 0.1 * 1000 + 1000
+        totalCharsLength * 0.1 * 1000 + 2300
       );
 
       return () => clearInterval(intervalId);
