@@ -3,7 +3,7 @@ import "./App.css";
 import Menu from "./components/Menu/Menu";
 import Intro from "./pages/IntroPage/Intro";
 import Project from "./pages/ProjectPage/Project";
-import Context from "./pages/ContextPage/Context";
+import Contact from "./pages/ContactPage/Contact";
 import Home from "./pages/Home/Home";
 import MyFooter from "./components/MyFooter/MyFooter";
 function App() {
@@ -15,7 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/intro" element={<Intro />} />
         <Route path="/project" element={<Project />} />
-        <Route path="/context" element={<Context />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       {location.pathname !== "/" && <MyFooter />}
     </div>

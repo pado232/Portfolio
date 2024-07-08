@@ -12,7 +12,7 @@ const Menu = () => {
           <button onClick={() => navigate("/project")}>PROJECT</button>
         </li>
         <li>
-          <button onClick={() => navigate("/context")}>CONTEXT</button>
+          <button onClick={() => navigate("/contact")}>CONTACT</button>
         </li>
       </ul>
     </div>
