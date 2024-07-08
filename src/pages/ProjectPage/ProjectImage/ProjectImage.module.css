@@ -13,6 +13,14 @@
 }
 .shop_img_wrapper {
   text-align: center;
+  position: relative;
+}
+.shop_img_wrapper:hover .shop_img {
+  z-index: 100;
+  transform: scale(2.2);
+  transition: transform 0.5s ease-in-out;
+  z-index: 10; /* 이 속성을 추가하여 이미지가 다른 이미지들 위로 오게 합니다 */
+  position: relative;
 }
 .shop_img {
   width: 100%;
@@ -22,4 +30,15 @@
   font-weight: bold;
   color: #696969;
   margin-bottom: 1rem;
+}
+.magnifier {
+  position: absolute;
+  width: 1rem;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-size: 200%;
+  z-index: 10;
+}
+.magnifier img {
+  width: 5rem;
 }
