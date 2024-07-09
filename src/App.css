@@ -12,7 +12,7 @@ body {
 }
 
 .App {
-  color: #181818;
+  color: #1f1f1f;
 }
 section {
   padding: 5rem 2rem;
@@ -22,7 +22,7 @@ section:nth-child(2n) {
   background-color: rgb(214, 214, 214);
 }
 section:nth-child(2n + 1) {
-  background-color: aliceblue;
+  background-color: rgb(221, 229, 235);
 }
 li {
   list-style: none;

@@ -1,1 +1,8 @@
-
+.Project .h3 {
+  margin: 2rem;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-weight: lighter;
+  font-size: 50px;
+  text-shadow: 0px 1px rgb(83, 83, 83), 3px 1px rgb(83, 83, 83);
+}

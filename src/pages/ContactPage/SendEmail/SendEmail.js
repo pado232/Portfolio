@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
-import { LuCopy, LuCopyCheck } from "react-icons/lu";
+import React, { useRef, useState } from "react";
+import { LuCopy } from "react-icons/lu";
 import { MdEmail } from "react-icons/md";
 // import emailjs from "emailjs-com";
 

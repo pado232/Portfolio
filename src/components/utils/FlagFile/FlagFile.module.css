@@ -1,0 +1,69 @@
+.FlagFile {
+}
+.FlagFile .container {
+  box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.3);
+  position: relative;
+  border-radius: 0 0 5px 5px;
+}
+.FlagFile .ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.FlagFile .li_box {
+  cursor: pointer;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0 10px 0 0;
+  box-shadow: 10px 0px 5px -5px rgba(0, 0, 0, 0.3);
+}
+.FlagFile .li_box.none {
+  box-shadow: none;
+}
+.FlagFile .li_box.selected {
+  position: relative;
+  z-index: 2;
+}
+.FlagFile .li_shape {
+  width: 100%;
+  height: 60px;
+  background-color: rgb(255, 238, 238);
+  padding: 10px;
+  border-radius: 20px 0 0 0;
+  transform: skew(-30deg) translate(20px, 0px);
+}
+.FlagFile .li_box.selected .li_shape {
+  background-color: rgb(51, 51, 51);
+}
+.FlagFile .li {
+  padding-top: 0.5rem;
+  padding-right: 2rem;
+  padding-left: 0.5rem;
+  padding-left: 1rem;
+  text-align: center;
+  transform: skew(30deg);
+  color: #4d4d4d;
+}
+.FlagFile .li_box.selected .li {
+  font-size: 18px;
+  font-weight: bold;
+  color: #eb7d7d;
+}
+.FlagFile .content_container {
+  background-color: rgb(51, 51, 51);
+  width: 100%;
+  box-shadow: 0 -5px 10px -5px rgba(0, 0, 0, 0.3);
+  position: relative;
+  border-radius: 0 0 5px 5px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.FlagFile .content {
+  padding: 10px;
+}
+.FlagFile .content_title {
+  padding-top: 1rem;
+  color: #ebacac;
+}
