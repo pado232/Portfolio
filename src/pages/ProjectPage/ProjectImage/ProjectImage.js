@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import Container from "../../../components/utils/Container/Container";
 import styles from "./ProjectImage.module.css";
 

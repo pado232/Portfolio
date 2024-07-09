@@ -1,5 +1,7 @@
-import React, { useRef, useState } from "react";
-import emailjs from "emailjs-com";
+import React, { useEffect, useRef, useState } from "react";
+import { LuCopy, LuCopyCheck } from "react-icons/lu";
+import { MdEmail } from "react-icons/md";
+// import emailjs from "emailjs-com";
 
 import Container from "../../../components/utils/Container/Container";
 
@@ -73,65 +75,103 @@ const SendEmail = () => {
     //   });
   };
 
+  const [copyState, setCopyState] = useState(false);
+
+  const handleCopyEmail = async (text) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopyState(true);
+      setTimeout(() => {
+        setCopyState(false);
+      }, 1000); // 1초 후에 copyState를 false로 설정
+    } catch (e) {
+      setCopyState(false);
+    }
+  };
+
   return (
     <Container>
       <div className={styles.SendEmail}>
-        <div className={styles.container_left}>
-          <h3>CONTACT WITH ME</h3>
-        </div>
-        <div className={styles.container_right}>
-          <form>
-            <div className={styles.box}>
-              <label className={styles.lab}>
-                Your name <span>*</span>
-              </label>
-              <input
-                className={styles.inp}
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                ref={(el) => (formDataRef.current[0] = el)}
-                required
-              />
+        <div className={styles.top}>
+          <div className={styles.email_container}>
+            <div className={styles.icon_email}>
+              <MdEmail size={30} style={{ verticalAlign: -9 }} />
             </div>
-            <div className={styles.box}>
-              <label className={styles.lab}>
-                Your email <span>*</span>
-              </label>
-              <input
-                className={styles.inp}
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                ref={(el) => (formDataRef.current[1] = el)}
-                required
-              />
-              {!emailValid && formData.email.length > 0 && (
-                <div className={styles.error}>
-                  이메일 형식을 지켜 입력해주세요.
-                </div>
-              )}
-            </div>
-            <div className={styles.box}>
-              <label className={styles.lab}>
-                Message <span>*</span>
-              </label>
-              <textarea
-                className={styles.txt_a}
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                ref={(el) => (formDataRef.current[2] = el)}
-                spellCheck={false}
-                required
-              />
-            </div>
-            <button type="submit" onClick={handleSubmit}>
-              Send
+            <button
+              onClick={() => {
+                handleCopyEmail("ehsilver98@gmail.com");
+              }}
+              className={styles.copy}
+            >
+              ehsilver98@gmail.com{" "}
+              <LuCopy size={20} style={{ verticalAlign: -5 }} />
             </button>
-          </form>
+          </div>
+          {!copyState ? "" : <div className={styles.copy_check}>Copied!</div>}
+        </div>
+
+        <div className={styles.bottom}>
+          <div className={styles.container_left}>
+            <h3>CONTACT WITH ME</h3>
+          </div>
+          <div className={styles.container_right}>
+            <form>
+              <div className={styles.box}>
+                <label className={styles.lab}>
+                  Your name <span>*</span>
+                </label>
+                <input
+                  className={styles.inp}
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  ref={(el) => (formDataRef.current[0] = el)}
+                  required
+                />
+              </div>
+              <div className={styles.box}>
+                <label className={styles.lab}>
+                  Your email <span>*</span>
+                </label>
+                <input
+                  className={styles.inp}
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  ref={(el) => (formDataRef.current[1] = el)}
+                  required
+                />
+                {!emailValid && formData.email.length > 0 && (
+                  <div className={styles.error}>
+                    이메일 형식을 지켜 입력해주세요.
+                  </div>
+                )}
+              </div>
+              <div className={styles.box}>
+                <label className={styles.lab}>
+                  Message <span>*</span>
+                </label>
+                <textarea
+                  className={styles.txt_a}
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  ref={(el) => (formDataRef.current[2] = el)}
+                  spellCheck={false}
+                  required
+                />
+              </div>
+              <button
+                className={styles.submit}
+                type="submit"
+                onClick={handleSubmit}
+              >
+                Send
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </Container>

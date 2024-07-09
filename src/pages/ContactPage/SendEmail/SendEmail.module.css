@@ -1,12 +1,42 @@
 .SendEmail {
+}
+/* 이메일 복사 부분*/
+.SendEmail .top {
+  margin: 2rem;
+}
+.SendEmail .top .copy_check {
+  text-align: center;
+}
+.SendEmail .email_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.SendEmail .email_container button.copy {
+  font-size: 1rem;
+  margin: 1rem;
+  background: none;
+  padding: 0.7rem 1.2rem;
+  border: 1px solid #161616;
+  cursor: pointer;
+}
+.SendEmail .email_container button.copy:hover {
+  color: #eb5656;
+  border: 1px solid #eb5656;
+}
+.SendEmail .email_container .icon_email {
+  margin: 0.5rem;
+}
+
+/* 입력 폼 부분*/
+.SendEmail .bottom {
   display: flex;
   justify-content: center;
   align-items: start;
 }
-.SendEmail .container_left {
-}
-.SendEmail h3 {
+.SendEmail .bottom .container_left h3 {
   writing-mode: vertical-rl;
+
   /* text-orientation: upright; */
   margin: 1rem;
   font-size: 4rem;
@@ -16,7 +46,7 @@
   text-shadow: -1px 1px #161616, 1px -1px #161616, 1px 1px #161616,
     -1px -1px #161616;
 }
-.SendEmail .container_right {
+.SendEmail .bottom .container_right {
   width: 100%;
   background-color: white;
   border-radius: 1rem;
@@ -51,7 +81,7 @@
   font-size: 1rem;
   line-height: 1.5;
 }
-.SendEmail button {
+.SendEmail button.submit {
   width: 100%;
   font-size: 1rem;
   padding: 1rem;
@@ -61,7 +91,6 @@
   color: white;
   cursor: pointer;
 }
-
 .SendEmail .error {
   color: rgb(248, 56, 56);
   font-size: 0.75rem;
