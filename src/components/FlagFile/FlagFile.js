@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "./FlagFile.module.css";
 
+// flagTitles =[{title :제목, component: 해당 컴포넌트}]
 const FlagFile = ({ flagTitles }) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
 

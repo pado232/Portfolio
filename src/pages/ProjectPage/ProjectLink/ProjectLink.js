@@ -1,13 +1,13 @@
 import { FaGithub } from "react-icons/fa";
 import { SiNotion } from "react-icons/si";
 
-import styles from "./ProjectContent.module.css";
+import styles from "./ProjectLink.module.css";
 
-const ProjectContent = () => {
+const ProjectLink = () => {
   return (
-    <div className={styles.ProjectContent}>
+    <div className={styles.ProjectLink}>
       <div className={styles.content_container}>
-        <table>
+        <table className={styles.table}>
           <colgroup style={{ width: 200 }} />
           <colgroup style={{ width: "auto" }} />
           <tbody>
@@ -41,7 +41,7 @@ const ProjectContent = () => {
                 </div>
               </td>
               <td className={styles.link_td}>
-                <h4>쇼핑몰</h4>
+                {/* <h4 className={styles.h4}>쇼핑몰</h4> */}
                 <div className={styles.link_warpper}>
                   <a
                     className={styles.a}
@@ -53,7 +53,7 @@ const ProjectContent = () => {
                   </a>
                 </div>
 
-                <h4>쇼핑몰 관리자</h4>
+                {/* <h4 className={styles.h4}>쇼핑몰 관리자</h4>
                 <div className={styles.link_warpper}>
                   <a
                     className={styles.a}
@@ -63,7 +63,7 @@ const ProjectContent = () => {
                   >
                     https://github.com/pado232/ShopAdmin
                   </a>
-                </div>
+                </div> */}
               </td>
             </tr>
             <tr>
@@ -91,4 +91,4 @@ const ProjectContent = () => {
   );
 };
 
-export default ProjectContent;
+export default ProjectLink;
