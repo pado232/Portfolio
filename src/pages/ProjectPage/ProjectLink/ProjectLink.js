@@ -1,7 +1,11 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import styles from "./ProjectLink.module.css";
 
-const ProjectLink = ({ linkData }) => {
+const ProjectLink = ({ projectKey }) => {
+  const projectDetails = useSelector((state) => state.projects[projectKey]);
+  const linkData = projectDetails ? projectDetails.link : [];
+
   return (
     <div className={styles.ProjectLink}>
       <div className={styles.content_container}>
@@ -19,7 +23,7 @@ const ProjectLink = ({ linkData }) => {
                       <img
                         className={styles.image}
                         src={link.srcOrIcon}
-                        alt="RealMoment"
+                        alt="Link Icon"
                       />
                     )}
                   </div>

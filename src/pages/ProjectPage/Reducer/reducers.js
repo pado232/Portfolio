@@ -1,3 +1,6 @@
+import { FaGithub } from "react-icons/fa";
+import { SiNotion } from "react-icons/si";
+
 const initialState = {
   projects: {
     RealMoment: {
@@ -129,7 +132,7 @@ const initialState = {
     // 나머지 프로젝트에 대한 데이터도 추가
   },
   teamProjects: ["RealMoment"],
-  //   personalProjects: ["portfolio"],
+  personalProjects: [],
 };
 
 const rootReducer = (state = initialState, action) => {

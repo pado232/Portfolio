@@ -1,13 +1,20 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import { useSelector } from "react-redux";
 import styles from "./FlagFile.module.css";
+import ProjectFileInFolder from "../../pages/ProjectPage/ProjectFileInFolder/ProjectFileInFolder";
 
-// flagTitles =[{title :제목, component: 해당 컴포넌트}]
-const FlagFile = ({ flagTitles }) => {
+const FlagFile = ({ projectKeys }) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const projects = useSelector((state) => state.projects);
 
   const handleClick = (index) => {
     setSelectedIndex(index);
   };
+
+  const flagTitles = projectKeys.map((key) => ({
+    title: projects[key]?.title || "No Title", // 프로젝트 데이터가 없을 때 기본값 설정
+    component: <ProjectFileInFolder projectKey={key} />,
+  }));
 
   return (
     <div className={styles.FlagFile}>
