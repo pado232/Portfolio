@@ -10,7 +10,7 @@ const ProjectDetails = ({ projectKey }) => {
     return <div>Loading...</div>; // projectDetails가 없을 경우 로딩 상태를 표시
   }
 
-  const renderAddText = (addText) => {
+  const renderAddText = (addText = []) => {
     return addText.map((item, index) => (
       <tr key={index}>
         <td>
@@ -27,7 +27,7 @@ const ProjectDetails = ({ projectKey }) => {
     ));
   };
 
-  const renderDetailsExp = (detailsExp) => {
+  const renderDetailsExp = (detailsExp = []) => {
     return detailsExp.map((item, index) => (
       <div key={index} className={styles.content_box}>
         <div className={styles.img_box}>
@@ -64,7 +64,7 @@ const ProjectDetails = ({ projectKey }) => {
           {renderDetailsExp(projectDetails.detailsExp)}
         </div>
       </div>
-      <ProjectLink linkData={projectDetails.link} />{" "}
+      <ProjectLink linkData={projectDetails.link} />
       {/* ProjectLink 컴포넌트를 추가합니다 */}
     </div>
   );

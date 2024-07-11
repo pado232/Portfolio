@@ -67,7 +67,7 @@ const initialState = {
             {
               title: "기능의 흐름",
               content: [
-                "- 데이터 전송방식 : REST API",
+                "- 데이터 전송방식: REST API",
                 "- 데이터의 형식: JSON 형식 ",
                 "- 데이터 통신 프로토콜: HTTP/HTTPS (RESTful API) ",
               ],
@@ -75,7 +75,7 @@ const initialState = {
             {
               title: "기술",
               content: [
-                "- 프로그래밍 언어 : javaScript ",
+                "- 프로그래밍 언어: javaScript ",
                 "- 프레임워크: React",
                 "- 통합 개발 환경(IDE): Visual Studio Code",
                 "- 버전 관리 및 협업: Git, GitHub",
@@ -115,24 +115,153 @@ const initialState = {
         },
       ],
     },
-    // portfolio: {
-    //   title: "Portfolio",
-    //   summary:
-    //     "2024년 7월을 시작으로 1개월에 걸쳐 제작한 포트폴리오 웹 사이트입니다.",
-    //   image: [
-    //     {
-    //       src: "/images/Portfolio.png",
-    //       name: "Portfolio",
-    //       linkUrl: "https://portfolio.example.com",
-    //     },
-    //   ],
-    //   details: "상세정보입니다.",
-    //   description: "상세설명입니다.",
-    // },
+
+    // RealMomentAdmin
+    RealMomentAdmin: {
+      title: "Real Moment Admin",
+      summary:
+        "2024년 3월을 시작으로 4개월에 걸쳐 제작한 코스메틱 웹 사이트에 적용할 값들을 추가, 삭제, 수정하기 위한 웹 사이트입니다. 모든 페이지는 로그인 되지 않으면 접근 할 수 없고 판매자가 사용자에게 필요한 이미지와 텍스트를 서버에 보내기 위해 사용할 수 있습니다.",
+      images: [
+        {
+          src: "/images/Admin-Image/adminHome.png",
+          name: "Home",
+          linkUrl: "https://real-moment.kro.kr/",
+        },
+      ],
+      link: [
+        {
+          srcOrIcon: <FaGithub size={35} />,
+          linkUrl: "https://github.com/pado232/ShopAdmin",
+          isIcon: true,
+        },
+        {
+          srcOrIcon: <SiNotion size={35} />,
+          linkUrl:
+            "https://www.notion.so/ShoppingMall-83cac7f2de6f47b48037173179d5c961",
+          isIcon: true,
+        },
+      ],
+      detailsInfo: [
+        {
+          src: "/images/Shopping-Mall-Image/Home.png",
+          summary:
+            "2024년 3월을 시작으로 4개월에 걸쳐 제작한 코스메틱 웹 사이트에 적용할 값들을 추가, 삭제, 수정하기 위한 웹 사이트입니다. 모든 페이지는 로그인 되지 않으면 접근 할 수 없고 판매자가 사용자에게 필요한 이미지와 텍스트를 서버에 보내기 위해 사용할 수 있습니다.",
+          addText: [
+            {
+              title: "개발 인원",
+              content: ["총 2명", "- 프론트엔드: 1명", "- 백엔드: 1명"],
+            },
+            {
+              title: "역할",
+              content: ["프론트 영역 전부"],
+            },
+            {
+              title: "일정",
+              content: [
+                "- 기획: 1개월",
+                "- 개발: 3개월",
+                "- 유지보수: 진행 중",
+              ],
+            },
+            {
+              title: "기능",
+              content: [
+                "RealMoment 쇼핑몰에 들어갈 정보를 추가, 수정, 삭제 가능한 사이트 ( 판매자를 위한 사이트 )",
+              ],
+            },
+            {
+              title: "기능의 흐름",
+              content: [
+                "- 데이터 전송방식: REST API",
+                "- 데이터의 형식: JSON 형식 ",
+                "- 데이터 통신 프로토콜: HTTP/HTTPS (RESTful API) ",
+              ],
+            },
+            {
+              title: "기술",
+              content: [
+                "- 프로그래밍 언어: javaScript ",
+                "- 프레임워크: React",
+                "- 통합 개발 환경(IDE): Visual Studio Code",
+                "- 버전 관리 및 협업: Git, GitHub",
+                "- 상태관리: Context API, React Router",
+                "- 스타일링: CSS",
+              ],
+            },
+          ],
+        },
+      ],
+    },
+
+    emotionDiary: {
+      title: "Emotion Diary",
+      summary:
+        "2023년 1월을 시작으로 1개월에 걸쳐 제작한 첫 프로젝트 입니다. 인프런 `한입 크기로 잘라먹는 리액트` 강의 내용으로 첫 리액트 프레임워크를 이용한 감정을 기록하는 다이어리입니다.",
+      images: [
+        {
+          src: "/images/emotion/emotionHome.png",
+          name: "Home",
+        },
+        {
+          src: "/images/emotion/viewPage.png",
+          name: "View",
+        },
+        {
+          src: "/images/emotion/writePage.png",
+          name: "Create & Edit",
+        },
+      ],
+      link: [
+        // {
+        //   srcOrIcon: <FaGithub size={35} />,
+        //   linkUrl: "https://github.com/pado232/ShopAdmin",
+        //   isIcon: true,
+        // },
+        // {
+        //   srcOrIcon: <SiNotion size={35} />,
+        //   linkUrl:
+        //     "https://www.notion.so/ShoppingMall-83cac7f2de6f47b48037173179d5c961",
+        //   isIcon: true,
+        // },
+      ],
+      detailsInfo: [
+        {
+          src: "/images/Shopping-Mall-Image/Home.png",
+          summary:
+            "2023년 1월을 시작으로 1개월에 걸쳐 제작한 첫 프로젝트 입니다. 인프런 `한입 크기로 잘라먹는 리액트` 강의 내용으로 첫 리액트 프레임워크를 이용한 감정을 기록하는 다이어리입니다.",
+          addText: [
+            {
+              title: "일정",
+              content: ["- 학습: 1개월"],
+            },
+            {
+              title: "기능",
+              content: ["오늘의 감정을 기록할 수 있는 다이어리"],
+            },
+            {
+              title: "기능의 흐름",
+              content: [
+                "감정을 기록, 수정, 편집할 수 있도록 state를 전역으로 사용",
+              ],
+            },
+            {
+              title: "기술",
+              content: [
+                "- 프로그래밍 언어: javaScript ",
+                "- 프레임워크: React",
+                "- 통합 개발 환경(IDE): Visual Studio Code",
+                "- 상태관리: Context API, React Router, Redux",
+                "- 스타일링: CSS",
+              ],
+            },
+          ],
+        },
+      ],
+    },
     // 나머지 프로젝트에 대한 데이터도 추가
   },
-  teamProjects: ["RealMoment"],
-  personalProjects: [],
+  teamProjects: ["RealMoment", "RealMomentAdmin"],
+  personalProjects: ["emotionDiary"],
 };
 
 const rootReducer = (state = initialState, action) => {
