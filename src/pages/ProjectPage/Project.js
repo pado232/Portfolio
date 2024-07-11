@@ -6,7 +6,7 @@ import ProjectDetails from "./ProjectDetails/ProjectDetails";
 import FlagFile from "../../components/FlagFile/FlagFile";
 import Container from "../../components/utils/Container/Container";
 import styles from "./Project.module.css";
-import TeamProject from "./TeamProject/TeamProject";
+import ProjectFileInFolder from "./ProjectFileInFolder/ProjectFileInFolder";
 
 import RealMomentPageImages from "./ProjectImage/pageImage/RealMomentPageImages.json";
 import emotionPageImages from "./ProjectImage/pageImage/emotionPageImages.json";
@@ -49,11 +49,13 @@ const toDoListDetails = {
 const flagTeamTitles = [
   {
     title: "Real Moment",
-    component: <TeamProject teamProjectDetails={RealMomentDetails} />,
+    component: <ProjectFileInFolder teamProjectDetails={RealMomentDetails} />,
   },
   {
     title: "Real Moment Admin",
-    component: <TeamProject teamProjectDetails={RealMomentAdminDetails} />,
+    component: (
+      <ProjectFileInFolder teamProjectDetails={RealMomentAdminDetails} />
+    ),
   },
 ];
 
@@ -61,15 +63,15 @@ const flagTeamTitles = [
 const flagPersonalTitles = [
   {
     title: "Portfolio",
-    component: <TeamProject teamProjectDetails={portfolioDetails} />,
+    component: <ProjectFileInFolder teamProjectDetails={portfolioDetails} />,
   },
   {
     title: "Emotion Diary",
-    component: <TeamProject teamProjectDetails={emotionDiaryDetails} />,
+    component: <ProjectFileInFolder teamProjectDetails={emotionDiaryDetails} />,
   },
   {
     title: "To Do List",
-    component: <TeamProject teamProjectDetails={toDoListDetails} />,
+    component: <ProjectFileInFolder teamProjectDetails={toDoListDetails} />,
   },
 ];
 
