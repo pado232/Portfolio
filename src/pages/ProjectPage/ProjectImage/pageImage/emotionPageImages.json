@@ -1,0 +1,14 @@
+[
+  {
+    "src": "/images/emotion/emotionHome.png",
+    "name": "Home"
+  },
+  {
+    "src": "/images/emotion/viewPage.png",
+    "name": "View"
+  },
+  {
+    "src": "/images/emotion/writePage.png",
+    "name": "Create & Edit"
+  }
+]

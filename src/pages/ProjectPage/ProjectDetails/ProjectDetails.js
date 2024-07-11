@@ -1,9 +1,8 @@
 import React from "react";
 import ProjectLink from "../ProjectLink/ProjectLink";
 import styles from "./ProjectDetails.module.css";
-import teamProjects from "../../../JSON/teamProjects.json";
-import teamProjectDetails from "../../../JSON/teamProjectDetails.json";
-import ProjectImage from "../ProjectImage/ProjectImage";
+import teamProjects from "./DetailData/teamProjects.json";
+import teamProjectDetails from "./DetailData/teamProjectDetails.json";
 
 const ProjectDetails = () => {
   return (
