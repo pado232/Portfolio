@@ -9,7 +9,7 @@ const Logos = [
     name: "JavaScript",
   },
   { src: `${process.env.PUBLIC_URL}/images/LogoReact.png`, name: "React" },
-  { src: `${process.env.PUBLIC_URL}/images/LogoGithub.png`, name: "GitHub" },
+  { src: `${process.env.PUBLIC_URL}/images/LogoGithub.png`, name: "Git" },
 ];
 
 const LogoSlide = () => {
@@ -27,7 +27,9 @@ const LogoSlide = () => {
               src={logo.src}
               alt={`${logo.name} Logo`}
             />
-            <p className={styles.logo_name}>{logo.name}</p>
+            <div className={styles.logo_name_box}>
+              <p className={styles.logo_name}>{logo.name}</p>
+            </div>
           </div>
         ))}
       </div>

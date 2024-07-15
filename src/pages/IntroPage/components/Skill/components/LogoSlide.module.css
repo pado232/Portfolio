@@ -22,9 +22,14 @@
 }
 
 .logo_name {
-  margin-top: 5px;
   font-size: 13px;
-  font-weight: bold;
+  font-size: 0.9rem;
   letter-spacing: 1px;
-  color: #5a99d4;
+  color: #7e7e7e;
+}
+.logo_name_box {
+  background-color: #ebebeb;
+  padding: 0.5rem 0.25rem;
+  border-radius: 3rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.137);
 }

@@ -43,7 +43,7 @@
   bottom: -3px;
   left: 0;
   font-size: 20px;
-  background-color: #deec9d;
+  background-color: rgb(230, 230, 188);
   transition: width 0.5s ease-out; /* 밑줄 애니메이션 추가 */
 }
 
@@ -55,5 +55,5 @@
 .MenuSub .menu_ul .menu_li .menu_button:hover,
 .MenuSub .menu_ul .menu_li .menu_button.active {
   font-size: 20px;
-  color: #deec9d;
+  color: rgb(230, 230, 188);
 }
