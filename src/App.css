@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbit&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -8,11 +9,15 @@ html,
 body {
   color: #181818;
   height: 100%;
-  font-family: Arial, sans-serif;
+  font-family: "Orbit", sans-serif;
+  font-size: 0.98rem;
 }
-
+button {
+  font-family: "Orbit", sans-serif;
+}
 .App {
   color: #1f1f1f;
+  font-size: 1rem;
 }
 section {
   padding: 5rem 2rem;

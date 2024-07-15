@@ -1,34 +1,31 @@
-.TeamProject {
-}
-.TeamProject .detail_container h4 {
+.detail_container h4 {
   padding-bottom: 1rem;
   padding-top: 2rem;
   color: rgb(202, 105, 105);
   text-align: center;
   border-bottom: 4px solid rgb(85, 60, 60);
 }
-.TeamProject .summary {
+.summary {
   color: rgb(168, 168, 168);
   margin: 1rem;
   line-height: 1.5;
   letter-spacing: 0.05rem;
-  word-spacing: 0.05rem;
   padding-bottom: 1rem;
 }
-.TeamProject .img_box {
+.img_box {
   width: 100%;
   text-align: center;
 }
-.TeamProject .screen {
+.screen {
   width: 100%;
   max-width: 700px;
 }
-.TeamProject .button_box {
+.button_box {
   margin-top: 20px;
   width: 100%;
   text-align: center;
 }
-.TeamProject .more {
+.more {
   padding: 1rem 2.5rem;
 
   border: 2px solid #644c29;

@@ -1,3 +1,4 @@
+import { type } from "@testing-library/user-event/dist/type";
 import { FaGithub } from "react-icons/fa";
 import { SiNotion } from "react-icons/si";
 
@@ -18,6 +19,32 @@ const initialState = {
           name: "Login",
           linkUrl: "https://real-moment.kro.kr/login",
         },
+        {
+          src: "/images/Shopping-Mall-Image/signupPage.png",
+          name: "SignUp",
+          linkUrl: "https://real-moment.kro.kr/signup",
+        },
+        {
+          src: "/images/Shopping-Mall-Image/itemlistPage.png",
+          name: "itemList",
+          linkUrl: "https://real-moment.kro.kr/item/all",
+        },
+        {
+          src: "/images/Shopping-Mall-Image/itemdetailPage.png",
+          name: "ItemDetail",
+          linkUrl: "https://real-moment.kro.kr/item/16",
+        },
+        {
+          src: "/images/Shopping-Mall-Image/cartPage.png",
+          name: "Cart",
+          linkUrl: "https://real-moment.kro.kr/cart",
+        },
+        {
+          src: "/images/Shopping-Mall-Image/haertPage.png",
+          name: "Heart",
+          linkUrl: "https://real-moment.kro.kr/heart",
+        },
+
         // 나머지 이미지도 추가
       ],
       link: [
@@ -72,18 +99,36 @@ const initialState = {
                 "- 데이터 통신 프로토콜: HTTP/HTTPS (RESTful API) ",
               ],
             },
-            {
-              title: "기술",
-              content: [
-                "- 프로그래밍 언어: javaScript ",
-                "- 프레임워크: React",
-                "- 통합 개발 환경(IDE): Visual Studio Code",
-                "- 버전 관리 및 협업: Git, GitHub",
-                "- 상태관리: Context API, React Router",
-                "- 스타일링: CSS",
-              ],
-            },
           ],
+        },
+      ],
+      detailsTech: [
+        {
+          title: "프로그래밍 언어",
+          type: [{ src: "/images/LogoJavascript.png", name: "Javascript" }],
+        },
+        {
+          title: "프레임워크",
+          type: [
+            { src: "/images/LogoReact.png", name: "React" },
+            { src: "/images/LogoNodeJS.png", name: "NodeJS" },
+          ],
+        },
+        {
+          title: "통합 개발 환경(IDE)",
+          type: [{ src: "/images/LogoVSCode.png", name: "Visual Studio Code" }],
+        },
+        {
+          title: "버전 관리 및 협업",
+          type: [{ src: "/images/LogoGithub.png", name: "GitHub" }],
+        },
+        {
+          title: "상태관리",
+          type: [{ name: "Context API, React Router" }],
+        },
+        {
+          title: "스타일링",
+          type: [{ src: "/images/LogoCSS3.png", name: "CSS" }],
         },
       ],
       detailsExp: [

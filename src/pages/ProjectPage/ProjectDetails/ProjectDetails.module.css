@@ -1,11 +1,10 @@
 .ProjectDetails {
+  letter-spacing: 0.03rem;
 }
 .ProjectDetails .container {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.ProjectDetails .img_container {
 }
 .ProjectDetails .content_container {
   margin: 1rem;
@@ -22,24 +21,19 @@
 }
 .ProjectDetails .detail {
   color: rgb(155, 155, 155);
-  line-height: 1.5;
   margin: 1rem 0;
-  letter-spacing: 0.05rem;
-  word-spacing: 0.05rem;
-  white-space: pre-line;
 }
 .ProjectDetails .detail p {
-  margin: 0.5rem 0;
+  margin: 0.3rem 0;
 }
 .ProjectDetails img.screen {
   width: 100%;
   max-width: 500px;
 }
-
 .ProjectDetails .h4 {
   padding-bottom: 1rem;
   padding-top: 2rem;
-  color: rgb(155, 155, 155);
+  color: rgb(202, 167, 167);
   text-align: center;
   border-bottom: 4px solid rgb(39, 39, 39);
 }
@@ -53,8 +47,6 @@
 }
 .title {
   margin: 0.5rem;
-  letter-spacing: 0.05rem;
-  word-spacing: 0.05rem;
   color: rgb(24, 24, 24);
   font-weight: bold;
   text-align: center;
@@ -62,7 +54,47 @@
 .content {
   color: rgb(155, 155, 155);
   padding: 0.3rem;
-  letter-spacing: 0.05rem;
-  word-spacing: 0.05rem;
   font-size: 0.9rem;
+}
+.tech_container {
+  margin: 1rem 0;
+}
+.tech_table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.tech_table thead tr {
+  /* border-bottom: 1px solid black; */
+  border-bottom: 1px solid rgb(56, 56, 56);
+}
+.tech_table tbody tr {
+  border-bottom: 1px solid rgb(56, 56, 56);
+}
+.tech_table tbody tr td {
+  text-align: center;
+  padding: 0.5rem;
+}
+.tech_table thead tr th {
+  text-align: center;
+  padding: 1rem 0.5rem;
+  font-size: 0.9rem;
+}
+.tech_img_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tech_img_box {
+  width: 100%;
+  padding: 0 0.5rem;
+}
+.tech_img {
+  max-width: 3rem;
+  min-width: 1rem;
+  width: 100%;
+}
+.tech_name {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: rgb(155, 155, 155);
 }

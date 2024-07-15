@@ -2,6 +2,7 @@ import { useState } from "react";
 import styles from "./FixedMenuButton.module.css";
 import { useNavigate } from "react-router-dom";
 import { LuArrowBigUpDash } from "react-icons/lu";
+import { FiPlus } from "react-icons/fi";
 
 const FixedMenuButton = () => {
   const navigate = useNavigate();
@@ -15,7 +16,9 @@ const FixedMenuButton = () => {
       onMouseLeave={() => setMouseOn(false)}
       onMouseEnter={() => setMouseOn(true)}
     >
-      <button className={styles.fix_btn}>+</button>
+      <button className={styles.fix_btn}>
+        <FiPlus size={25} />
+      </button>
       <div className={`${styles.btn_wrapper} ${mouseOn ? styles.visible : ""}`}>
         <div>
           <button

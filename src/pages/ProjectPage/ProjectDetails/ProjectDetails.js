@@ -47,8 +47,49 @@ const ProjectDetails = ({ projectKey }) => {
     ));
   };
 
+  const renderDetailsTech = (detailsTech = []) => {
+    return (
+      <table className={styles.tech_table}>
+        <thead>
+          <tr>
+            {detailsTech.map((item, index) => (
+              <th key={index}>{item.title}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            {detailsTech.map((item, index) => (
+              <td key={index}>
+                <div className={styles.tech_img_container}>
+                  {item.type.map((type, i) => (
+                    <div key={i} className={styles.tech_img_box}>
+                      {type.src ? (
+                        <img
+                          className={styles.tech_img}
+                          src={type.src}
+                          alt={`${item.title} Logo ${i + 1}`}
+                        />
+                      ) : (
+                        <></>
+                      )}
+                      <p className={styles.tech_name}>{type.name}</p>
+                    </div>
+                  ))}
+                </div>
+              </td>
+            ))}
+          </tr>
+        </tbody>
+      </table>
+    );
+  };
+
   return (
     <div className={styles.ProjectDetails}>
+      <ProjectLink projectKey={projectKey} />
+      {/* ProjectLink 컴포넌트를 추가합니다 */}
+
       {projectDetails.detailsInfo.map((detail, index) => (
         <div key={index}>
           <h4 className={styles.h4}>상세 정보</h4>
@@ -59,13 +100,18 @@ const ProjectDetails = ({ projectKey }) => {
           </table>
         </div>
       ))}
+
+      <div className={styles.tech_container}>
+        <h4 className={styles.h4}>기술</h4>
+        {renderDetailsTech(projectDetails.detailsTech)}
+      </div>
+
+      <h4 className={styles.h4}>상세 정보</h4>
       <div className={styles.container}>
         <div className={styles.content_container}>
           {renderDetailsExp(projectDetails.detailsExp)}
         </div>
       </div>
-      <ProjectLink linkData={projectDetails.link} />
-      {/* ProjectLink 컴포넌트를 추가합니다 */}
     </div>
   );
 };

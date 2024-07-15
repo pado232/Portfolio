@@ -14,7 +14,7 @@ const ProjectFileInFolder = ({ projectKey }) => {
   }
 
   return (
-    <div className={styles.TeamProject}>
+    <div className={styles.ProjectFileInFolder}>
       <div className={styles.detail_container}>
         {/* 요약 글 */}
         <div className={styles.summary}>{projectDetails.summary}</div>
