@@ -30,7 +30,7 @@
   background-color: rgb(255, 238, 238);
   padding: 15px;
   border-radius: 20px 0 0 0;
-  transform: skew(-30deg) translate(20px, 0px);
+  transform: skew(-30deg) translate(16px, 0px);
 }
 .FlagFile .li_box.selected .li_shape {
   padding: 13px;

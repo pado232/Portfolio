@@ -1,16 +1,9 @@
-/* AboutMe.module.css */
 .about_me {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-}
-
-.my_img,
-.h2,
-.p {
-  opacity: 0;
-  transform: translateY(100px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
+  color: #bbbbbb;
+  margin: 1rem;
 }
 
 .appear {
@@ -19,8 +12,8 @@
 }
 
 .my_img {
-  width: 35%;
-  min-width: 350px;
+  width: 20%;
+  min-width: 200px;
   padding: 0 1rem;
 }
 
@@ -29,16 +22,57 @@
 }
 
 .content {
-  width: 65%;
-  padding: 0 1rem;
+  width: 80%;
+  padding: 0 2rem;
 }
 
-.content h2 {
+.content .h2 {
   font-size: 3rem;
+  margin: 0.8rem 0;
+}
+.content .h3 {
+  margin: 0.5rem 0;
+  font-size: 1.4rem;
 }
 
 .content p {
   padding: 10px 0;
   font-size: 1.2rem;
-  line-height: 1.5; /* 문장 간격 */
+  line-height: 1.5;
+}
+.table {
+  color: #bbbbbb;
+  padding: 0.5rem;
+}
+.table th {
+  padding: 0.5rem 1rem;
+  text-align: start;
+}
+.table td {
+  padding: 0.5rem;
+  text-align: start;
+}
+.category {
+  font-weight: lighter;
+  font-size: 1.3rem;
+  padding: 0.8rem;
+  border-bottom: 2px solid #494949;
+}
+
+.more {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  color: #3b205e;
+  font-weight: bold;
+  font-size: 0.8rem;
+  text-decoration: none;
+  background-color: #8773a1;
+  padding: 0.3rem 1rem;
+  border-radius: 1rem;
+  border: 1px solid #57535c;
+  box-shadow: 0 0 7px #00000062;
+  text-align: center;
+}
+.more:active {
+  box-shadow: 0 0 5px #414141;
 }

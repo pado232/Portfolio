@@ -7,7 +7,7 @@ import Skill from "./components/Skill/Skill";
 import styles from "./intro.module.css";
 
 const Intro = () => {
-  const menuItems = ["About Me", "Skill"];
+  const menuItems = ["About Me", "Skills"];
   const menuRef = useRef([]);
   const [activeIndex, setActiveIndex] = useState(0);
 

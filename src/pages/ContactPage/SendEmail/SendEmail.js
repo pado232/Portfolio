@@ -107,7 +107,10 @@ const SendEmail = () => {
               <LuCopy size={20} style={{ verticalAlign: -5 }} />
             </button>
           </div>
-          {!copyState ? "" : <div className={styles.copy_check}>Copied!</div>}
+          <div className={styles.copy_check_box}>
+            {" "}
+            {!copyState ? "" : <div className={styles.copy_check}>Copied!</div>}
+          </div>
         </div>
 
         <div className={styles.bottom}>

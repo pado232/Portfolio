@@ -4,10 +4,19 @@
 .SendEmail .top {
   margin: 2rem;
 }
+.copy_check_box > div {
+  margin: auto;
+}
 .SendEmail .top .copy_check {
+  color: #bbb;
+  background-color: #201e1e;
+  border-radius: 5rem;
+  padding: 0.5rem 0.25rem;
   text-align: center;
+  width: 6rem;
 }
 .SendEmail .email_container {
+  color: #bbb;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,12 +26,13 @@
   margin: 1rem;
   background: none;
   padding: 0.7rem 1.2rem;
-  border: 1px solid #161616;
+  color: #bbb;
+  border: 1px solid #646464;
   cursor: pointer;
 }
 .SendEmail .email_container button.copy:hover {
-  color: #eb5656;
-  border: 1px solid #eb5656;
+  color: #d16565;
+  border: 1px solid #ac4a4a;
 }
 .SendEmail .email_container .icon_email {
   margin: 0.5rem;
