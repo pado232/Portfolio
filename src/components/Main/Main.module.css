@@ -19,6 +19,12 @@
   margin: 0;
 }
 
+@media (max-width: 40rem) {
+  /* 768px 이하 */
+  .title h1 {
+    font-size: 4rem;
+  }
+}
 .portfolio {
   font-size: 5rem;
   margin-top: 1rem; /* 위와 간격 조정 */

@@ -9,7 +9,7 @@
   position: absolute;
   background-color: rgba(26, 26, 26, 0.541);
   display: flex;
-  height: 3rem;
+  height: 3.2rem;
   width: 100%; /* ul 요소가 부모 요소의 전체 너비를 차지하도록 설정 */
   margin: 0;
   padding: 0;
@@ -24,11 +24,10 @@
 }
 
 .MenuSub .menu_ul .menu_li .menu_button {
-  font-size: 20px;
+  font-size: 1.1rem;
   color: #e0e0e0;
   margin: 10px;
   padding: 0 3px;
-  font-size: 20px;
   background: none;
   border: none;
   cursor: pointer;
@@ -42,7 +41,6 @@
   height: 2px;
   bottom: -3px;
   left: 0;
-  font-size: 20px;
   background-color: rgb(230, 230, 188);
   transition: width 0.5s ease-out; /* 밑줄 애니메이션 추가 */
 }
@@ -54,6 +52,5 @@
 
 .MenuSub .menu_ul .menu_li .menu_button:hover,
 .MenuSub .menu_ul .menu_li .menu_button.active {
-  font-size: 20px;
   color: rgb(230, 230, 188);
 }

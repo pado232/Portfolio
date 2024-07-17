@@ -59,6 +59,11 @@
 .tech_container {
   margin: 1rem 0;
 }
+@media (max-width: 40rem) {
+  .tech_container {
+    display: none;
+  }
+}
 .tech_table {
   width: 100%;
   border-collapse: collapse;
@@ -97,4 +102,19 @@
   margin-top: 0.5rem;
   font-size: 0.85rem;
   color: rgb(155, 155, 155);
+}
+.tech_container_min {
+  display: none;
+}
+.tech_min {
+  display: flex;
+}
+.tech_min p {
+  margin-left: 1rem;
+}
+
+@media (max-width: 40rem) {
+  .tech_container_min {
+    display: inline;
+  }
 }

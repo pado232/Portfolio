@@ -4,13 +4,11 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 html,
 body {
   color: #181818;
   height: 100%;
   font-family: "Orbit", sans-serif;
-  font-size: 0.98rem;
 }
 button {
   font-family: "Orbit", sans-serif;
@@ -33,4 +31,30 @@ section:nth-child(2n + 1) {
 }
 li {
   list-style: none;
+}
+
+@media (max-width: 48rem) {
+  /* 768px 이하 */
+  html {
+    font-size: 0.9rem; /* 기본 폰트 크기를 14px로 줄임 */
+  }
+  button {
+    font-size: 0.9rem; /* 기본 폰트 크기를 14px로 줄임 */
+  }
+}
+@media (max-width: 40rem) {
+  /* 768px 이하 */
+  html {
+    font-size: 0.8rem; /* 기본 폰트 크기를 14px로 줄임 */
+  }
+  button {
+    font-size: 0.8rem; /* 기본 폰트 크기를 14px로 줄임 */
+  }
+}
+/* 큰 화면에서는 기본 폰트 크기를 늘림 */
+@media (min-width: 90rem) {
+  /* 1440px 이상 */
+  .container {
+    max-width: 80rem; /* 최대 너비를 1280px로 줄임 */
+  }
 }

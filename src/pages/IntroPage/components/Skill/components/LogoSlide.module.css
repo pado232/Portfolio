@@ -14,7 +14,7 @@
 }
 .logo_wrapper {
   text-align: center;
-  margin: 10px;
+  margin: 1rem;
 }
 .logo {
   max-width: 5rem;
@@ -22,14 +22,13 @@
 }
 
 .logo_name {
-  font-size: 13px;
   font-size: 0.9rem;
   letter-spacing: 1px;
   color: #7e7e7e;
 }
 .logo_name_box {
   background-color: #ebebeb;
-  padding: 0.5rem 0.25rem;
+  padding: 0.5rem 1.5rem;
   border-radius: 3rem;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.137);
 }

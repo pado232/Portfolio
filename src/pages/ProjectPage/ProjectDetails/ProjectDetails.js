@@ -85,6 +85,23 @@ const ProjectDetails = ({ projectKey }) => {
     );
   };
 
+  const renderDetailsTechMin = (detailsTech = []) => {
+    return (
+      <div>
+        {detailsTech.map((item, index) => (
+          <div className={styles.tech_min}>
+            <strong key={index}>{item.title}</strong>
+            {item.type.map((type, i) => (
+              <div key={i}>
+                <p className={styles.tech_name}>{type.name}</p>
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+    );
+  };
+
   return (
     <div className={styles.ProjectDetails}>
       <ProjectLink projectKey={projectKey} />
@@ -104,6 +121,10 @@ const ProjectDetails = ({ projectKey }) => {
       <div className={styles.tech_container}>
         <h4 className={styles.h4}>기술</h4>
         {renderDetailsTech(projectDetails.detailsTech)}
+      </div>
+      <div className={styles.tech_container_min}>
+        <h4 className={styles.h4}>기술</h4>
+        {renderDetailsTechMin(projectDetails.detailsTech)}
       </div>
 
       <h4 className={styles.h4}>상세 정보</h4>

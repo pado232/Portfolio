@@ -63,14 +63,15 @@ const AboutMe = () => {
         </div>
         <div className={styles.content}>
           <h2 className={styles.h2}>Front Developer</h2>
-          <h3 className={styles.h3}>1998 . 5 . 5</h3>
+          {/* <h3 className={styles.h3}>1998 . 5 . 5</h3> */}
           <div>
+            <h3 className={styles.h3}>반갑습니다, 저는 김도은입니다.</h3>
             <p className={styles.p}>
               새로운 시도를 두려워하지 않는 프론트엔드 개발자가 되겠습니다.
             </p>
             <p className={styles.p}>
-              꾸준히 쌓은 지식으로 강한 힘을 갖겠습니다. 성실함을 갖고 항상
-              앞으로 나아가는 프론트엔드 개발자로 성장하겠습니다.
+              꾸준히 쌓은 지식으로 강한 힘을 가지겠습니다. 실전과 경험이 내
+              것으로 만든다 생각하기에 성실함을 가지고 돌파하겠습니다.
             </p>
           </div>
         </div>

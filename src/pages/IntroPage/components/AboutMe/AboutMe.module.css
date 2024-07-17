@@ -29,15 +29,23 @@
 .content .h2 {
   font-size: 2.5rem;
   margin: 0.8rem 0;
+  padding-bottom: 1rem;
+}
+@media (max-width: 40rem) {
+  /* 768px 이하 */
+  .content .h2 {
+    font-size: 1.3rem;
+  }
 }
 .content .h3 {
   margin: 0.5rem 0;
   font-size: 1.3rem;
+  color: #c240b7;
 }
 
 .content p {
   padding: 6px 0;
-  font-size: 1.15rem;
+  font-size: 1rem;
   line-height: 1.5;
 }
 .table {

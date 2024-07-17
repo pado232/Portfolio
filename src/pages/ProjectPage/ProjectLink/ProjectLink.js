@@ -11,7 +11,7 @@ const ProjectLink = ({ projectKey }) => {
       <div className={styles.content_container}>
         <table className={styles.table}>
           <colgroup style={{ width: 200 }} />
-          <colgroup style={{ width: "auto" }} />
+          <colgroup style={{ width: 1000 }} />
           <tbody>
             {linkData.map((link, index) => (
               <tr key={index}>
