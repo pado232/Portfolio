@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# 📝Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+저를 소개하는 포트폴리오입니다.<br/>
+반응형 웹 디자인, css 모듈 사용, Redux 사용을 중심으로 공부하고 싶어 프로젝트로 작성하였습니다.
 
-## Available Scripts
+<br/>
 
-In the project directory, you can run:
+## 🔍 프로젝트 세부 정보
 
-### `npm start`
+### 프로젝트 종류
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+개인 프로젝트
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 일정
 
-### `npm test`
+2024.07.01 ~
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 기술
 
-### `npm run build`
+**프로그래밍 언어** - Javascript
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**프레임워크** - React
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**상태관리** - Context API, Redux
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**스타일링** - CSS Module
 
-### `npm run eject`
+**통합 개발 환경(IDE)** - Visual Studio Code
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**버전 관리** - Git, GitHub
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<br/>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🔥 문제 해결
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 상태관리
 
-## Learn More
+**컴포넌트의 재사용성을 높이려고 prop으로 데이터를 받으면서 porp-drilling 발생**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Redux를 사용하여 해당 컴포넌트에만 필요한 데이터를 따로 가져오면서 문제를 해결
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 반응형 웹 디자인
 
-### Code Splitting
+**화면이 작아질수로 한 화면에 컨텐츠가 전부 알맞게 들어오지 않는 상황이 발생**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+rem, %를 이용해 사이즈를 맞추고 미디어 쿼리를 이용해 화면 크기별로 css 적용
 
-### Analyzing the Bundle Size
+### 스타일링
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**클래스 이름이 같은 요소의 중복을 막기 위해 컴포넌트의 상위 클래스를 모두 적어주면서 작성하니 가독성이 떨어지는 문제 발생**
 
-### Making a Progressive Web App
+CSS Module을 사용하여 상위 클래스를 적지 않으면서 해당 컴포넌트에서만 클래스명을 사용하게 끔 변경
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 폴더 구조
 
-### Advanced Configuration
+**이전에 작성했던 프로젝트에서 폴더 관리를 제대로 하지 않아서 유지보수 시 불편함을 겪음**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+이번 프로젝트에서는 폴더구조를 세분화하고 폴더를 찾기 쉽게 배치함
 
-### Deployment
+<br/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🚀 더 배우고 싶은 점 & 부족한 점
 
-### `npm run build` fails to minify
+지금까지 했던 작업들을 요약하고 검토하면서 전에 작성했던 프로젝트들에 대해 복기하는 기회가 되었고, 부족한 부분이 무엇인지 찾게되는 의미있는 시간을 가졌습니다.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- 프로젝트의 완성도를 신경쓰기
+- 유지보수에 대해 생각하며 작성하기
+- 다양한 프로그래밍 언어, 프레임워크, css 모듈 사용해보기

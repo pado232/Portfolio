@@ -9,7 +9,7 @@
   width: 100%; /* ul 요소가 부모 요소의 전체 너비를 차지하도록 설정 */
   margin: 0;
   padding: 0;
-  height: 80px;
+  height: 6rem;
 }
 .Menu ul li {
   flex: 1; /* 각 li 요소가 균등한 너비를 가지도록 설정 */
@@ -21,7 +21,7 @@
 .Menu ul li button {
   color: rgb(134, 134, 134);
   padding: 0 3px;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   background: none;
   border: none;
   cursor: pointer;

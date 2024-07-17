@@ -8,7 +8,7 @@
 .FlagFile .ul {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: end;
 }
 .FlagFile .li_box {
   cursor: pointer;
@@ -17,6 +17,7 @@
   border-radius: 0 10px 0 0;
   box-shadow: 10px 0px 5px -5px rgba(0, 0, 0, 0.4);
 }
+
 .FlagFile .li_box.none {
   box-shadow: none;
 }
@@ -27,13 +28,18 @@
 .FlagFile .li_shape {
   width: 100%;
   height: 60px;
+
   background-color: rgb(255, 238, 238);
   padding: 15px;
   border-radius: 20px 0 0 0;
   transform: skew(-30deg) translate(16px, 0px);
 }
+.FlagFile .li_shape:hover {
+  height: 70px;
+}
 .FlagFile .li_box.selected .li_shape {
   padding: 13px;
+  height: 70px;
 }
 .FlagFile .li_box.selected .li_shape {
   background-color: rgb(51, 51, 51);

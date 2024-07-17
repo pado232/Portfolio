@@ -27,9 +27,9 @@ const LogoSlide = () => {
               src={logo.src}
               alt={`${logo.name} Logo`}
             />
-            <div className={styles.logo_name_box}>
+            {/* <div className={styles.logo_name_box}>
               <p className={styles.logo_name}>{logo.name}</p>
-            </div>
+            </div> */}
           </div>
         ))}
       </div>
