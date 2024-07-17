@@ -31,7 +31,7 @@ function App() {
 
   return (
     <div className="App">
-      <Menu />
+      {location.pathname !== "/" && <Menu />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/intro" element={<Intro />} />
