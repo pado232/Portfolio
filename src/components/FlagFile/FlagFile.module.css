@@ -29,10 +29,10 @@
   width: 100%;
   height: 60px;
 
-  background-color: rgb(255, 238, 238);
+  background-color: #e6b738;
   padding: 15px;
   border-radius: 20px 0 0 0;
-  transform: skew(-30deg) translate(16px, 0px);
+  transform: skew(-30deg) translate(18px, 0px);
 }
 .FlagFile .li_shape:hover {
   height: 70px;
@@ -42,7 +42,8 @@
   height: 70px;
 }
 .FlagFile .li_box.selected .li_shape {
-  background-color: rgb(51, 51, 51);
+  /* background-color: rgb(51, 51, 51); */
+  background-color: #ffd35b;
 }
 .FlagFile .li {
   padding-top: 0.5rem;
@@ -51,15 +52,15 @@
   padding-left: 1rem;
   text-align: center;
   transform: skew(30deg);
-  color: #4d4d4d;
+  color: #61331e;
 }
 .FlagFile .li_box.selected .li {
   font-size: 18px;
   font-weight: bold;
-  color: #eb7d7d;
+  color: #fd5512;
 }
 .FlagFile .content_container {
-  background-color: rgb(51, 51, 51);
+  background: linear-gradient(340deg, #c0910f, #ffd35b 30%);
   width: 100%;
   box-shadow: 0 -5px 10px -5px rgba(0, 0, 0, 0.4);
   position: relative;
@@ -74,5 +75,5 @@
 }
 .FlagFile .content_title {
   padding-top: 1rem;
-  color: #ebacac;
+  color: #61331e;
 }

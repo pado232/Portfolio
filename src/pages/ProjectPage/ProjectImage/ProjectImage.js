@@ -27,9 +27,6 @@ const ProjectImage = ({ pageImages }) => {
             onMouseMove={(event) => handleMouseMove(event, page.src)}
           >
             <img
-              // style={{
-              //   cursor: `url(${process.env.PUBLIC_URL}/images/readingGlasses.png), auto`,
-              // }}
               className={styles.shop_img}
               src={page.src}
               alt={`Screenshot of ${page.name}`}

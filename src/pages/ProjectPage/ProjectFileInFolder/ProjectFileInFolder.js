@@ -35,7 +35,7 @@ const ProjectFileInFolder = ({ projectKey }) => {
         <div>
           <div className={styles.button_box}>
             <button className={styles.more} onClick={() => setIsOpen(true)}>
-              More
+              자세히 보기
             </button>
           </div>
           <MyModal isOpen={isOpen} handleClose={() => setIsOpen(false)}>

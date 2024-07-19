@@ -1,24 +1,29 @@
 .main {
+  position: relative;
+  width: 100vw;
   height: 100vh;
+  overflow: hidden;
 }
 
-.title_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 30vh;
+.title_container.hidden {
+  display: none;
 }
-.title_container > div {
-  width: 33.3%;
-}
+
 .title_h2 {
-  margin: 2rem;
-  text-align: center;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  font-size: 2rem;
 }
-.action_container {
-  width: 100%;
-  text-align: center;
+.total_container {
+  margin: auto;
+  max-width: 1200px;
+  min-height: 100vh; /* 화면을 꽉 채운 높이 설정 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
 .input_container {
   margin: auto;
   display: flex;
@@ -28,6 +33,41 @@
   border: 1px solid #ddd;
   border-radius: 5rem;
   box-shadow: 0 0 5px #ddd;
+  background-color: rgb(255, 255, 255);
+}
+@keyframes vibration {
+  0% {
+    transform: translateX(0rem);
+  }
+  12.5% {
+    transform: translateX(-0.3rem);
+  }
+  25% {
+    transform: translateX(0.3rem);
+  }
+  37.5% {
+    transform: translateX(-0.25rem);
+  }
+  50% {
+    transform: translateX(0.25rem);
+  }
+  62.5% {
+    transform: translateX(-0.2rem);
+  }
+  75% {
+    transform: translateX(0.2rem);
+  }
+  87.5% {
+    transform: translateX(-0.15rem);
+  }
+  100% {
+    transform: translateX(0.15rem);
+  }
+}
+
+.input_container.error {
+  box-shadow: 0 0 5px #ff7979;
+  animation: vibration 0.5s infinite;
 }
 .search_icon {
   padding: 1rem 1.5rem;
@@ -37,8 +77,15 @@
   font-size: 1.2rem;
 }
 .input.large {
-  position: absolute;
-  font-size: 8rem; /* 큰 크기 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: -3rem;
+  left: 0;
+  font-size: 9rem;
   color: #dddddd00;
   transition: font-size 2s ease, color 4s ease;
   /* 기타 스타일 */
@@ -55,8 +102,7 @@
 }
 .keyboard > div {
 }
-
-.alp_key {
+.key {
   width: 2.1rem;
   height: 2.3rem;
   margin: 0.2rem;
@@ -65,48 +111,22 @@
   box-shadow: 0 0 3px #555555;
   background-color: white;
   outline: none;
+  font-size: 0.9rem;
 }
-.alp_key:active {
+.key:active {
   box-shadow: none;
 }
-.spacebar_key {
+.key.spacebar {
   width: 12rem;
-  height: 2.3rem;
-  margin: 0.2rem;
-  border: none;
-  border-radius: 0.4rem;
-  box-shadow: 0 0 3px #555555;
-  background-color: white;
-  outline: none;
 }
-.spacebar_key:active {
-  box-shadow: none;
-}
-.backspace_key {
+.key.backspace {
   width: 6rem;
-  height: 2.3rem;
-  margin: 0.2rem;
-  border: none;
-  border-radius: 0.4rem;
-  box-shadow: 0 0 3px #555555;
-  background-color: white;
-  outline: none;
 }
-.backspace_key:active {
-  box-shadow: none;
-}
-.enter_key {
+.key.enter {
   width: 6rem;
-  height: 2.3rem;
-  margin: 0.2rem;
-  border: none;
-  border-radius: 0.4rem;
-  box-shadow: 0 0 3px #555555;
-  background-color: white;
-  outline: none;
-}
-.enter_key:active {
-  box-shadow: none;
 }
 .pressed {
+  background-color: #8e7f97;
+  color: white;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
