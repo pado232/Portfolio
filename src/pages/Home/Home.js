@@ -3,6 +3,21 @@ import styles from "./Home.module.css";
 import { useNavigate } from "react-router-dom";
 import { TfiLock } from "react-icons/tfi";
 
+const numbers = [
+  "`",
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+  "0",
+  "-",
+  "=",
+];
 const topRowAlphabets = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"];
 const middleRowAlphabets = ["A", "S", "D", "F", "G", "H", "J", "K", "L"];
 const bottomRowAlphabets = ["Z", "X", "C", "V", "B", "N", "M"];
@@ -111,14 +126,6 @@ const Home = () => {
     }
   };
 
-  const handleSpaceBar = () => {
-    setInputValue((prev) => prev + " ");
-    setPressedKey(" ");
-    setTimeout(() => {
-      setPressedKey(null);
-    }, 200);
-  };
-
   const handleBackspace = () => {
     setInputValue((prev) => prev.slice(0, -1));
     setPressedKey("Backspace");
@@ -184,8 +191,6 @@ const Home = () => {
         bottomRowAlphabets.includes(key)
       ) {
         handleKeyPress(key);
-      } else if (e.key === " ") {
-        handleSpaceBar();
       } else if (e.key === "Backspace") {
         handleBackspace();
       } else if (e.key === "Enter") {
@@ -233,15 +238,12 @@ const Home = () => {
 
           <div className={styles.keyboard}>
             <div>
-              {topRowAlphabets.map((alp, index) => (
+              {numbers.map((num, index) => (
                 <button
                   key={index}
-                  className={`${styles.key} ${styles.alp} ${
-                    pressedKey === alp ? styles.pressed : ""
-                  }`}
-                  onClick={() => handleKeyPress(alp)}
+                  className={`${styles.key} ${styles.small} `}
                 >
-                  {alp}
+                  {num}
                 </button>
               ))}
               <button
@@ -254,6 +256,26 @@ const Home = () => {
               </button>
             </div>
             <div>
+              <button className={`${styles.key} ${styles.mid} `}>Tab</button>
+              {topRowAlphabets.map((alp, index) => (
+                <button
+                  key={index}
+                  className={`${styles.key} ${styles.alp} ${
+                    pressedKey === alp ? styles.pressed : ""
+                  }`}
+                  onClick={() => handleKeyPress(alp)}
+                >
+                  {alp}
+                </button>
+              ))}
+              <button className={`${styles.key} ${styles.small}`}>[</button>
+              <button className={`${styles.key} ${styles.small}`}>]</button>
+              <button className={`${styles.key} ${styles.mid}`}>\</button>
+            </div>
+            <div>
+              <button className={`${styles.key} ${styles.lar} `}>
+                CapsLock
+              </button>
               {middleRowAlphabets.map((alp, index) => (
                 <button
                   key={index}
@@ -265,6 +287,8 @@ const Home = () => {
                   {alp}
                 </button>
               ))}
+              <button className={`${styles.key} ${styles.small}`}>;</button>
+              <button className={`${styles.key} ${styles.small}`}>'</button>
               <button
                 className={`${styles.key} ${styles.enter} ${
                   pressedKey === "Enter" ? styles.pressed : ""
@@ -275,7 +299,10 @@ const Home = () => {
               </button>
             </div>
 
-            <div style={{ marginRight: "5rem" }}>
+            <div>
+              <button className={`${styles.key} ${styles.lar_shift} `}>
+                Shift
+              </button>
               {bottomRowAlphabets.map((alp, index) => (
                 <button
                   key={index}
@@ -287,15 +314,30 @@ const Home = () => {
                   {alp}
                 </button>
               ))}
-            </div>
-            <div style={{ marginRight: "5rem" }}>
+              <button className={`${styles.key} ${styles.small}`}>{`,`}</button>
+              <button className={`${styles.key} ${styles.small}`}>{`.`}</button>
+              <button className={`${styles.key} ${styles.small}`}>{`/`}</button>
               <button
-                className={`${styles.key} ${styles.spacebar} ${
-                  pressedKey === " " ? styles.pressed : ""
-                }`}
-                onClick={handleSpaceBar}
+                className={`${styles.key} ${styles.lar} `}
+                style={{ marginRight: "3.2rem" }}
               >
+                Shift
+              </button>
+            </div>
+            <div>
+              <button className={`${styles.key} ${styles.small}`}>Alt</button>
+              <button className={`${styles.key} ${styles.small}`}>Win</button>
+              <button className={`${styles.key} ${styles.small}`}>Ctrl</button>
+              <button className={`${styles.key} ${styles.spacebar} `}>
                 SpaceBar
+              </button>
+              <button className={`${styles.key} ${styles.small}`}>Alt</button>
+              <button className={`${styles.key} ${styles.small}`}>Fn</button>
+              <button
+                className={`${styles.key} ${styles.small}`}
+                style={{ marginRight: "4rem" }}
+              >
+                Ctrl
               </button>
             </div>
           </div>

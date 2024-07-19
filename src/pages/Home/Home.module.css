@@ -15,8 +15,10 @@
   position: absolute;
   font-size: 2rem;
 }
+
 .total_container {
   margin: auto;
+  padding: 1rem;
   max-width: 1200px;
   min-height: 100vh; /* 화면을 꽉 채운 높이 설정 */
   display: flex;
@@ -35,6 +37,7 @@
   box-shadow: 0 0 5px #ddd;
   background-color: rgb(255, 255, 255);
 }
+
 @keyframes vibration {
   0% {
     transform: translateX(0rem);
@@ -69,13 +72,16 @@
   box-shadow: 0 0 5px #ff7979;
   animation: vibration 0.5s infinite;
 }
+
 .search_icon {
   padding: 1rem 1.5rem;
 }
+
 .input {
   padding: 0.5rem;
   font-size: 1.2rem;
 }
+
 .input.large {
   display: flex;
   align-items: center;
@@ -90,18 +96,28 @@
   transition: font-size 2s ease, color 4s ease;
   /* 기타 스타일 */
 }
+
 .keyboard {
   margin: 2rem auto;
   padding-top: 0.45rem;
-  height: 12rem;
-  width: 36rem;
-  border: 2px solid rgb(191, 183, 194);
+  height: 16.5rem;
+  width: 43rem;
+  border: 1rem solid rgb(200, 185, 206);
   border-radius: 0.2rem;
   background-color: rgb(230, 217, 236);
+  box-shadow: 10px 5px 5px #00000020;
   text-align: center;
 }
+
+@media (max-width: 570px) {
+  .keyboard {
+    width: 37rem;
+  }
+}
+
 .keyboard > div {
 }
+
 .key {
   width: 2.1rem;
   height: 2.3rem;
@@ -112,18 +128,57 @@
   background-color: white;
   outline: none;
   font-size: 0.9rem;
+  cursor: pointer;
 }
+
 .key:active {
   box-shadow: none;
 }
-.key.spacebar {
-  width: 12rem;
-}
+
 .key.backspace {
-  width: 6rem;
+  width: 7rem;
 }
+
 .key.enter {
+  width: 6.6rem;
+}
+
+.key.small {
+  width: 2.1rem;
+  color: #ccc;
+}
+
+.key.mid {
+  width: 4.6rem;
+  color: #ccc;
+}
+
+.key.lar {
+  width: 5.1rem;
+  color: #ccc;
+}
+
+.key.lar_shift {
   width: 6rem;
+  color: #ccc;
+}
+
+.key.spacebar {
+  width: 15rem;
+  color: #fff;
+}
+@media (max-width: 570px) {
+  .key,
+  .key.small {
+    width: 1.6rem;
+  }
+  .key.enter {
+    width: 6.2rem;
+  }
+
+  .key.lar_shift {
+    width: 5rem;
+  }
 }
 .pressed {
   background-color: #8e7f97;
