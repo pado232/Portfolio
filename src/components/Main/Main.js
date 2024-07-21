@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from "react";
-import styles from "./Main.module.css";
+import lightStyles from "./Main.module.css";
+import darkStyles from "./MainD.module.css";
 import { TfiMouse } from "react-icons/tfi";
 import { RiArrowDownWideLine } from "react-icons/ri";
-import Menu from "../Menu/Menu";
+import { useTheme } from "../../ThemeContext/ThemeContext";
 
 const Main = ({ titleText }) => {
+  const [theme] = useTheme();
+
   const [scrollY, setScrollY] = useState(0);
+
+  const styles = theme === "light" ? lightStyles : darkStyles;
 
   useEffect(() => {
     const handleScroll = () => {

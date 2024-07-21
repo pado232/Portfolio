@@ -10,6 +10,21 @@ body {
   height: 100%;
   font-family: "Orbit", sans-serif;
 }
+body {
+  background-color: var(--bg);
+  /* &.light {
+    --bg: #ffffff;
+    --textTitle: #444;
+    --textNormal: #555;
+    --textDesc: #999;
+  }
+  &.dark {
+    --bg: #282c35;
+    --textTitle: #eee;
+    --textNormal: #ddd;
+    --textDesc: #888;
+  } */
+}
 button {
   font-family: "Orbit", sans-serif;
 }

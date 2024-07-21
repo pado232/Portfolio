@@ -3,6 +3,7 @@ import styles from "./FixedMenuButton.module.css";
 import { useNavigate } from "react-router-dom";
 import { LuArrowBigUpDash } from "react-icons/lu";
 import { FiPlus } from "react-icons/fi";
+import { useTheme } from "../../../ThemeContext/ThemeContext";
 
 const FixedMenuButton = () => {
   const navigate = useNavigate();
@@ -10,6 +11,9 @@ const FixedMenuButton = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  const [theme, toggleTheme] = useTheme();
+
   return (
     <div
       className={styles.FixedMenuButton}
@@ -48,6 +52,11 @@ const FixedMenuButton = () => {
             }}
           >
             CONTACT
+          </button>
+        </div>
+        <div>
+          <button onClick={toggleTheme}>
+            {theme === "light" ? "dark" : "ligth"}
           </button>
         </div>
         <div>

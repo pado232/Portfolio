@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom, #c1d6e4, #d6b2b2);
+  background: linear-gradient(to bottom, #373846, #4d4d4d);
   position: relative;
   overflow: hidden;
 }
@@ -93,12 +93,12 @@
   margin-bottom: 1rem;
 }
 .welcome_title {
-  color: #ca4a6a;
+  color: rgb(212, 212, 175);
   font-size: 1.4rem;
   margin: 1rem;
 }
 .welcome_content {
-  color: #863c52;
+  color: rgb(151, 151, 124);
   font-size: 1rem;
   margin: 0.5rem;
 }

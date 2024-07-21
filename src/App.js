@@ -8,6 +8,7 @@ import Home from "./pages/Home/Home";
 import MyFooter from "./components/MyFooter/MyFooter";
 import { useEffect, useState } from "react";
 import FixedMenuButton from "./components/utils/button/FixedMenuButton";
+import { ThemeProvider, useTheme } from "./ThemeContext/ThemeContext";
 function App() {
   const location = useLocation();
   const [showButton, setShowButton] = useState(false);
@@ -30,17 +31,19 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      {location.pathname !== "/" && <Menu />}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/intro" element={<Intro />} />
-        <Route path="/project" element={<Project />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-      {showButton && <FixedMenuButton />}
-      {location.pathname !== "/" && <MyFooter />}
-    </div>
+    <ThemeProvider>
+      <div className="App">
+        {location.pathname !== "/" && <Menu />}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/intro" element={<Intro />} />
+          <Route path="/project" element={<Project />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        {showButton && <FixedMenuButton />}
+        {location.pathname !== "/" && <MyFooter />}
+      </div>
+    </ThemeProvider>
   );
 }
 

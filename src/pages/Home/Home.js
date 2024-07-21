@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
-import styles from "./Home.module.css";
+import lightStyles from "./Home.module.css";
+import darkStyles from "./HomeD.module.css";
 import { useNavigate } from "react-router-dom";
 import { TfiLock } from "react-icons/tfi";
+import Toggle from "../../components/utils/Toggle/Toggle";
+import { useTheme } from "../../ThemeContext/ThemeContext";
 
 const numbers = [
   "`",
@@ -24,6 +27,7 @@ const bottomRowAlphabets = ["Z", "X", "C", "V", "B", "N", "M"];
 
 const Home = () => {
   const navigate = useNavigate();
+  const [theme] = useTheme();
 
   const [inputValue, setInputValue] = useState("");
   const [pressedKey, setPressedKey] = useState(null);
@@ -31,6 +35,7 @@ const Home = () => {
   const [hiddenH2, setHiddenH2] = useState(false);
   const [error, setError] = useState(false);
 
+  const styles = theme === "light" ? lightStyles : darkStyles;
   useEffect(() => {
     const titleElements = document.querySelectorAll("h2");
 
@@ -221,6 +226,7 @@ const Home = () => {
         <h2 className={styles.title_h2}>PROJECT</h2>
         <h2 className={styles.title_h2}>CONTACT</h2>
       </div>
+      <Toggle />
       <div className={styles.total_container}>
         <div className={styles.action_container}>
           <div
