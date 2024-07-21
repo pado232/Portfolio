@@ -5,22 +5,26 @@
   justify-content: center;
   align-items: center;
 }
-.arrow_icon_warpper {
-}
 .logo_container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .logo_wrapper {
+  width: 4.5rem;
   text-align: center;
-  margin: 1rem;
+  margin: 1.5rem;
 }
-.logo {
-  max-width: 5rem;
-  margin: 1rem;
+@media (max-width: 768px) {
+  .logo_wrapper {
+    width: 3rem;
+    margin: 1.2rem;
+  }
 }
 
+.logo {
+  width: 100%;
+}
 .logo_name {
   font-size: 0.9rem;
   letter-spacing: 1px;

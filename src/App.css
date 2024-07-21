@@ -10,21 +10,6 @@ body {
   height: 100%;
   font-family: "Orbit", sans-serif;
 }
-body {
-  background-color: var(--bg);
-  /* &.light {
-    --bg: #ffffff;
-    --textTitle: #444;
-    --textNormal: #555;
-    --textDesc: #999;
-  }
-  &.dark {
-    --bg: #282c35;
-    --textTitle: #eee;
-    --textNormal: #ddd;
-    --textDesc: #888;
-  } */
-}
 button {
   font-family: "Orbit", sans-serif;
 }
@@ -54,28 +39,34 @@ li {
   list-style: none;
 }
 
-@media (max-width: 48rem) {
-  /* 768px 이하 */
-  html {
-    font-size: 0.9rem; /* 기본 폰트 크기를 14px로 줄임 */
-  }
-  button {
-    font-size: 0.9rem; /* 기본 폰트 크기를 14px로 줄임 */
+@media (max-width: 425px) {
+  html,
+  button,
+  a {
+    font-size: 0.6rem;
   }
 }
-@media (max-width: 40rem) {
-  /* 768px 이하 */
-  html {
-    font-size: 0.8rem; /* 기본 폰트 크기를 14px로 줄임 */
-  }
-  button {
-    font-size: 0.8rem; /* 기본 폰트 크기를 14px로 줄임 */
+
+@media (min-width: 426px) and (max-width: 768px) {
+  html,
+  button,
+  a {
+    font-size: 0.9rem;
   }
 }
-/* 큰 화면에서는 기본 폰트 크기를 늘림 */
-@media (min-width: 90rem) {
-  /* 1440px 이상 */
-  .container {
-    max-width: 80rem; /* 최대 너비를 1280px로 줄임 */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  html,
+  button,
+  a {
+    font-size: 0.95rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  html,
+  button,
+  a {
+    font-size: 1rem;
   }
 }

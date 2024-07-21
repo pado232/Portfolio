@@ -20,8 +20,8 @@
 
 .total_container {
   margin: auto;
-  padding: 1rem;
-  max-width: 1200px;
+  padding: 1.3rem;
+  max-width: 45rem;
   min-height: 100vh; /* 화면을 꽉 채운 높이 설정 */
   display: flex;
   flex-direction: column;
@@ -33,7 +33,7 @@
   display: flex;
   justify-content: start;
   align-items: center;
-  width: 35rem;
+  width: 90%;
   border: 1px solid #141414;
   border-radius: 5rem;
   box-shadow: 0 0 10px #0000008c;
@@ -99,30 +99,21 @@
   font-size: 9rem;
   color: #00000000;
   transition: font-size 2s ease, color 4s ease;
-  /* 기타 스타일 */
 }
 
 .keyboard {
   margin: 2rem auto;
-  padding-top: 0.45rem;
-  height: 16.5rem;
-  width: 43rem;
+  padding: 0.45rem;
+  width: 100%;
   border: 1rem solid rgb(29, 28, 29);
   border-radius: 0.2rem;
   background-color: rgb(48, 41, 51);
   box-shadow: 10px 5px 5px #00000020;
-  text-align: center;
-}
-
-@media (max-width: 570px) {
-  .keyboard {
-    width: 37rem;
-  }
 }
 .key {
-  width: 2.1rem;
-  height: 2.3rem;
-  margin: 0.2rem;
+  width: 5.05%;
+  height: 2.1rem;
+  margin: 0.69%;
   border: none;
   border-radius: 0.4rem;
   box-shadow: 0 0 3px #555555;
@@ -137,52 +128,44 @@
 }
 
 .key.backspace {
-  width: 7rem;
+  width: 15%;
 }
 
 .key.enter {
-  width: 6.6rem;
+  width: 15%;
 }
 
 .key.small {
-  width: 2.1rem;
+  width: 5.05%;
   color: #505050;
 }
 
 .key.mid {
-  width: 4.6rem;
+  width: 10%;
   color: #505050;
 }
 
 .key.lar {
-  width: 5.1rem;
+  width: 11.5%;
   color: #505050;
 }
 
 .key.lar_shift {
-  width: 6rem;
+  width: 15%;
   color: #505050;
 }
 
 .key.spacebar {
-  width: 15rem;
+  width: 45%;
   color: #8a7f8b;
-}
-@media (max-width: 570px) {
-  .key,
-  .key.small {
-    width: 1.6rem;
-  }
-  .key.enter {
-    width: 6.2rem;
-  }
-
-  .key.lar_shift {
-    width: 5rem;
-  }
 }
 .pressed {
   background-color: #524658;
   color: white;
   transition: background-color 0.2s ease, color 0.2s ease;
+}
+@media (max-width: 768px) {
+  .key {
+    font-size: 0.7rem;
+  }
 }

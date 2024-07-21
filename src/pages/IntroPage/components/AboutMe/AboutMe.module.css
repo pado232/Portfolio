@@ -5,6 +5,14 @@
   margin: 1rem;
 }
 
+@media (max-width: 425px) {
+  .about_me {
+    display: grid;
+    justify-content: center;
+    align-items: flex-end;
+  }
+}
+
 .appear {
   opacity: 1;
   transform: translateY(0);
@@ -12,7 +20,7 @@
 
 .my_img {
   width: 20%;
-  min-width: 200px;
+  min-width: 10rem;
   padding: 0 1rem;
 }
 
@@ -30,12 +38,7 @@
   margin: 0.8rem 0;
   padding-bottom: 1rem;
 }
-@media (max-width: 40rem) {
-  /* 768px 이하 */
-  .content .h2 {
-    font-size: 1.3rem;
-  }
-}
+
 .content .h3 {
   margin: 0.5rem 0;
   font-size: 1.3rem;
@@ -82,4 +85,25 @@
 }
 .more:active {
   box-shadow: 0 0 5px #414141;
+}
+@media (max-width: 768px) {
+  .content .h2 {
+    font-size: 1.3rem;
+    /* margin: 0.8rem 0; */
+    padding-bottom: 0;
+  }
+  .about_me {
+    display: grid;
+    justify-content: center;
+    align-items: flex-end;
+    .my_img {
+      width: 100%;
+      padding: 0 35%;
+      min-width: 10rem;
+    }
+    .content {
+      width: 100%;
+      padding: 0 2rem;
+    }
+  }
 }

@@ -15,16 +15,10 @@
 
 .title h1 {
   letter-spacing: 7px;
-  font-size: 4.5rem;
+  font-size: 4rem;
   margin: 0;
 }
 
-@media (max-width: 40rem) {
-  /* 768px 이하 */
-  .title h1 {
-    font-size: 4rem;
-  }
-}
 .portfolio {
   font-size: 5rem;
   margin-top: 1rem; /* 위와 간격 조정 */
@@ -82,10 +76,6 @@
 .text {
   margin: 0.5rem;
 }
-
-.arrow_box {
-}
-
 .top_arrow {
   height: 10px;
 }
@@ -101,4 +91,16 @@
   color: #863c52;
   font-size: 1rem;
   margin: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .main .title h1 {
+    font-size: 3rem;
+  }
+  .main .mouse_container {
+    scale: 0.8;
+  }
+  .main .text_container {
+    scale: 0.8;
+  }
 }

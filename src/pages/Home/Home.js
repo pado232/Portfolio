@@ -323,12 +323,7 @@ const Home = () => {
               <button className={`${styles.key} ${styles.small}`}>{`,`}</button>
               <button className={`${styles.key} ${styles.small}`}>{`.`}</button>
               <button className={`${styles.key} ${styles.small}`}>{`/`}</button>
-              <button
-                className={`${styles.key} ${styles.lar} `}
-                style={{ marginRight: "3.2rem" }}
-              >
-                Shift
-              </button>
+              <button className={`${styles.key} ${styles.lar} `}>Shift</button>
             </div>
             <div>
               <button className={`${styles.key} ${styles.small}`}>Alt</button>
@@ -339,12 +334,7 @@ const Home = () => {
               </button>
               <button className={`${styles.key} ${styles.small}`}>Alt</button>
               <button className={`${styles.key} ${styles.small}`}>Fn</button>
-              <button
-                className={`${styles.key} ${styles.small}`}
-                style={{ marginRight: "4rem" }}
-              >
-                Ctrl
-              </button>
+              <button className={`${styles.key} ${styles.small}`}>Ctrl</button>
             </div>
           </div>
         </div>

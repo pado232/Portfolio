@@ -10,12 +10,12 @@ const ProjectLink = ({ projectKey }) => {
     <div className={styles.ProjectLink}>
       <div className={styles.content_container}>
         <table className={styles.table}>
-          <colgroup style={{ width: 200 }} />
-          <colgroup style={{ width: 1000 }} />
+          <colgroup style={{ width: "12.5rem" }} />
+          <colgroup style={{ width: "auto" }} />
           <tbody>
             {linkData.map((link, index) => (
               <tr key={index}>
-                <td>
+                <td className={styles.logo_td}>
                   <div className={styles.icon}>
                     {link.isIcon ? (
                       link.srcOrIcon

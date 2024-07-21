@@ -99,7 +99,7 @@ const SendEmail = () => {
         <div className={styles.top}>
           <div className={styles.email_container}>
             <div className={styles.icon_email}>
-              <MdEmail size={30} style={{ verticalAlign: -9 }} />
+              <MdEmail size={"1.9rem"} style={{ verticalAlign: -9 }} />
             </div>
             <button
               onClick={() => {
@@ -108,7 +108,7 @@ const SendEmail = () => {
               className={styles.copy}
             >
               ehsilver98@gmail.com{" "}
-              <LuCopy size={20} style={{ verticalAlign: -5 }} />
+              <LuCopy size={"1.3rem"} style={{ verticalAlign: -5 }} />
             </button>
           </div>
           <div className={styles.copy_check_box}>

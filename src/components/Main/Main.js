@@ -105,16 +105,16 @@ const Main = ({ titleText }) => {
       >
         <div className={styles.mouse}>
           <div>
-            <TfiMouse size={35} />
+            <TfiMouse size={"2rem"} />
           </div>
           <div className={styles.text}>Scroll</div>
         </div>
         <div className={styles.arrow_box}>
           <div className={styles.top_arrow}>
-            <RiArrowDownWideLine size={30} />
+            <RiArrowDownWideLine size={"1.5rem"} />
           </div>
           <div className={styles.bottom_arrow}>
-            <RiArrowDownWideLine size={30} />
+            <RiArrowDownWideLine size={"1.5rem"} />
           </div>
         </div>
       </div>

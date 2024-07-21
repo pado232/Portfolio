@@ -5,38 +5,34 @@
   width: 100%;
 }
 .ProjectLink .content_container .table td {
-  /* padding: 1rem 0.5rem; */
   text-align: center;
-  /* border-bottom: 1px solid #666666; */
 }
 .ProjectLink .content_container .table td.link_td {
   text-align: start;
 }
 .ProjectLink .content_container .image {
   min-width: 6rem;
+  padding: 0.3rem;
   width: 100%;
   max-width: 10rem;
 }
-@media (max-width: 35rem) {
-  /* 768px 이하 */
-  .ProjectLink .content_container .image {
+@media (max-width: 768px) {
+  .ProjectLink .content_container .image,
+  .ProjectLink .content_container .icon {
+    display: none;
+  }
+  .logo_td {
     display: none;
   }
 }
 .ProjectLink .content_container .icon {
   color: #757575;
 }
-@media (max-width: 35rem) {
-  /* 768px 이하 */
-  .ProjectLink .content_container .icon {
-    display: none;
-  }
-}
 .ProjectLink .content_container td.link_td a {
-  color: rgb(168, 168, 168);
+  color: #a8a8a8;
 }
 .ProjectLink .content_container td.link_td a:hover {
-  color: rgb(241, 241, 241);
+  color: #f1f1f1;
 }
 .ProjectLink .content_container td.link_td .link_warpper {
   background-color: #242424;

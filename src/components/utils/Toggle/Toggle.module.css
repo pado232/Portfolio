@@ -6,30 +6,30 @@
 .lab {
   display: block;
   position: relative;
-  width: 160px;
-  height: 44px;
+  width: 10rem; /* 160px / 16 */
+  height: 2.75rem; /* 44px / 16 */
   background-color: #d3d3d3;
-  border-radius: 60px;
+  border-radius: 3.75rem; /* 60px / 16 */
   transition: background-color 0.4s;
 }
 .lab::after {
   content: "";
   position: absolute;
-  left: 4px;
+  left: 0.25rem; /* 4px / 16 */
   top: 50%;
-  width: 35px;
-  height: 35px;
+  width: 2.1875rem; /* 35px / 16 */
+  height: 2.1875rem; /* 35px / 16 */
   border-radius: 100%;
   background-color: #fff;
   transform: translateY(-50%);
-  box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0.0625rem 0.1875rem 0.25rem rgba(0, 0, 0, 0.1); /* 1px, 3px, 4px / 16 */
   transition: all 0.5s;
 }
 .lab::before {
   content: "Dark Mode";
   font-size: 1rem;
   position: absolute;
-  left: 52px;
+  left: 3.25rem; /* 52px / 16 */
   top: 50%;
   transform: translateY(-50%);
   transition: all 0.5s;
@@ -38,10 +38,10 @@
   background: rgba(109, 104, 107);
 }
 .input:checked + .lab::after {
-  left: calc(100% - 40px);
+  left: calc(100% - 2.5rem); /* 40px / 16 */
 }
 .input:checked + .lab::before {
   content: "Light Mode";
   color: #fff;
-  left: 17px;
+  left: 1.0625rem; /* 17px / 16 */
 }

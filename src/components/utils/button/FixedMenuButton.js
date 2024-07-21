@@ -21,7 +21,7 @@ const FixedMenuButton = () => {
       onMouseEnter={() => setMouseOn(true)}
     >
       <button className={styles.fix_btn}>
-        <FiPlus size={25} />
+        <FiPlus size={"1.69rem"} />
       </button>
       <div className={`${styles.btn_wrapper} ${mouseOn ? styles.visible : ""}`}>
         <div>

@@ -41,7 +41,7 @@ const AboutMe = () => {
   const tableComponent = (tableContent) => {
     return (
       <table className={styles.table}>
-        <colgroup style={{ minWidth: 180 }} />
+        <colgroup style={{ minWidth: "13rem" }} />
         <colgroup style={{ width: "auto" }} />
         <tbody>
           {tableContent.map((table, index) => (

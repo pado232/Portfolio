@@ -13,7 +13,7 @@
 
 .modal_main {
   background-color: rgb(71, 71, 71);
-  padding: 20px;
+  padding: 1rem;
   margin: 0 3rem;
   border-radius: 4px;
   max-width: 1200px;
@@ -27,12 +27,12 @@
 }
 
 .modal_main::-webkit-scrollbar-track {
-  border-radius: 10px; /* 스크롤바 트랙 둥근 모서리 */
+  border-radius: 0.625rem; /* 스크롤바 트랙 둥근 모서리 */
 }
 
 .modal_main::-webkit-scrollbar-thumb {
   background: #888; /* 스크롤바 색상 */
-  border-radius: 10px; /* 스크롤바 둥근 모서리 */
+  border-radius: 0.625rem; /* 스크롤바 둥근 모서리 */
 }
 
 .modal_main::-webkit-scrollbar-thumb:hover {

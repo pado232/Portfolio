@@ -20,7 +20,7 @@
 }
 .Menu ul li button {
   color: rgb(134, 134, 134);
-  padding: 0 3px;
+  padding: 0 0.25rem;
   font-size: 1.3rem;
   background: none;
   border: none;
@@ -30,6 +30,6 @@
 
 .Menu ul li button:hover {
   font-size: 1.6rem;
-  transition: font-size 0.5s;
-  color: rgb(170, 170, 170);
+  color: #cfcfcf;
+  transition: font-size 0.5s, color 0.5s;
 }
