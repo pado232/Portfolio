@@ -1,28 +1,19 @@
 import { useTheme } from "../../../ThemeContext/ThemeContext";
 import styles from "./Toggle.module.css";
+
 const Toggle = () => {
   const [theme, toggleTheme] = useTheme();
+  const mode = theme === "light" ? true : false;
 
   return (
     <div className={styles.Toggle}>
       <div className={styles.container}>
-        {/* <div>
-          <input className={styles.input} type="checkbox" />
-          <label className={styles.lab} for="switch"></label>
-        </div>
-
-        <div>
-          <input type="checkbox" id="toggle" hidden />
-
-          <label for="toggle" className={styles.toggleSwitch}>
-            <span className={styles.toggleButton}></span>
-          </label>
-        </div> */}
-        <div style={{ marginTop: 30, textAlign: "center" }}>
-          <button onClick={toggleTheme}>
-            {theme === "light" ? "Light Mode" : "Dark Mode"}
-          </button>
-        </div>
+        <input className={styles.input} type="checkbox" hidden checked={mode} />
+        <label
+          className={styles.lab}
+          for="switch"
+          onClick={toggleTheme}
+        ></label>
       </div>
     </div>
   );

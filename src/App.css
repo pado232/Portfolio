@@ -28,6 +28,12 @@ body {
 button {
   font-family: "Orbit", sans-serif;
 }
+input {
+  font-family: "Orbit", sans-serif;
+}
+textarea {
+  font-family: "Orbit", sans-serif;
+}
 .App {
   color: #1f1f1f;
   font-size: 1rem;

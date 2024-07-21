@@ -1,76 +1,47 @@
+.container {
+  position: absolute;
+  right: 1.5rem;
+  top: 5%;
+}
 .lab {
   display: block;
   position: relative;
-  width: 100px;
-  height: 45px;
-  background: #d3d3d3;
+  width: 160px;
+  height: 44px;
+  background-color: #d3d3d3;
   border-radius: 60px;
-  transition: background 0.4s;
+  transition: background-color 0.4s;
 }
 .lab::after {
   content: "";
   position: absolute;
-  left: 2.5px;
+  left: 4px;
   top: 50%;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   border-radius: 100%;
   background-color: #fff;
   transform: translateY(-50%);
   box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.1);
-  transition: all 0.4s;
+  transition: all 0.5s;
 }
 .lab::before {
-  font-size: 24px;
+  content: "Dark Mode";
+  font-size: 1rem;
   position: absolute;
-  left: 45px;
+  left: 52px;
   top: 50%;
   transform: translateY(-50%);
-  transition: all 0.4s;
+  transition: all 0.5s;
 }
 .input:checked + .lab {
   background: rgba(109, 104, 107);
 }
 .input:checked + .lab::after {
-  left: calc(100% - 42.5px);
+  left: calc(100% - 40px);
 }
 .input:checked + .lab::before {
+  content: "Light Mode";
   color: #fff;
-  left: 15px;
-}
-.toggleSwitch {
-  width: 100px;
-  height: 50px;
-  display: block;
-  position: relative;
-  border-radius: 30px;
-  background-color: #fff;
-  box-shadow: 0 0 16px 3px rgba(0 0 0 / 15%);
-  cursor: pointer;
-  margin: 30px;
-}
-
-.toggleSwitch .toggleButton {
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  top: 50%;
-  left: 4px;
-  transform: translateY(-50%);
-  border-radius: 50%;
-  background: #f03d3d;
-}
-
-#toggle:checked ~ .toggleSwitch {
-  background: #f03d3d;
-}
-
-#toggle:checked ~ .toggleSwitch .toggleButton {
-  left: calc(100% - 44px);
-  background: #fff;
-}
-
-.toggleSwitch,
-.toggleButton {
-  transition: all 0.2s ease-in;
+  left: 17px;
 }

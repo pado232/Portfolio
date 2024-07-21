@@ -6,11 +6,11 @@ const MyFooter = () => {
   return (
     <div className={styles.MyFooter}>
       <footer id={styles.footer}>
-        <div className={styles.text}>저에게 연락하고 싶으신가요?</div>
+        <div className={styles.text}>© Created by DONY</div>
 
         <div className={styles.icon_container}>
           <div className={styles.icon}>
-            <a className={styles.a} href="/context">
+            <a className={styles.a} href="/contact">
               <MdEmail size={30} />
             </a>
           </div>

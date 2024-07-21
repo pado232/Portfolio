@@ -27,6 +27,15 @@ const FixedMenuButton = () => {
         <div>
           <button
             className={styles.goto}
+            onClick={toggleTheme}
+            style={{ fontSize: "1rem" }}
+          >
+            {theme === "light" ? "🌞" : "🌜"}
+          </button>
+        </div>
+        <div>
+          <button
+            className={styles.goto}
             onClick={() => {
               navigate("/intro");
             }}
@@ -54,11 +63,7 @@ const FixedMenuButton = () => {
             CONTACT
           </button>
         </div>
-        <div>
-          <button onClick={toggleTheme}>
-            {theme === "light" ? "dark" : "ligth"}
-          </button>
-        </div>
+
         <div>
           <button
             className={styles.goto}

@@ -1,40 +1,43 @@
-import React, { useRef, useEffect } from "react";
-import styles from "./AboutMe.module.css";
+import React from "react";
+import lightStyles from "./AboutMe.module.css";
+import darkStyles from "./AboutMeD.module.css";
 import Container from "../../../../components/utils/Container/Container";
+import { useTheme } from "../../../../ThemeContext/ThemeContext";
+const tableTeamProject = [
+  {
+    title: "2024.07 ~",
+    content: "Portfolio",
+  },
+  {
+    title: "2024.03 ~ 2022.07",
+    content:
+      "'RealMoment' Shopping-mall Admin - 코스메틱 쇼핑몰 관리자 웹 사이트 (프론트 영역)",
+  },
+  {
+    title: "2024.01 ~ 2024.07",
+    content:
+      "'RealMoment' Shopping-mall - 코스메틱 쇼핑몰 웹 사이트 (프론트 영역)",
+  },
+  {
+    title: "2024.01 ~ 2022.01",
+    content:
+      "Emotion Diary - '한입 크기로 잘라먹는 리액트' 강의 실습 프로젝트 내용",
+  },
+];
+
+const tableEducation = [
+  { title: "2017.03 ~ 2019.02", content: "대덕대학교 컴퓨터공학과" },
+  {
+    title: "2020.02 ~ 2022.02",
+    content: "공주대학교 천안캠퍼스 정보통신공학과",
+  },
+];
 
 const AboutMe = () => {
-  const tableTeamProject = [
-    {
-      title: "2024.07 ~",
-      content: "Portfolio",
-    },
-    {
-      title: "2024.03 ~ 2022.07",
-      content:
-        "'RealMoment' Shopping-mall Admin - 코스메틱 쇼핑몰 관리자 웹 사이트 (프론트 영역)",
-    },
-    {
-      title: "2024.01 ~ 2024.07",
-      content:
-        "'RealMoment' Shopping-mall - 코스메틱 쇼핑몰 웹 사이트 (프론트 영역)",
-    },
-    {
-      title: "2024.01 ~ 2022.01",
-      content:
-        "Emotion Diary - '한입 크기로 잘라먹는 리액트' 강의 실습 프로젝트 내용",
-    },
-  ];
-
-  const tableEducation = [
-    { title: "2017.03 ~ 2019.02", content: "대덕대학교 컴퓨터공학과" },
-    {
-      title: "2020.02 ~ 2022.02",
-      content: "공주대학교 천안캠퍼스 정보통신공학과",
-    },
-  ];
-
+  const [theme] = useTheme();
   const tableCertificate = [{ title: "2024.06 ~ ", content: "정보처리 기사" }];
 
+  const styles = theme === "light" ? lightStyles : darkStyles;
   const tableComponent = (tableContent) => {
     return (
       <table className={styles.table}>

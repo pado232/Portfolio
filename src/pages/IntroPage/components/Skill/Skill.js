@@ -1,8 +1,13 @@
 import Container from "../../../../components/utils/Container/Container";
+import { useTheme } from "../../../../ThemeContext/ThemeContext";
 import LogoSilde from "./components/LogoSlide";
-import styles from "./Skill.module.css";
+import lightStyles from "./Skill.module.css";
+import darkStyles from "./SkillD.module.css";
 
 const Skill = () => {
+  const [theme] = useTheme();
+
+  const styles = theme === "light" ? lightStyles : darkStyles;
   return (
     <Container>
       <div className={styles.Skill}>

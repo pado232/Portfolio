@@ -1,12 +1,15 @@
 import React, { useRef, useState } from "react";
 import { LuCopy } from "react-icons/lu";
 import { MdEmail } from "react-icons/md";
+import { useTheme } from "../../../ThemeContext/ThemeContext";
 // import emailjs from "emailjs-com";
 
 import Container from "../../../components/utils/Container/Container";
 
-import styles from "./SendEmail.module.css";
+import lightStyles from "./SendEmail.module.css";
+import darkStyles from "./SendEmailD.module.css";
 const SendEmail = () => {
+  const [theme] = useTheme();
   const formDataRef = useRef([]);
 
   const [emailValid, setEmailVaild] = useState(false);
@@ -16,6 +19,7 @@ const SendEmail = () => {
     message: "",
   });
 
+  const styles = theme === "light" ? lightStyles : darkStyles;
   const validateEmail = (value) => {
     const emailReg = /^[a-z0-9_+.-]+@([a-z0-9-]+\.)+[a-z0-9]{2,4}$/;
     return emailReg.test(value);
@@ -130,6 +134,7 @@ const SendEmail = () => {
                   value={formData.name}
                   onChange={handleChange}
                   ref={(el) => (formDataRef.current[0] = el)}
+                  spellCheck={false}
                   required
                 />
               </div>
@@ -144,6 +149,7 @@ const SendEmail = () => {
                   value={formData.email}
                   onChange={handleChange}
                   ref={(el) => (formDataRef.current[1] = el)}
+                  spellCheck={false}
                   required
                 />
                 {!emailValid && formData.email.length > 0 && (

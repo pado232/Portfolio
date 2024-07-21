@@ -83,6 +83,8 @@
 .input {
   padding: 0.5rem;
   font-size: 1.2rem;
+  letter-spacing: 1px;
+  color: #ebebeb;
 }
 
 .input.large {
@@ -95,7 +97,7 @@
   top: -3rem;
   left: 0;
   font-size: 9rem;
-  color: #dddddd00;
+  color: #00000000;
   transition: font-size 2s ease, color 4s ease;
   /* 기타 스타일 */
 }
@@ -117,10 +119,6 @@
     width: 37rem;
   }
 }
-
-.keyboard > div {
-}
-
 .key {
   width: 2.1rem;
   height: 2.3rem;

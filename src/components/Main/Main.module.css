@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom, #c1d6e4, #d6b2b2);
+  background: linear-gradient(to bottom, #e8f0cc, #d6b2b2);
   position: relative;
   overflow: hidden;
 }

@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  color: #bbbbbb;
   margin: 1rem;
 }
 
@@ -39,7 +40,7 @@
 .content .h3 {
   margin: 0.5rem 0;
   font-size: 1.3rem;
-  color: #e65aa0;
+  color: #c240b7;
 }
 
 .content p {
@@ -48,6 +49,7 @@
   line-height: 1.5;
 }
 .table {
+  color: #bbbbbb;
   padding: 0.5rem;
 }
 .table th {
@@ -62,21 +64,20 @@
   font-weight: lighter;
   font-size: 1.3rem;
   padding: 0.8rem;
-  border-bottom: 2px solid #a5a5a5;
-  color: #86769b;
+  border-bottom: 2px solid #494949;
 }
 
 .more {
   margin-left: 1rem;
   margin-bottom: 1rem;
-  color: #381f58;
+  color: #3b205e;
   font-weight: bold;
   font-size: 0.8rem;
   text-decoration: none;
-  background-color: #bfa7df;
+  background-color: #8773a1;
   padding: 0.3rem 1rem;
   border-radius: 1rem;
-  border: 1px solid #bfa7df;
+  border: 1px solid #57535c;
   box-shadow: 0 0 7px #00000062;
   text-align: center;
 }

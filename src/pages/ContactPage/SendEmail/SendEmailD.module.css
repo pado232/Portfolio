@@ -16,7 +16,7 @@
   width: 6rem;
 }
 .SendEmail .email_container {
-  color: #7c7c7c;
+  color: #bbb;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,13 +26,13 @@
   margin: 1rem;
   background: none;
   padding: 0.7rem 1.2rem;
-  color: #414141;
-  border: 1px solid #7a7a7a;
+  color: #bbb;
+  border: 1px solid #646464;
   cursor: pointer;
 }
 .SendEmail .email_container button.copy:hover {
-  color: #e76666;
-  border: 1px solid #e76666;
+  color: #d16565;
+  border: 1px solid #ac4a4a;
 }
 .SendEmail .email_container .icon_email {
   margin: 0.5rem;
@@ -46,16 +46,19 @@
 }
 .SendEmail .bottom .container_left h3 {
   writing-mode: vertical-rl;
+
+  /* text-orientation: upright; */
   margin: 1rem;
   font-size: 4rem;
-
+  /* letter-spacing: -0.6rem;
+  word-spacing: -1.3rem; */
   color: rgb(154, 194, 255);
   text-shadow: -1px 1px #161616, 1px -1px #161616, 1px 1px #161616,
     -1px -1px #161616;
 }
 .SendEmail .bottom .container_right {
   width: 100%;
-  background-color: white;
+  background-color: #414141;
   border-radius: 1rem;
   padding: 2rem;
 }
@@ -63,17 +66,20 @@
   margin: 1rem 0;
 }
 .SendEmail .lab {
+  color: #bbb;
   font-size: 1rem;
   padding: 0 0.3rem;
 }
 .SendEmail .lab span {
-  color: rgb(248, 56, 56);
+  color: rgb(194, 67, 67);
 }
 .SendEmail .inp {
   width: 100%;
   margin-top: 0.4rem;
   padding: 0.5rem;
-  border: 1px solid #ccc;
+
+  background-color: #e0e0e0;
+  border: 1px solid #3a3a3a;
   border-radius: 0.15rem;
   font-size: 1rem;
 }
@@ -83,7 +89,9 @@
   margin-top: 0.3rem;
   min-height: 20rem;
   padding: 0.5rem;
-  border: 1px solid #ccc;
+
+  background-color: #e0e0e0;
+  border: 1px solid #3a3a3a;
   border-radius: 0.15rem;
   font-size: 1rem;
   line-height: 1.5;
@@ -92,14 +100,14 @@
   width: 100%;
   font-size: 1rem;
   padding: 1rem;
-  background-color: #f78b00;
+  background-color: #d87a00;
   border: none;
   border-radius: 0.15rem;
   color: white;
   cursor: pointer;
 }
 .SendEmail .error {
-  color: rgb(255, 0, 0);
+  color: rgb(245, 130, 130);
   font-size: 0.75rem;
   margin: 0.3rem;
 }
