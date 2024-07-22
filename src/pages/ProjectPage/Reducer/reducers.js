@@ -1,4 +1,3 @@
-import { type } from "@testing-library/user-event/dist/type";
 import { FaGithub } from "react-icons/fa";
 import { SiNotion } from "react-icons/si";
 

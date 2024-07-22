@@ -8,13 +8,13 @@ import Home from "./pages/Home/Home";
 import MyFooter from "./components/MyFooter/MyFooter";
 import { useEffect, useState } from "react";
 import FixedMenuButton from "./components/utils/button/FixedMenuButton";
-import { ThemeProvider, useTheme } from "./ThemeContext/ThemeContext";
+import { ThemeProvider } from "./ThemeContext/ThemeContext";
 function App() {
   const location = useLocation();
   const [showButton, setShowButton] = useState(false);
 
   const handleScroll = () => {
-    if (window.pageYOffset > 200) {
+    if (window.scrollY > 200) {
       // 예시로 100 픽셀 이상 스크롤되면 버튼을 보여줍니다.
       setShowButton(true);
     } else {

@@ -8,11 +8,11 @@ import { useTheme } from "../../../ThemeContext/ThemeContext";
 const FixedMenuButton = () => {
   const navigate = useNavigate();
   const [mouseOn, setMouseOn] = useState(false);
+  const [theme, toggleTheme] = useTheme();
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
-
-  const [theme, toggleTheme] = useTheme();
 
   return (
     <div
@@ -24,6 +24,7 @@ const FixedMenuButton = () => {
         <FiPlus size={"1.69rem"} />
       </button>
       <div className={`${styles.btn_wrapper} ${mouseOn ? styles.visible : ""}`}>
+        {/** 다크모드 변환  */}
         <div>
           <button
             className={styles.goto}
@@ -33,6 +34,8 @@ const FixedMenuButton = () => {
             {theme === "light" ? "🌞" : "🌜"}
           </button>
         </div>
+
+        {/** intro 페이지로 이동 */}
         <div>
           <button
             className={styles.goto}
@@ -43,6 +46,8 @@ const FixedMenuButton = () => {
             INTRO
           </button>
         </div>
+
+        {/** project 페이지로 이동 */}
         <div>
           <button
             className={styles.goto}
@@ -53,6 +58,8 @@ const FixedMenuButton = () => {
             PROJECT
           </button>
         </div>
+
+        {/** contact 페이지로 이동 */}
         <div>
           <button
             className={styles.goto}
@@ -64,6 +71,7 @@ const FixedMenuButton = () => {
           </button>
         </div>
 
+        {/** 페이지의 상단으로 이동 */}
         <div>
           <button
             className={styles.goto}
@@ -72,7 +80,7 @@ const FixedMenuButton = () => {
             }}
           >
             Top
-            <LuArrowBigUpDash size={23} style={{ verticalAlign: -6 }} />
+            <LuArrowBigUpDash size={"1.5rem"} style={{ verticalAlign: -6 }} />
           </button>
         </div>
       </div>

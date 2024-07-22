@@ -226,7 +226,9 @@ const Home = () => {
         <h2 className={styles.title_h2}>PROJECT</h2>
         <h2 className={styles.title_h2}>CONTACT</h2>
       </div>
-      <Toggle />
+      <div className={styles.toggle_container}>
+        <Toggle />
+      </div>
       <div className={styles.total_container}>
         <div className={styles.action_container}>
           <div

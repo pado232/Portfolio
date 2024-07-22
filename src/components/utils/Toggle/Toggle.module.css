@@ -1,8 +1,3 @@
-.container {
-  position: absolute;
-  right: 1.5rem;
-  top: 5%;
-}
 .lab {
   display: block;
   position: relative;
@@ -38,6 +33,7 @@
   background: rgba(109, 104, 107);
 }
 .input:checked + .lab::after {
+  content: "";
   left: calc(100% - 2.5rem); /* 40px / 16 */
 }
 .input:checked + .lab::before {

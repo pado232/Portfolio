@@ -17,7 +17,9 @@ const Main = ({ titleText }) => {
       setScrollY(window.scrollY);
     };
 
+    // 스크롤 이벤트 리스너 등록
     window.addEventListener("scroll", handleScroll);
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -118,6 +120,8 @@ const Main = ({ titleText }) => {
           </div>
         </div>
       </div>
+
+      {/** scrollY 값이 10이상이면 클래스 이름 변경(스타일 변경) */}
       <div
         className={`${styles.text_container} ${
           scrollY > 10 ? styles.visible : styles.hidden

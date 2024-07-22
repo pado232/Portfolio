@@ -20,9 +20,14 @@ const Container = ({ children }) => {
       }
     };
 
+    // Initial check
+    // 컴포넌트가 마운트될 때 초기 상태를 체크하기 위해 handleScroll 함수를 한 번 실행.
+    // (초기 렌더링 시에도 요소의 위치가 바로 반영)
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Initial check
+    handleScroll();
 
+    // 컴포넌트가 언마운트될 때 또는 useEffect가 다시 실행되기 전에
+    // scroll 이벤트 리스너를 제거하여 메모리 누수 방지
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };

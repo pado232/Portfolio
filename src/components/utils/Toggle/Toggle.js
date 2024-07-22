@@ -7,14 +7,8 @@ const Toggle = () => {
 
   return (
     <div className={styles.Toggle}>
-      <div className={styles.container}>
-        <input className={styles.input} type="checkbox" hidden checked={mode} />
-        <label
-          className={styles.lab}
-          for="switch"
-          onClick={toggleTheme}
-        ></label>
-      </div>
+      <input className={styles.input} type="checkbox" hidden checked={mode} />
+      <label className={styles.lab} for="switch" onClick={toggleTheme}></label>
     </div>
   );
 };

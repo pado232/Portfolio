@@ -22,6 +22,7 @@ const ThemeProvider = ({ children }) => {
     localStorage.setItem("theme", theme);
   }, [theme]);
 
+  // 내부 컴포넌트는 따로 관리하지만 현재 themeClass를 이용해서 section의 스타일을 변경하고 있음.
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <div className={themeClass}>{children}</div>

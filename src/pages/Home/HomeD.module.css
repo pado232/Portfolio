@@ -28,6 +28,12 @@
   justify-content: center;
 }
 
+.toggle_container {
+  position: absolute;
+  right: 1.5rem;
+  top: 5%;
+}
+
 .input_container {
   margin: auto;
   display: flex;
