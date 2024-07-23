@@ -2,24 +2,26 @@ import React, { useRef, useState } from "react";
 import { LuCopy } from "react-icons/lu";
 import { MdEmail } from "react-icons/md";
 import { useTheme } from "../../../ThemeContext/ThemeContext";
-// import emailjs from "emailjs-com";
+import emailjs from "emailjs-com";
 
 import Container from "../../../components/utils/Container/Container";
 
 import lightStyles from "./SendEmail.module.css";
 import darkStyles from "./SendEmailD.module.css";
+
 const SendEmail = () => {
   const [theme] = useTheme();
   const formDataRef = useRef([]);
-
   const [emailValid, setEmailVaild] = useState(false);
   const [formData, setFormData] = useState({
-    name: "",
+    from_name: "",
+    to_name: "DONY",
     email: "",
     message: "",
   });
 
   const styles = theme === "light" ? lightStyles : darkStyles;
+
   const validateEmail = (value) => {
     const emailReg = /^[a-z0-9_+.-]+@([a-z0-9-]+\.)+[a-z0-9]{2,4}$/;
     return emailReg.test(value);
@@ -30,6 +32,7 @@ const SendEmail = () => {
     if (name === "email") {
       setEmailVaild(validateEmail(value));
     }
+
     setFormData({
       ...formData,
       [name]: value,
@@ -46,37 +49,32 @@ const SendEmail = () => {
       }
     }
 
-    if (emailValid === false) {
+    if (!emailValid) {
       formDataRef.current[1].focus();
       return; // 이메일 형식이 유효하지 않으면 전송을 막음
     }
 
     console.log("formData", formData);
-    setFormData({
-      name: "",
-      email: "",
-      message: "",
-    });
-    // emailjs
-    //   .send(
-    //     "your_service_id", // EmailJS에서 생성한 서비스 ID
-    //     "your_template_id", // EmailJS에서 생성한 템플릿 ID
-    //     formData,
-    //     "your_user_id" // EmailJS에서 제공하는 사용자 ID
-    //   )
-    //   .then((response) => {
-    //     console.log("Email sent successfully:", response.status, response.text);
-    //     alert("Email successfully sent.");
-    //     setFormData({
-    //       name: "",
-    //       email: "",
-    //       message: "",
-    //     });
-    //   })
-    //   .catch((error) => {
-    //     console.error("Failed to send email:", error);
-    //     alert("Failed to send email.");
-    //   });
+
+    // EmailJS 초기화
+    emailjs.init("KXPNbGDcC7L5WPbDG");
+
+    emailjs
+      .send("service_bxfihre", "template_9fhoy1q", formData)
+      .then((response) => {
+        console.log("Email sent successfully:", response.status, response.text);
+        alert("Email successfully sent.");
+        setFormData({
+          from_name: "",
+          to_name: "DONY",
+          email: "",
+          message: "",
+        });
+      })
+      .catch((error) => {
+        console.error("Failed to send email:", error);
+        alert("Failed to send email.");
+      });
   };
 
   const [copyState, setCopyState] = useState(false);
@@ -112,7 +110,6 @@ const SendEmail = () => {
             </button>
           </div>
           <div className={styles.copy_check_box}>
-            {" "}
             {!copyState ? "" : <div className={styles.copy_check}>Copied!</div>}
           </div>
         </div>
@@ -122,7 +119,7 @@ const SendEmail = () => {
             <h3>CONTACT WITH ME</h3>
           </div>
           <div className={styles.container_right}>
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className={styles.box}>
                 <label className={styles.lab}>
                   Your name <span>*</span>
@@ -130,13 +127,19 @@ const SendEmail = () => {
                 <input
                   className={styles.inp}
                   type="text"
-                  name="name"
-                  value={formData.name}
+                  name="from_name"
+                  value={formData.from_name}
                   onChange={handleChange}
                   ref={(el) => (formDataRef.current[0] = el)}
                   spellCheck={false}
+                  maxLength={20}
                   required
                 />
+                {formData.from_name.length >= 20 && (
+                  <div className={styles.error}>
+                    이름은 20자 이하로 입력해주세요.
+                  </div>
+                )}
               </div>
               <div className={styles.box}>
                 <label className={styles.lab}>
@@ -169,14 +172,12 @@ const SendEmail = () => {
                   onChange={handleChange}
                   ref={(el) => (formDataRef.current[2] = el)}
                   spellCheck={false}
+                  maxLength={500}
+                  placeholder="메시지는 500자 이하로 입력해주세요."
                   required
                 />
               </div>
-              <button
-                className={styles.submit}
-                type="submit"
-                onClick={handleSubmit}
-              >
+              <button className={styles.submit} type="submit">
                 Send
               </button>
             </form>
