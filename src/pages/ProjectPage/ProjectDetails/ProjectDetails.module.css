@@ -1,13 +1,8 @@
 .ProjectDetails {
   letter-spacing: 0.03rem;
 }
-.ProjectDetails .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .ProjectDetails .content_container {
-  margin: 1rem;
+  margin: 1.5rem 0;
 }
 .ProjectDetails .img_box {
   width: 100%;
@@ -16,11 +11,9 @@
 .ProjectDetails h3.title {
   font-size: 1.3rem;
   font-weight: lighter;
-  color: rgb(219, 219, 219);
   margin: 1rem 0;
 }
 .ProjectDetails .detail {
-  color: rgb(155, 155, 155);
   margin: 1rem 0;
 }
 .ProjectDetails .detail p {
@@ -32,8 +25,7 @@
 }
 .ProjectDetails .h4 {
   padding-bottom: 1rem;
-  padding-top: 2rem;
-  color: rgb(202, 167, 167);
+  padding-top: 1rem;
   text-align: center;
   border-bottom: 4px solid rgb(39, 39, 39);
 }
@@ -47,23 +39,17 @@
 }
 .title {
   margin: 0.5rem;
-  color: rgb(24, 24, 24);
   font-weight: bold;
   text-align: center;
 }
 .content {
-  color: rgb(155, 155, 155);
   padding: 0.3rem;
   font-size: 0.9rem;
 }
 .tech_container {
   margin: 1rem 0;
 }
-@media (max-width: 40rem) {
-  .tech_container {
-    display: none;
-  }
-}
+
 .tech_table {
   width: 100%;
   border-collapse: collapse;
@@ -99,7 +85,6 @@
   width: 100%;
 }
 .tech_name {
-  margin-top: 0.5rem;
   font-size: 0.85rem;
   color: rgb(155, 155, 155);
 }
@@ -112,9 +97,14 @@
 .tech_min p {
   margin-left: 1rem;
 }
-
-@media (max-width: 40rem) {
+@media (max-width: 768px) {
+  .tech_container {
+    display: none;
+  }
   .tech_container_min {
     display: inline;
+  }
+  .ProjectDetails .tech_min {
+    margin-top: 0.8rem;
   }
 }

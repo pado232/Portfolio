@@ -25,9 +25,6 @@
     display: none;
   }
 }
-.ProjectLink .content_container .icon {
-  color: #757575;
-}
 .ProjectLink .content_container td.link_td a {
   color: #a8a8a8;
 }

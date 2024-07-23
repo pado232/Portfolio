@@ -12,8 +12,8 @@
 }
 
 .modal_main {
-  background-color: rgb(248, 241, 220);
-  padding: 2rem 1rem;
+  background-color: rgb(71, 71, 71);
+  padding: 2rem 2rem;
   margin: 0 3rem;
   border-radius: 4px;
   max-width: 1200px;
@@ -48,11 +48,11 @@
 }
 .modal p,
 .modal a {
-  color: #252525;
-}
-.modal h4 {
-  color: #c03b1d;
+  color: #a7a7a7;
 }
 .modal h3 {
-  color: #e97633;
+  color: #e2e2e2;
+}
+.modal h4 {
+  color: #e4b6b6;
 }

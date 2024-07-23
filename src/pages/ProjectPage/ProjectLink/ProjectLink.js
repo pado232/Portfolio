@@ -18,7 +18,7 @@ const ProjectLink = ({ projectKey }) => {
                 <td className={styles.logo_td}>
                   <div className={styles.icon}>
                     {link.isIcon ? (
-                      link.srcOrIcon
+                      <p>{link.srcOrIcon}</p>
                     ) : (
                       <img
                         className={styles.image}
