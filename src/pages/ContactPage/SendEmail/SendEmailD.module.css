@@ -13,6 +13,7 @@
   border-radius: 5rem;
   padding: 0.5rem 0.25rem;
   text-align: center;
+  box-shadow: 0 0 5px #0000005e;
   width: 6rem;
 }
 .SendEmail .email_container {

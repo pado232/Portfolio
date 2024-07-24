@@ -63,7 +63,9 @@ const SendEmail = () => {
       .send("service_bxfihre", "template_9fhoy1q", formData)
       .then((response) => {
         console.log("Email sent successfully:", response.status, response.text);
-        alert("Email successfully sent.");
+        alert(
+          "이메일이 성공적으로 보내졌습니다.\n빠른 시일 내에 답신 드리겠습니다."
+        );
         setFormData({
           from_name: "",
           to_name: "DONY",
@@ -73,7 +75,7 @@ const SendEmail = () => {
       })
       .catch((error) => {
         console.error("Failed to send email:", error);
-        alert("Failed to send email.");
+        alert("이메일 보내기에 실패하였습니다.");
       });
   };
 
