@@ -15,16 +15,16 @@
   cursor: none;
 }
 .home_icon {
-  color: #363f0e;
+  color: #868686;
 }
 .home .h2 {
-  color: #9bad4b;
+  color: #7772ad;
   margin: 0;
   padding: 0;
   font-size: 2.5rem;
 }
 .home .p {
-  color: #737c3c;
+  color: #9b98bb;
   font-size: 0.65rem;
   font-weight: bold;
 }
@@ -32,11 +32,13 @@
   position: absolute;
   pointer-events: none;
   z-index: 10;
+  color: #cfcfcf;
 }
 .key_icon {
   display: inline-block; /* transform이 적용되려면 inline-block 또는 block이어야 함 */
   transform: rotate(90deg);
 }
+
 .menu {
 }
 .menu ul {
@@ -59,7 +61,7 @@
   align-items: center;
 }
 .menu ul li .btn {
-  color: #a0a0a0;
+  color: #868686;
   padding: 0 0.25rem;
   font-size: 1.2rem;
   background: none;
@@ -71,10 +73,10 @@
 
 .menu ul li .btn:hover {
   font-size: 1.6rem;
-  color: #b66565;
+  color: #cfcfcf;
 }
 .menu ul li .btn.active {
-  color: #b66565;
+  color: #cfcfcf;
 }
 
 @media (max-width: 768px) {
