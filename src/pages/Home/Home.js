@@ -227,6 +227,7 @@ const Home = () => {
         <h2 className={styles.title_h2}>CONTACT</h2>
       </div>
       <div className={styles.toggle_container}>
+      <div style={{color:"white"}}>하이</div>
         <Toggle />
       </div>
       <div className={styles.total_container}>
