@@ -5,7 +5,7 @@ import ProjectFileInFolder from "../../pages/ProjectPage/ProjectFileInFolder/Pro
 
 const FlagFile = ({ projectKeys }) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const projects = useSelector((state) => state.projects);
+  const projects = useSelector((state) => state.project.projects);
 
   const handleClick = (index) => {
     setSelectedIndex(index);

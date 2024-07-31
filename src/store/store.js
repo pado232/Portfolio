@@ -1,9 +1,21 @@
 import { createStore } from "redux";
-import rootReducer from "../pages/ProjectPage/Reducer/reducers";
+import { persistStore, persistReducer } from "redux-persist";
+import storage from "redux-persist/lib/storage"; // 브라우저의 로컬 스토리지
+import rootReducer from "../pages/ProjectPage/Reducer/reducers"; // 루트 리듀서
 
-const store = createStore(
-  rootReducer,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
+// persistConfig 설정
+const persistConfig = {
+  key: "root",
+  storage,
+};
 
-export default store;
+// persistReducer 생성
+const persistedReducer = persistReducer(persistConfig, rootReducer);
+
+// 스토어 생성
+const store = createStore(persistedReducer);
+
+// 퍼시스터 생성
+const persistor = persistStore(store);
+
+export { store, persistor };

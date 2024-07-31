@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 import { TfiLock } from "react-icons/tfi";
 import Toggle from "../../components/utils/Toggle/Toggle";
 import { useTheme } from "../../ThemeContext/ThemeContext";
+import { useDispatch } from "react-redux";
+import { lock, unlock } from "../ProjectPage/Reducer/lockReducer/action";
 
 const numbers = [
   "`",
@@ -28,6 +30,12 @@ const bottomRowAlphabets = ["Z", "X", "C", "V", "B", "N", "M"];
 const Home = () => {
   const navigate = useNavigate();
   const [theme] = useTheme();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    // 홈에 접근하면 잠궈버림
+    dispatch(lock());
+  }, [dispatch]);
 
   const [inputValue, setInputValue] = useState("");
   const [pressedKey, setPressedKey] = useState(null);
@@ -153,6 +161,7 @@ const Home = () => {
   const handleSubmit = () => {
     switch (inputValue.trim().toUpperCase()) {
       case "INTRO":
+        dispatch(unlock());
         setLargeInput(true);
         setHiddenH2(true);
         setTimeout(() => {
@@ -162,19 +171,23 @@ const Home = () => {
         break;
 
       case "PROJECT":
+        dispatch(unlock());
         setLargeInput(true);
         setHiddenH2(true);
         setTimeout(() => {
           navigate("/project");
         }, 3000);
+
         break;
 
       case "CONTACT":
+        dispatch(unlock());
         setLargeInput(true);
         setHiddenH2(true);
         setTimeout(() => {
           navigate("/contact");
         }, 3000);
+
         break;
 
       default:
@@ -227,9 +240,9 @@ const Home = () => {
         <h2 className={styles.title_h2}>CONTACT</h2>
       </div>
       <div className={styles.toggle_container}>
-      <div style={{color:"white"}}>하이</div>
         <Toggle />
       </div>
+
       <div className={styles.total_container}>
         <div className={styles.action_container}>
           <div

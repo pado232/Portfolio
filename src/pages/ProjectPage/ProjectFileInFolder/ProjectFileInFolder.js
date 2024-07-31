@@ -7,7 +7,9 @@ import ProjectDetails from "../../ProjectPage/ProjectDetails/ProjectDetails";
 
 const ProjectFileInFolder = ({ projectKey }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const projectDetails = useSelector((state) => state.projects[projectKey]);
+  const projectDetails = useSelector(
+    (state) => state.project.projects[projectKey]
+  );
 
   if (!projectDetails) {
     return <div>Loading...</div>; // projectDetails가 없을 경우 로딩 상태를 표시

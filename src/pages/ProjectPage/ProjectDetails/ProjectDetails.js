@@ -4,7 +4,9 @@ import ProjectLink from "../ProjectLink/ProjectLink";
 import styles from "./ProjectDetails.module.css";
 
 const ProjectDetails = ({ projectKey }) => {
-  const projectDetails = useSelector((state) => state.projects[projectKey]);
+  const projectDetails = useSelector(
+    (state) => state.project.projects[projectKey]
+  );
 
   if (!projectDetails) {
     return <div>Loading...</div>; // projectDetails가 없을 경우 로딩 상태를 표시

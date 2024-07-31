@@ -37,8 +37,8 @@ const Main = ({ titleText }) => {
       const titleChars = title.textContent.split("");
       const portfolioChars = portfolio.textContent.split("");
 
-      console.log("titleChars", titleChars); // ['D', 'O', 'N', 'Y', "'", 's']
-      console.log("title.textContent", title.textContent); // DONY's
+      // console.log("titleChars", titleChars); // ['D', 'O', 'N', 'Y', "'", 's']
+      // console.log("title.textContent", title.textContent); // DONY's
 
       // title 요소의 텍스트를 개별 문자로 분리하고,
       // 각 문자에 애니매니션 지연 시간(글자마다 기다려야하는 시간)을 적용한 span 태그로 감싸기

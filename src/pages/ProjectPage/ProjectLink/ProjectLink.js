@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import styles from "./ProjectLink.module.css";
 
 const ProjectLink = ({ projectKey }) => {
-  const projectDetails = useSelector((state) => state.projects[projectKey]);
+  const projectDetails = useSelector((state) => state.project.projects[projectKey]);
   const linkData = projectDetails ? projectDetails.link : [];
 
   return (
