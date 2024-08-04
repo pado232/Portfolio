@@ -48,27 +48,27 @@ const initialState = {
       ],
       link: [
         {
+          title: "RealMoment",
+          isIcon: false,
           srcOrIcon: "/images/RealMomentLogo.png",
           linkUrl: "https://real-moment.kro.kr/",
-          isIcon: false,
         },
         {
-          srcOrIcon: <FaGithub size={"2rem"} />,
-          linkUrl: "https://github.com/pado232/RealMoment",
+          title: "Github",
           isIcon: true,
+          srcOrIcon: FaGithub,
+          linkUrl: "https://github.com/pado232/RealMoment",
         },
         {
-          srcOrIcon: <SiNotion size={"2rem"} />,
+          title: "Notion",
+          isIcon: true,
+          srcOrIcon: SiNotion,
           linkUrl:
             "https://www.notion.so/ShoppingMall-83cac7f2de6f47b48037173179d5c961",
-          isIcon: true,
         },
       ],
       detailsInfo: [
         {
-          src: "/images/Shopping-Mall-Image/Home.png",
-          summary:
-            "2024년 12월을 시작으로 7개월에 걸쳐 제작한 코스메틱 웹 사이트입니다. 상품 목록을 조회, 결제할 수 있고, Route를 이용한 페이지 이동을 구현하고, bar 메뉴의 카테고리 선택과 header의 상품명 검색에 모든 페이지에서 나타나고 동작합니다.",
           addText: [
             {
               title: "개발 인원",
@@ -173,12 +173,14 @@ const initialState = {
       ],
       link: [
         {
-          srcOrIcon: <FaGithub size={"2rem"} />,
+          srcOrIcon: FaGithub,
+          title: "Github",
           linkUrl: "https://github.com/pado232/ShopAdmin",
           isIcon: true,
         },
         {
-          srcOrIcon: <SiNotion size={"2rem"} />,
+          srcOrIcon: SiNotion,
+          title: "Notion",
           linkUrl:
             "https://www.notion.so/ShoppingMall-83cac7f2de6f47b48037173179d5c961",
           isIcon: true,
@@ -250,12 +252,14 @@ const initialState = {
       ],
       link: [
         {
-          srcOrIcon: <FaGithub size={"2rem"} />,
+          srcOrIcon: FaGithub,
+          title: "Github",
           linkUrl: "https://github.com/pado232/Portfolio",
           isIcon: true,
         },
         {
-          srcOrIcon: <SiNotion size={"2rem"} />,
+          srcOrIcon: SiNotion,
+          title: "Notion",
           linkUrl:
             "https://www.notion.so/Portfolio-7a25d265898547bd8472f62ad9b1cd9d",
           isIcon: true,

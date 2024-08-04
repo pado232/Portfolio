@@ -35,7 +35,10 @@ function App() {
     return isLocked ? (
       <div style={{ textAlign: "center", margin: 50 }}>
         <h2>Access Denied</h2>
-        <p>This page is locked. Please contact support for more information.</p>
+        <p>
+          암호를 풀지 않으면 해당 페이지에 접근할 수 없습니다. 암호를 풀어
+          포트폴리오를 확인해보세요!
+        </p>
       </div>
     ) : (
       element
@@ -46,16 +49,6 @@ function App() {
     <ThemeProvider>
       <div className="App">
         {location.pathname !== "/" && !isLocked && <Menu />}
-        <div
-          style={{
-            color: "orange",
-            position: "absolute",
-            zIndex: "10",
-            margin: 20,
-          }}
-        >
-          <h3>Status: {isLocked ? "Locked" : "Unlocked"}</h3>
-        </div>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/intro" element={<PrivateRoute element={<Intro />} />} />
