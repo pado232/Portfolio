@@ -33,31 +33,6 @@ function App() {
     };
   }, []);
 
-  // const PrivateRoute = ({ element }) => {
-  //   const [theme] = useTheme();
-  //   return isLocked ? (
-  //     <div
-  //       style={
-  //         theme === "ligth"
-  //           ? { height: "100vh", textAlign: "center", padding: 50 }
-  //           : {
-  //               height: "100vh",
-  //               textAlign: "center",
-  //               padding: 50,
-  //               backgroundColor: "#aaa",
-  //             }
-  //       }
-  //     >
-  //       <h2>Access Denied</h2>
-  //       <p>아직 잠겨있어요!</p>
-  //       <p>아직 잠겨있어요! 암호를 풀어 포트폴리오를 확인해보세요!</p>
-  //       <Link to="/">홈으로 돌아가기</Link>
-  //     </div>
-  //   ) : (
-  //     element
-  //   );
-  // };
-
   return (
     <ThemeProvider>
       <div className="App">
