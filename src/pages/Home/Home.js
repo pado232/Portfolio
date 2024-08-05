@@ -166,7 +166,7 @@ const Home = () => {
         setHiddenH2(true);
         setTimeout(() => {
           navigate("/intro");
-        }, 3000);
+        }, 2000);
 
         break;
 
@@ -176,7 +176,7 @@ const Home = () => {
         setHiddenH2(true);
         setTimeout(() => {
           navigate("/project");
-        }, 3000);
+        }, 2000);
 
         break;
 
@@ -186,7 +186,7 @@ const Home = () => {
         setHiddenH2(true);
         setTimeout(() => {
           navigate("/contact");
-        }, 3000);
+        }, 2000);
 
         break;
 
@@ -251,8 +251,16 @@ const Home = () => {
             <div className={styles.search_icon}>
               <TfiLock size={"1.5rem"} />
             </div>
+            <input
+              className={`${styles.input}`}
+              name="inputValue"
+              value={inputValue}
+            />
+
             <div
-              className={`${styles.input} ${largeInput ? styles.large : ""}`}
+              className={`${styles.input_large} ${
+                largeInput ? styles.action : ""
+              }`}
             >
               {inputValue}
             </div>

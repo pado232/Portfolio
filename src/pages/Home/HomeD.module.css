@@ -87,26 +87,35 @@
 }
 
 .input {
+  width: 77%;
   padding: 0.5rem;
   font-size: 1.2rem;
   letter-spacing: 1px;
-  color: #ebebeb;
+  color: #ddd;
+  border: none;
+  background-color: #141414;
 }
-
-.input.large {
+.input:focus {
+  outline: none;
+}
+.input_large {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  width: 100vw;
+  font-size: 1rem;
+  color: #ddd;
+  opacity: 0;
+}
+.input_large.action {
+  font-size: 9rem;
   position: fixed;
   top: -3rem;
   left: 0;
-  font-size: 9rem;
-  color: #00000000;
-  transition: font-size 2s ease, color 4s ease;
+  height: 100vh;
+  width: 100vw;
+  opacity: 1;
+  transition: opacity 1.5s ease, font-size 1.3s ease;
 }
-
 .keyboard {
   margin: 2rem auto;
   padding: 0.45rem;
