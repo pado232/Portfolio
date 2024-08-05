@@ -46,8 +46,12 @@ const AboutMe = () => {
         <tbody>
           {tableContent.map((table, index) => (
             <tr key={index}>
-              <th>{table.title}</th>
-              <td>{table.content}</td>
+              <th>
+                <p>{table.title}</p>
+              </th>
+              <td>
+                <p>{table.content}</p>
+              </td>
             </tr>
           ))}
         </tbody>

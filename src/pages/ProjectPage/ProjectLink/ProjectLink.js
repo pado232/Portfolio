@@ -44,7 +44,7 @@ const ProjectLink = ({ projectKey }) => {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      {link.linkUrl || "No URL provided"}
+                      <p>{link.linkUrl || "No URL provided"}</p>
                     </a>
                   </div>
                 </td>

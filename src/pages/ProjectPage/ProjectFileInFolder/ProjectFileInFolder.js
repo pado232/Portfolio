@@ -19,7 +19,9 @@ const ProjectFileInFolder = ({ projectKey }) => {
     <div className={styles.ProjectFileInFolder}>
       <div className={styles.detail_container}>
         {/* 요약 글 */}
-        <div className={styles.summary}>{projectDetails.summary}</div>
+        <div>
+          <p className={styles.summary}>{projectDetails.summary}</p>
+        </div>
 
         {/* 이미지 컴포넌트 */}
         {projectDetails.images.length > 1 ? (

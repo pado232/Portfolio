@@ -127,10 +127,9 @@
   outline: none;
   font-size: 0.9rem;
   cursor: pointer;
-}
 
-.key:active {
-  box-shadow: none;
+  font-family: "Noto Sans KR", sans-serif;
+  letter-spacing: 0.5px;
 }
 
 .key.backspace {
@@ -165,6 +164,11 @@
   width: 45%;
   color: #8a7f8b;
 }
+.key.altWinCtrl {
+  width: 6%;
+  color: #505050;
+}
+
 .pressed {
   background-color: #524658;
   color: white;

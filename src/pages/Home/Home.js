@@ -342,15 +342,27 @@ const Home = () => {
               <button className={`${styles.key} ${styles.lar} `}>Shift</button>
             </div>
             <div>
-              <button className={`${styles.key} ${styles.small}`}>Alt</button>
-              <button className={`${styles.key} ${styles.small}`}>Win</button>
-              <button className={`${styles.key} ${styles.small}`}>Ctrl</button>
+              <button className={`${styles.key} ${styles.altWinCtrl}`}>
+                Alt
+              </button>
+              <button className={`${styles.key} ${styles.altWinCtrl}`}>
+                Win
+              </button>
+              <button className={`${styles.key} ${styles.altWinCtrl}`}>
+                Ctrl
+              </button>
               <button className={`${styles.key} ${styles.spacebar} `}>
                 SpaceBar
               </button>
-              <button className={`${styles.key} ${styles.small}`}>Alt</button>
-              <button className={`${styles.key} ${styles.small}`}>Fn</button>
-              <button className={`${styles.key} ${styles.small}`}>Ctrl</button>
+              <button className={`${styles.key} ${styles.altWinCtrl} `}>
+                Alt
+              </button>
+              <button className={`${styles.key} ${styles.altWinCtrl}`}>
+                Fn
+              </button>
+              <button className={`${styles.key} ${styles.altWinCtrl}`}>
+                Ctrl
+              </button>
             </div>
           </div>
         </div>

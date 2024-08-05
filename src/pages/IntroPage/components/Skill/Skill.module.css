@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
 .Skill {
 }
 .title_h3 {
@@ -13,5 +14,8 @@
   border-bottom: 2px solid #a5a5a5;
 }
 .Skill .p {
+  font-family: "Noto Sans KR", sans-serif;
+  letter-spacing: 0.5px;
+  word-spacing: 0.5px;
   padding: 0.5rem 1rem;
 }

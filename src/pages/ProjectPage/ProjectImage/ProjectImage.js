@@ -38,7 +38,7 @@ const ProjectImage = ({ pageImages }) => {
               onMouseLeave={() => setShowMagnifier(false)}
               onMouseMove={(event) => handleMouseMove(event, page.src)}
             />
-            <p className={styles.page_title}>{page.name}</p>
+            <div className={styles.page_title}>{page.name}</div>
             {showMagnifier && currentImage === page.src && (
               <div
                 className={styles.magnifier}

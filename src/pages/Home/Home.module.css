@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
 .main {
   position: relative;
   width: 100vw;
@@ -127,10 +128,9 @@
   outline: none;
   font-size: 0.9rem;
   cursor: pointer;
-}
 
-.key:active {
-  box-shadow: none;
+  font-family: "Noto Sans KR", sans-serif;
+  letter-spacing: 0.5px;
 }
 
 .key.backspace {
@@ -164,6 +164,10 @@
 .key.spacebar {
   width: 45%;
   color: #fff;
+}
+.key.altWinCtrl {
+  width: 6%;
+  color: #ccc;
 }
 
 .pressed {
