@@ -45,8 +45,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* width: 100%;  */
-  /* ul 요소가 부모 요소의 전체 너비를 차지하도록 설정 */
   margin: 0;
   padding: 0;
   width: 100%;
@@ -67,7 +65,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  position: relative; /* ::after 요소를 상대적으로 위치시키기 위해 필요 */
+  position: relative;
   transition: font-size 0.5s, color 0.5s;
 }
 

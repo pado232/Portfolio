@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "./App.css";
 import Menu from "./components/Menu/Menu";
@@ -9,7 +9,7 @@ import Contact from "./pages/ContactPage/Contact";
 import Home from "./pages/Home/Home";
 import MyFooter from "./components/MyFooter/MyFooter";
 import FixedMenuButton from "./components/utils/button/FixedMenuButton";
-import { ThemeProvider, useTheme } from "./ThemeContext/ThemeContext";
+import { ThemeProvider } from "./ThemeContext/ThemeContext";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 
 function App() {
