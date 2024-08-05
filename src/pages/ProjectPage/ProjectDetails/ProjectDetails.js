@@ -1,13 +1,18 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import ProjectLink from "../ProjectLink/ProjectLink";
-import styles from "./ProjectDetails.module.css";
+import lightStyles from "./ProjectDetails.module.css";
+import darkStyles from "./ProjectDetailsD.module.css";
+import { useTheme } from "../../../ThemeContext/ThemeContext";
 
 const ProjectDetails = ({ projectKey }) => {
+  const [theme] = useTheme();
+
+  const styles = theme === "light" ? lightStyles : darkStyles;
+
   const projectDetails = useSelector(
     (state) => state.project.projects[projectKey]
   );
-  console.log("projectDetails", projectDetails);
 
   if (!projectDetails) {
     return <div>Loading...</div>; // projectDetails가 없을 경우 로딩 상태를 표시
@@ -19,7 +24,7 @@ const ProjectDetails = ({ projectKey }) => {
     }
 
     return detailsInfo.map((detail, index) => (
-      <div key={index}>
+      <div className={styles.container} key={index}>
         <h4 className={styles.h4}>상세 정보</h4>
         <table className={styles.table}>
           <colgroup style={{ width: "10rem" }} />
@@ -51,7 +56,7 @@ const ProjectDetails = ({ projectKey }) => {
     }
 
     return (
-      <div>
+      <div className={styles.container}>
         <h4 className={styles.h4}>상세 내용</h4>
         <div className={styles.content_container}>
           {detailsExp.map((item, index) => (
@@ -82,7 +87,7 @@ const ProjectDetails = ({ projectKey }) => {
     }
 
     return (
-      <div>
+      <div className={styles.container}>
         <h4 className={styles.h4}>기술</h4>
         <table className={styles.tech_table}>
           <thead>
@@ -126,10 +131,10 @@ const ProjectDetails = ({ projectKey }) => {
       return null;
     }
     return (
-      <div>
+      <div className={styles.container}>
         <h4 className={styles.h4}>기술</h4>
         {detailsTech.map((item, index) => (
-          <div className={styles.tech_min}>
+          <div key={index} className={styles.tech_min}>
             <strong key={index}>{item.title}</strong>
             {item.type.map((type, idx) => (
               <div key={idx}>

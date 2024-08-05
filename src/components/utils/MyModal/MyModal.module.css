@@ -13,7 +13,7 @@
 
 .modal_main {
   background-color: rgb(248, 241, 220);
-  padding: 2rem 1rem;
+  padding: 2rem 2rem;
   margin: 0 3rem;
   border-radius: 4px;
   max-width: 1200px;
@@ -23,7 +23,7 @@
 }
 /* 스크롤바 스타일링 */
 .modal_main::-webkit-scrollbar {
-  width: 0.5rem; /* 스크롤바 너비 */
+  width: 0.7rem; /* 스크롤바 너비 */
 }
 
 .modal_main::-webkit-scrollbar-track {
@@ -31,12 +31,12 @@
 }
 
 .modal_main::-webkit-scrollbar-thumb {
-  background: #888; /* 스크롤바 색상 */
+  background: #e6b856; /* 스크롤바 색상 */
   border-radius: 0.625rem; /* 스크롤바 둥근 모서리 */
 }
 
 .modal_main::-webkit-scrollbar-thumb:hover {
-  background: #797979; /* 스크롤바 색상 (호버 시) */
+  background: #e28940; /* 스크롤바 색상 (호버 시) */
 }
 
 .display_block {
@@ -45,14 +45,4 @@
 
 .display_none {
   display: none;
-}
-.modal p,
-.modal a {
-  color: #252525;
-}
-.modal h4 {
-  color: #c03b1d;
-}
-.modal h3 {
-  color: #e97633;
 }

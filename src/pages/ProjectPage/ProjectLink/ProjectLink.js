@@ -7,8 +7,7 @@ const ProjectLink = ({ projectKey }) => {
     (state) => state.project.projects[projectKey]
   );
   const linkData = projectDetails ? projectDetails.link : [];
-  console.log("Project Details:", projectDetails); // 상태를 로그에 출력
-  console.log("Link Data:", linkData);
+
   return (
     <div className={styles.ProjectLink}>
       <div className={styles.content_container}>
@@ -24,7 +23,9 @@ const ProjectLink = ({ projectKey }) => {
                       React.isValidElement(link.srcOrIcon) ? (
                         React.createElement(link.srcOrIcon, { size: "2rem" })
                       ) : (
-                        <div>{link.title}</div> // 아이콘이 유효하지 않은 경우
+                        <div>
+                          <strong>{link.title}</strong>
+                        </div> // 아이콘이 유효하지 않은 경우
                       )
                     ) : (
                       <img
@@ -34,7 +35,6 @@ const ProjectLink = ({ projectKey }) => {
                       />
                     )}
                   </div>
-                  <div>{link.title}</div>
                 </td>
                 <td className={styles.link_td}>
                   <div className={styles.link_warpper}>

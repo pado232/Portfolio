@@ -1,19 +1,22 @@
 .ProjectLink .content_container {
   letter-spacing: 0;
+  margin: 3rem 0;
 }
 .ProjectLink .content_container .table {
   width: 100%;
 }
 .ProjectLink .content_container .table td {
+  border: none;
   text-align: center;
 }
 .ProjectLink .content_container .table td.link_td {
+  border: none;
   text-align: start;
 }
 .ProjectLink .content_container .image {
   min-width: 6rem;
   padding: 0.3rem;
-  width: 100%;
+  width: 9rem;
   max-width: 10rem;
 }
 @media (max-width: 768px) {

@@ -46,13 +46,3 @@
 .display_none {
   display: none;
 }
-.modal p,
-.modal a {
-  color: #a7a7a7;
-}
-.modal h3 {
-  color: #e2e2e2;
-}
-.modal h4 {
-  color: #e4b6b6;
-}

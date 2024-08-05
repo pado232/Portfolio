@@ -15,7 +15,6 @@
   font-size: 1.3rem;
   font-weight: lighter;
   margin: 1rem 0;
-  color: #e4854e;
 }
 .ProjectDetails .detail {
   margin: 1rem 0;
@@ -28,40 +27,38 @@
   max-width: 500px;
 }
 .ProjectDetails .h4 {
-  padding-bottom: 1rem;
+  color: #afafaf;
   font-size: 1.1rem;
+  padding-bottom: 1rem;
   padding-top: 1rem;
   text-align: center;
-  color: #c03b1d;
-  border-bottom: 3px solid rgb(218, 178, 134);
+  border-bottom: 4px solid rgb(39, 39, 39);
 }
+
+/* .modal p,
+.modal a {
+  color: #a7a7a7;
+}
+.modal h3 {
+  color: #e2e2e2;
+}
+.modal h4 {
+  color: #e4b6b6;
+} */
 .table {
   width: 100%;
+  color: #a7a7a7;
 }
 .table td {
   padding: 0.3rem;
-  border-bottom: 1px solid rgb(207, 182, 162);
+  border-bottom: 1px solid rgb(53, 53, 53);
 }
 .title {
   margin: 0.5rem;
   font-weight: bold;
   text-align: center;
+  color: #181818;
 }
-
-/* .modal p,
-.modal a {
-  color: #252525;
-}
-.modal h4 {
-  color: #c03b1d;
-}
-.modal h3 {
-  color: #e97633;
-}
-.modal table td {
-  border-bottom: 1px solid #aaaaaa;
-} */
-
 .content {
   padding: 0.3rem;
   font-size: 0.9rem;
@@ -75,10 +72,11 @@
   border-collapse: collapse;
 }
 .tech_table thead tr {
-  border-bottom: 1px solid rgb(207, 182, 162);
+  /* border-bottom: 1px solid black; */
+  border-bottom: 1px solid rgb(56, 56, 56);
 }
 .tech_table tbody tr {
-  border-bottom: 1px solid rgb(207, 182, 162);
+  border-bottom: 1px solid rgb(56, 56, 56);
 }
 .tech_table tbody tr td {
   text-align: center;
@@ -105,7 +103,7 @@
 }
 .tech_name {
   font-size: 0.85rem;
-  color: #252525;
+  color: rgb(155, 155, 155);
 }
 .tech_container_min {
   display: none;

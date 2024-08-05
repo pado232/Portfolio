@@ -1,0 +1,48 @@
+.PrivateRoute {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding-top: 4rem;
+  text-align: center;
+  height: 100vh;
+  background-color: #303030;
+}
+.error {
+  color: #ad2d2d;
+  margin: 1rem;
+  font-size: 3rem;
+  font-weight: lighter;
+}
+.p {
+  color: #bbbbbb;
+  margin: 0.3rem;
+  font-size: 1.05rem;
+}
+.span {
+  font-weight: bold;
+  color: #cf8181;
+}
+.box {
+  background-color: #555555;
+  padding: 2.5rem 4rem 1.5rem 4rem;
+  margin: 3rem 1rem 1rem 1rem;
+  border-radius: 1rem;
+}
+.link {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 1rem;
+
+  background-color: #1a1a1a;
+  width: 12rem;
+  height: 3rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+  cursor: pointer;
+}
+.link:hover {
+  background-color: #442828;
+}
