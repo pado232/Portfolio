@@ -19,9 +19,12 @@ const PrivateRoute = ({ element }) => {
           <h1 className={styles.error}>Access Denied</h1>
           <p className={styles.p}>잠겨있어요!</p>
           <p className={styles.p}>
-            암호를 풀지 못하면 페이지에 접근하실 수 없습니다.
+            암호를 풀지 않으면 해당 페이지에 접근하실 수 없어요.
           </p>
-
+          <p className={styles.p}>
+            이전에 암호를 풀었어도 홈 방문 시 초기화되므로 다시 암호를 풀어야
+            해요.
+          </p>
           <div className={styles.box}>
             <p className={styles.p}>
               <span className={styles.span}>HINT!</span> 키보드로 무엇을

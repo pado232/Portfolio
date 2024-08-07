@@ -2,7 +2,7 @@
   letter-spacing: 0.03rem;
 }
 .container {
-  margin-bottom: 3rem;
+  /* margin-bottom: 3rem; */
 }
 .ProjectDetails .content_container {
   margin: 1.5rem 0;
@@ -15,43 +15,34 @@
   font-size: 1.3rem;
   font-weight: lighter;
   margin: 1rem 0;
+  color: #ac7d19;
 }
 .ProjectDetails .detail {
   margin: 1rem 0;
 }
 .ProjectDetails .detail p {
   margin: 0.3rem 0;
+  color: #a8a8a8;
 }
 .ProjectDetails img.screen {
   width: 100%;
   max-width: 500px;
 }
 .ProjectDetails .h4 {
-  color: #afafaf;
+  color: #b1a175;
   font-size: 1.1rem;
   padding-bottom: 1rem;
   padding-top: 1rem;
   text-align: center;
-  border-bottom: 4px solid rgb(39, 39, 39);
+  border-bottom: 4px solid #33302a;
 }
-
-/* .modal p,
-.modal a {
-  color: #a7a7a7;
-}
-.modal h3 {
-  color: #e2e2e2;
-}
-.modal h4 {
-  color: #e4b6b6;
-} */
 .table {
   width: 100%;
-  color: #a7a7a7;
+  color: #a8a8a8;
 }
 .table td {
   padding: 0.3rem;
-  border-bottom: 1px solid rgb(53, 53, 53);
+  border-bottom: 1px solid #413c34;
 }
 .title {
   margin: 0.5rem;
@@ -73,10 +64,10 @@
 }
 .tech_table thead tr {
   /* border-bottom: 1px solid black; */
-  border-bottom: 1px solid rgb(56, 56, 56);
+  border-bottom: 1px solid #413c34;
 }
 .tech_table tbody tr {
-  border-bottom: 1px solid rgb(56, 56, 56);
+  border-bottom: 1px solid #413c34;
 }
 .tech_table tbody tr td {
   text-align: center;
@@ -102,16 +93,20 @@
   width: 100%;
 }
 .tech_name {
-  font-size: 0.85rem;
-  color: rgb(155, 155, 155);
+  color: #a8a8a8;
 }
 .tech_container_min {
   display: none;
 }
 .tech_min {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #383838;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .tech_min p {
+  text-align: end;
   margin-left: 1rem;
 }
 @media (max-width: 768px) {
@@ -120,8 +115,5 @@
   }
   .tech_container_min {
     display: inline;
-  }
-  .ProjectDetails .tech_min {
-    margin-top: 0.8rem;
   }
 }

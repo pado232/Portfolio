@@ -56,7 +56,7 @@ const Menu = () => {
             }px`,
           }}
         >
-          <VscKey className={styles.key_icon} size={"2rem"} /> click!
+          <VscKey className={styles.key_icon} size={"2.5rem"} />
         </div>
       )}
       <div className={styles.menu}>

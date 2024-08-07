@@ -1,6 +1,3 @@
-import { FaGithub } from "react-icons/fa";
-import { SiNotion } from "react-icons/si";
-
 const initialState = {
   projects: {
     RealMoment: {
@@ -56,13 +53,13 @@ const initialState = {
         {
           title: "Github",
           isIcon: true,
-          srcOrIcon: FaGithub,
+
           linkUrl: "https://github.com/pado232/RealMoment",
         },
         {
           title: "Notion",
           isIcon: true,
-          srcOrIcon: SiNotion,
+
           linkUrl:
             "https://www.notion.so/ShoppingMall-83cac7f2de6f47b48037173179d5c961",
         },
@@ -173,13 +170,11 @@ const initialState = {
       ],
       link: [
         {
-          srcOrIcon: FaGithub,
           title: "Github",
           linkUrl: "https://github.com/pado232/ShopAdmin",
           isIcon: true,
         },
         {
-          srcOrIcon: SiNotion,
           title: "Notion",
           linkUrl:
             "https://www.notion.so/ShoppingMall-83cac7f2de6f47b48037173179d5c961",
@@ -252,13 +247,11 @@ const initialState = {
       ],
       link: [
         {
-          srcOrIcon: FaGithub,
           title: "Github",
           linkUrl: "https://github.com/pado232/Portfolio",
           isIcon: true,
         },
         {
-          srcOrIcon: SiNotion,
           title: "Notion",
           linkUrl:
             "https://www.notion.so/Portfolio-7a25d265898547bd8472f62ad9b1cd9d",

@@ -32,7 +32,7 @@
   position: absolute;
   pointer-events: none;
   z-index: 10;
-  color: #cfcfcf;
+  color: #ddd;
 }
 .key_icon {
   display: inline-block; /* transform이 적용되려면 inline-block 또는 block이어야 함 */
@@ -71,10 +71,10 @@
 
 .menu ul li .btn:hover {
   font-size: 1.6rem;
-  color: #cfcfcf;
+  color: #ddd;
 }
 .menu ul li .btn.active {
-  color: #cfcfcf;
+  color: #ddd;
 }
 
 @media (max-width: 768px) {

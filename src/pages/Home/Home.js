@@ -255,6 +255,7 @@ const Home = () => {
               className={`${styles.input}`}
               name="inputValue"
               value={inputValue}
+              autoComplete="off"
             />
 
             <div

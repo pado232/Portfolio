@@ -16,9 +16,10 @@
 .p {
   color: #181818;
   margin: 0.3rem;
-  font-size: 1.05rem;
 }
 .span {
+  font-size: 1.1rem;
+  padding-right: 0.5rem;
   font-weight: bold;
   color: #d46868;
 }
@@ -31,8 +32,6 @@
 .link {
   color: #ddd;
   text-decoration: none;
-  font-size: 1rem;
-
   background-color: #4e4a4a;
   width: 12rem;
   height: 3rem;
@@ -41,6 +40,7 @@
   justify-content: center;
   align-items: center;
   margin: 2rem auto;
+  padding-bottom: 0.2rem;
   cursor: pointer;
 }
 .link:hover {

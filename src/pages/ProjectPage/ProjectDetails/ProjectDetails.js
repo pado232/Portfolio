@@ -27,7 +27,7 @@ const ProjectDetails = ({ projectKey }) => {
       <div className={styles.container} key={index}>
         <h4 className={styles.h4}>상세 정보</h4>
         <table className={styles.table}>
-          <colgroup style={{ width: "10rem" }} />
+          <colgroup style={{ maxWidth: "8rem", width: "25%" }} />
           <colgroup style={{ width: "auto" }} />
           <tbody>
             {detail.addText.map((item, idx) => (

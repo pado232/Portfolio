@@ -1,11 +1,22 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import styles from "./ProjectLink.module.css";
+import { FaGithub } from "react-icons/fa";
+import { SiNotion } from "react-icons/si";
+
+const icons = {
+  Github: <FaGithub size={"2rem"} />,
+  Notion: <SiNotion size={"2rem"} />,
+};
 
 const ProjectLink = ({ projectKey }) => {
   const projectDetails = useSelector(
     (state) => state.project.projects[projectKey]
   );
+
+  // 프로젝트 데이터를 콘솔에 출력하여 확인
+  console.log("projectDetails:", projectDetails);
+
   const linkData = projectDetails ? projectDetails.link : [];
 
   return (
@@ -20,13 +31,7 @@ const ProjectLink = ({ projectKey }) => {
                 <td className={styles.logo_td}>
                   <div className={styles.icon}>
                     {link.isIcon ? (
-                      React.isValidElement(link.srcOrIcon) ? (
-                        React.createElement(link.srcOrIcon, { size: "2rem" })
-                      ) : (
-                        <div>
-                          <strong>{link.title}</strong>
-                        </div> // 아이콘이 유효하지 않은 경우
-                      )
+                      icons[link.title] // 아이콘 이름에 해당하는 컴포넌트를 렌더링
                     ) : (
                       <img
                         className={styles.image}
