@@ -5,6 +5,8 @@ import lightStyles from "./MyModal.module.css";
 import darkStyles from "./MyModalD.module.css";
 import { useTheme } from "../../../ThemeContext/ThemeContext";
 
+import { RxCross2 } from "react-icons/rx";
+
 const MyModal = ({ isOpen, handleClose, children }) => {
   const [theme] = useTheme();
 
@@ -18,6 +20,13 @@ const MyModal = ({ isOpen, handleClose, children }) => {
   return createPortal(
     <div className={styles.modal} onClick={handleClose}>
       <div className={styles.modal_main} onClick={handleInnerClick}>
+        <div className={styles.close_box}>
+          <RxCross2
+            size={"1.7rem"}
+            className={styles.close}
+            onClick={handleClose}
+          />
+        </div>
         {children}
       </div>
     </div>,

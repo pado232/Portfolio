@@ -32,7 +32,8 @@ const Main = ({ titleText }) => {
     const title = document.querySelector(`.${styles.title} h1`);
     const portfolio = document.querySelector(`.${styles.portfolio}`);
 
-    console.log("title", title); // <h1>DONY's<h1>
+    // console.log("title", title); // <h1>DONY's<h1>
+
     if (title && portfolio) {
       const titleChars = title.textContent.split("");
       const portfolioChars = portfolio.textContent.split("");

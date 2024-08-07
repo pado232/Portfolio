@@ -13,7 +13,10 @@ const persistConfig = {
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 // 스토어 생성
-const store = createStore(persistedReducer);
+const store = createStore(
+  persistedReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 // 퍼시스터 생성
 const persistor = persistStore(store);

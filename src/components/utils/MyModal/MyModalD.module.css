@@ -46,3 +46,13 @@
 .display_none {
   display: none;
 }
+.close_box {
+  text-align: end;
+}
+.close {
+  cursor: pointer;
+}
+.close:hover {
+  background-color: #ffffff3b;
+  border-radius: 0.2rem;
+}

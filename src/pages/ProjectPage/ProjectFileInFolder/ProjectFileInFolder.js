@@ -44,9 +44,8 @@ const ProjectFileInFolder = ({ projectKey }) => {
           </div>
           <MyModal isOpen={isOpen} handleClose={() => setIsOpen(false)}>
             {/* 모달 안 컴포넌트 */}
-            <div style={{ margin: "2rem" }}>
-              <ProjectDetails projectKey={projectKey} />
-            </div>
+
+            <ProjectDetails projectKey={projectKey} />
           </MyModal>
         </div>
       </div>

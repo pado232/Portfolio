@@ -253,8 +253,10 @@ const Home = () => {
             </div>
             <input
               className={`${styles.input}`}
+              type="text"
               name="inputValue"
               value={inputValue}
+              onChange={setInputValue}
               autoComplete="off"
             />
 
