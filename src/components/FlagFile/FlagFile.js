@@ -7,8 +7,6 @@ const FlagFile = ({ projectKeys }) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const projectType = useProject("projects");
   const projects = projectType.projects;
-  // console.log("projectKeys", projectKeys);
-  // console.log("projects", projects);
 
   const handleClick = (index) => {
     setSelectedIndex(index);

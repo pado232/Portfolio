@@ -44,3 +44,15 @@
   box-shadow: 15px 3px 5px #00000060;
   transition: border-bottom-right-radius 0.5s ease, box-shadow 0.7s;
 }
+@media (max-width: 768px) {
+  .more {
+    padding: 0.7rem 3rem 0.5rem 1.5rem;
+    box-shadow: 7px 2px 5px #0000004b;
+    font-size: 1.2rem;
+  }
+  .more:hover {
+    border-bottom-right-radius: 2.5rem 0.5rem;
+    box-shadow: 10px 3px 5px #00000060;
+    transition: border-bottom-right-radius 0.5s ease, box-shadow 0.7s;
+  }
+}

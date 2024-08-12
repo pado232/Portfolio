@@ -6,3 +6,8 @@
   font-size: 3rem;
   text-shadow: 0px 1px rgb(83, 83, 83), 3px 1px rgb(83, 83, 83);
 }
+@media (max-width: 768px) {
+  .Project .h3 {
+    font-size: 2rem;
+  }
+}
