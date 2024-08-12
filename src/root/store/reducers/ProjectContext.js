@@ -255,21 +255,21 @@ export const projectData = {
       summary:
         "2024년 7월을 시작으로 약 1개월에 걸쳐 제작한 '나'를 표현한 포트폴리오 프로젝트입니다. 암호를 입력해서 해당 페이지들로 이동할 수 있도록 제작했고, 해당 페이지는 암호를 풀지 못하면 진입할 수 없습니다. 소개, 프로젝트, 연락에 대한 페이지로 각각 구성되어 있습니다.",
       images: [
+        // {
+        //   src: "/images/Portfolio-Image/intro.png",
+        //   name: "Intro",
+        // },
+        // {
+        //   src: "/images/Portfolio-Image/project.png",
+        //   name: "Project",
+        // },
+        // {
+        //   src: "/images/Portfolio-Image/contact.png",
+        //   name: "Contact",
+        // },
         {
           src: "/images/Portfolio-Image/home.png",
           name: "Home",
-        },
-        {
-          src: "/images/Portfolio-Image/intro.png",
-          name: "Intro",
-        },
-        {
-          src: "/images/Portfolio-Image/project.png",
-          name: "Project",
-        },
-        {
-          src: "/images/Portfolio-Image/contact.png",
-          name: "Contact",
         },
       ],
       link: [
@@ -340,6 +340,43 @@ export const projectData = {
         {
           title: "스타일링",
           type: [{ src: "/images/LogoCSS3.png", name: "CSS Module" }],
+        },
+      ],
+      detailsExp: [
+        {
+          src: "/images/Portfolio-Image/home.png",
+          title: "Home_page",
+          content: [
+            "암호를 입력해서 들어갈 수 있게 제작, 암호를 풀지 않고 페이지 이동하거나 다시 LOCK이 걸리면 해당 페이지에는 접근할 수 없다는 안내를 띄움",
+            "직접 키보드를 이용해 타이핑하거나 화면에 나타난 키보드를 마우스로 클릭해 암호 입력 가능",
+            "상단에 토글 버튼을 이용해 다크모드 가능",
+          ],
+        },
+        {
+          src: "/images/Portfolio-Image/intro.png",
+          title: "Intro_page",
+          content: [
+            "[동일] 페이지 상단 - 해당 페이지에 대한 글자가 튀어오르는 애니메이션, 메뉴, 잠금(홈으로 이동), 푸터, 고정 메뉴 바(페이지 이동, 최상단으로 이동, 다크모드), 섹션 이동 메뉴 바 ",
+            "화면 크기에 따라 소개 글 배치와 크기가 변경되는 반응형 웹 디자인",
+          ],
+        },
+        {
+          src: "/images/Portfolio-Image/project.png",
+          title: "Project_page",
+          content: [
+            "[동일] 페이지 상단 - 해당 페이지에 대한 글자가 튀어오르는 애니메이션, 메뉴, 잠금(홈으로 이동), 푸터, 고정 메뉴 바(페이지 이동, 최상단으로 이동, 다크모드), 섹션 이동 메뉴 바",
+            "플래그 폴더를 만들어 프로젝트를 불러오고, 프로젝트에 대한 스크린 이미지가 여러 개라면 클릭하여 확대 가능",
+            "'자세히 보기' 플래그를 버튼을 클릭하면 모달을 띄워 프로젝트의 상세 내용을 보여줌",
+          ],
+        },
+        {
+          src: "/images/Portfolio-Image/contact.png",
+          title: "Contact_page",
+          content: [
+            "[동일] 페이지 상단 - 해당 페이지에 대한 글자가 튀어오르는 애니메이션, 메뉴, 잠금(홈으로 이동), 푸터, 고정 메뉴 바(페이지 이동, 최상단으로 이동, 다크모드), 섹션 이동 메뉴 바 ",
+            "이메일을 복사 가능한 버튼, 복사가 완료 되었다면 안내 문구를 띄움",
+            "'emailJS'를 이용하여 이메일 작성 폼에 입력하고 전송하면 사용자가 이메일을 보낼 수 있음",
+          ],
         },
       ],
     },

@@ -55,7 +55,7 @@
 }
 .SendEmail .bottom .container_right {
   width: 100%;
-  background-color: #414141;
+  background-color: #20212e;
   border-radius: 1rem;
   padding: 2rem;
 }
@@ -75,7 +75,7 @@
   margin-top: 0.4rem;
   padding: 0.5rem;
 
-  background-color: #e0e0e0;
+  background-color: #c7cdd1;
   border: 1px solid #3a3a3a;
   border-radius: 0.15rem;
   font-size: 1rem;
@@ -87,7 +87,7 @@
   min-height: 20rem;
   padding: 0.5rem;
 
-  background-color: #e0e0e0;
+  background-color: #c7cdd1;
   border: 1px solid #3a3a3a;
   border-radius: 0.15rem;
   font-size: 1rem;
@@ -97,7 +97,7 @@
   width: 100%;
   font-size: 1rem;
   padding: 1rem;
-  background-color: #d87a00;
+  background-color: #b86800;
   border: none;
   border-radius: 0.15rem;
   color: white;
@@ -117,5 +117,5 @@
 }
 .SendEmail input:focus,
 .SendEmail textarea:focus {
-  border: 1px solid #3a3a3a;
+  border: 1px solid #fffb00;
 }

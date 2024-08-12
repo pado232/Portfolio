@@ -4,6 +4,7 @@ import lightStyles from "./ProjectDetails.module.css";
 import darkStyles from "./ProjectDetailsD.module.css";
 import { useTheme } from "../../../ThemeContext/ThemeContext";
 import { useProject } from "../../../root/store/reducers/ProjectContext";
+import { FaRegHandPointRight } from "react-icons/fa";
 
 const ProjectDetails = ({ projectKey }) => {
   const [theme] = useTheme();
@@ -71,7 +72,14 @@ const ProjectDetails = ({ projectKey }) => {
               <h3 className={styles.title}>{item.title}</h3>
               <div className={styles.detail}>
                 {item.content.map((line, idx) => (
-                  <p key={idx}>{line}</p>
+                  <div className={styles.detail_context}>
+                    <div>
+                      <FaRegHandPointRight />
+                    </div>
+                    <div>
+                      <p key={idx}>{line}</p>
+                    </div>
+                  </div>
                 ))}
               </div>
             </div>

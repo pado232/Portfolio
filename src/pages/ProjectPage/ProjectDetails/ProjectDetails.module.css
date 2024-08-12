@@ -9,7 +9,7 @@
   margin: 1.5rem 0;
 }
 .ProjectDetails .img_box {
-  width: 100%;
+  /* width: 100%; */
   text-align: center;
 }
 .ProjectDetails h3.title {
@@ -19,14 +19,15 @@
   color: #e4854e;
 }
 .ProjectDetails .detail {
-  margin: 1rem 0;
-}
-.ProjectDetails .detail p {
-  margin: 0.3rem 0;
+  border-radius: 1rem;
+  background-color: #f7e7c9;
+  margin: 1rem 1rem 3rem 1rem;
+  padding: 1rem;
 }
 .ProjectDetails img.screen {
-  width: 100%;
-  max-width: 500px;
+  padding: 0 3rem;
+  max-width: 100%;
+  max-height: 50rem;
 }
 .ProjectDetails .h4 {
   padding-bottom: 1rem;
@@ -35,6 +36,15 @@
   text-align: center;
   color: #c03b1d;
   border-bottom: 3px solid rgb(218, 178, 134);
+}
+.detail_context {
+  margin: 0.7rem 0;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+.detail_context > div {
+  padding: 0 0.5rem;
 }
 .table {
   width: 100%;
