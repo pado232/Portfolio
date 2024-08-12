@@ -6,7 +6,7 @@ import { TfiLock } from "react-icons/tfi";
 import Toggle from "../../components/utils/Toggle/Toggle";
 import { useTheme } from "../../ThemeContext/ThemeContext";
 import { useDispatch } from "react-redux";
-import { lock, unlock } from "../ProjectPage/Reducer/lockReducer/action";
+import { lock, unlock } from "../../root/actions/lockAactions";
 
 const numbers = [
   "`",

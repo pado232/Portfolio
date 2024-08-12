@@ -1,7 +1,7 @@
 import { createStore } from "redux";
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage"; // 브라우저의 로컬 스토리지
-import rootReducer from "../pages/ProjectPage/Reducer/reducers"; // 루트 리듀서
+import rootReducer from "./rootReducer";
 
 // persistConfig 설정
 const persistConfig = {

@@ -1,11 +1,14 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
 import styles from "./FlagFile.module.css";
 import ProjectFileInFolder from "../../pages/ProjectPage/ProjectFileInFolder/ProjectFileInFolder";
+import { useProject } from "../../root/store/reducers/ProjectContext";
 
 const FlagFile = ({ projectKeys }) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const projects = useSelector((state) => state.project.projects);
+  const projectType = useProject("projects");
+  const projects = projectType.projects;
+  // console.log("projectKeys", projectKeys);
+  // console.log("projects", projects);
 
   const handleClick = (index) => {
     setSelectedIndex(index);

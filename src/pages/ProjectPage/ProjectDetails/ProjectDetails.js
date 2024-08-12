@@ -1,18 +1,18 @@
 import React from "react";
-import { useSelector } from "react-redux";
 import ProjectLink from "../ProjectLink/ProjectLink";
 import lightStyles from "./ProjectDetails.module.css";
 import darkStyles from "./ProjectDetailsD.module.css";
 import { useTheme } from "../../../ThemeContext/ThemeContext";
+import { useProject } from "../../../root/store/reducers/ProjectContext";
 
 const ProjectDetails = ({ projectKey }) => {
   const [theme] = useTheme();
 
   const styles = theme === "light" ? lightStyles : darkStyles;
 
-  const projectDetails = useSelector(
-    (state) => state.project.projects[projectKey]
-  );
+  const project = useProject();
+  const projectDetails = project.projects[projectKey];
+  console.log("제대로 나오는지 보자", projectDetails);
 
   if (!projectDetails) {
     return <div>Loading...</div>; // projectDetails가 없을 경우 로딩 상태를 표시

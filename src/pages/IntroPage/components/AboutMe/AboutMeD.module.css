@@ -47,12 +47,13 @@
   padding: 0.5rem;
 }
 .table th {
-  padding: 0.5rem 1rem;
-  text-align: start;
+  padding: 0.8rem 0.5rem;
+  display: flex;
+  justify-content: start;
+  align-items: start;
 }
 .table td {
-  padding: 0.5rem;
-  text-align: start;
+  padding: 0.8rem 0.5rem;
 }
 .category {
   font-weight: lighter;
@@ -98,5 +99,13 @@
       width: 100%;
       padding: 0 2rem;
     }
+  }
+  .table td {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    padding-top: 0rem;
+    padding-bottom: 1rem;
+    color: #aaaaaa;
   }
 }

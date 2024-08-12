@@ -1,19 +1,22 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
 import styles from "./ProjectFileInFolder.module.css";
 import MyModal from "../../../components/utils/MyModal/MyModal";
 import ProjectImage from "../ProjectImage/ProjectImage";
 import ProjectDetails from "../../ProjectPage/ProjectDetails/ProjectDetails";
+import { useProject } from "../../../root/store/reducers/ProjectContext";
 
 const ProjectFileInFolder = ({ projectKey }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const projectDetails = useSelector(
-    (state) => state.project.projects[projectKey]
-  );
+  const project = useProject();
+  const projectDetails = project.projects[projectKey];
+
+  // console.log("projectDetails", projectDetails);
 
   if (!projectDetails) {
     return <div>Loading...</div>; // projectDetails가 없을 경우 로딩 상태를 표시
   }
+
+  // console.log("pageImages", projectDetails.images);
 
   return (
     <div className={styles.ProjectFileInFolder}>

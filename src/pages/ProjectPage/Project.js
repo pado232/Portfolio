@@ -1,21 +1,22 @@
 import React, { useRef, useState } from "react";
-import { useSelector } from "react-redux";
 import Main from "../../components/Main/Main";
 import MenuSub from "../../components/MenuSub/MenuSub";
 import FlagFile from "../../components/FlagFile/FlagFile";
 import Container from "../../components/utils/Container/Container";
 import styles from "./Project.module.css";
+import { useProject } from "../../root/store/reducers/ProjectContext";
 
 const Project = () => {
   const menuItems = ["Team Project", "Personal Project"];
   const menuRef = useRef([]);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  // Redux 상태에서 프로젝트 데이터 가져오기
-  const teamProjects = useSelector((state) => state.project.teamProjects);
-  const personalProjects = useSelector(
-    (state) => state.project.personalProjects
-  );
+  const projectData = useProject("");
+  const teamProjects = projectData.teamProjects;
+  const personalProjects = projectData.personalProjects;
+
+  // console.log("teamProjects", teamProjects);
+  // console.log("personalProjects", personalProjects);
 
   return (
     <div className={styles.Project}>

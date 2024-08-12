@@ -1,8 +1,8 @@
 import React from "react";
-import { useSelector } from "react-redux";
 import styles from "./ProjectLink.module.css";
 import { FaGithub } from "react-icons/fa";
 import { SiNotion } from "react-icons/si";
+import { useProject } from "../../../root/store/reducers/ProjectContext";
 
 const icons = {
   Github: <FaGithub size={"2rem"} />,
@@ -10,9 +10,8 @@ const icons = {
 };
 
 const ProjectLink = ({ projectKey }) => {
-  const projectDetails = useSelector(
-    (state) => state.project.projects[projectKey]
-  );
+  const project = useProject();
+  const projectDetails = project.projects[projectKey];
 
   // 프로젝트 데이터를 콘솔에 출력하여 확인
   console.log("projectDetails:", projectDetails);
