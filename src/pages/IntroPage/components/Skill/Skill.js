@@ -12,21 +12,27 @@ const Skill = () => {
     <Container>
       <div className={styles.Skill}>
         <LogoSilde />
-
         <h3 className={styles.title_h3}>
           <center>이런 부분을 경험했어요.</center>
         </h3>
         <h3 className={styles.name_h3}>Javascript</h3>
-        <p className={styles.p}>
+        {/* <p className={styles.p}>
           비동기 처리, DOM조작, HTTP 요청 기능과 상태관리, 에러 핸들링, 적절한
           함수를 사용해 가독성/유지보수성/효율성 높이기
+        </p> */}
+        <p className={styles.p}>
+          '프로그래머스'를 통한 코딩테스트로 사고력 키우기
         </p>
+        <p className={styles.p}>
+          유튜브, 인프런 기초 강의를 통한 적절한 함수 사용
+        </p>
+        <p className={styles.p}>프로젝트를 통한 실전 경험</p>
         <br />
         <h3 className={styles.name_h3}>CSS</h3>
         <p className={styles.p}>
-          transform을 사용한 애니메이션 요소의 시각적 효과, 화면 크기에 따른
-          유연한 반응형 웹 디자인
+          transform을 사용한 애니메이션 요소의 시각적 효과
         </p>
+        <p className={styles.p}>화면 크기에 따른 유연한 반응형 웹 디자인</p>
         <br />
         <h3 className={styles.name_h3}>HTML</h3>
         <p className={styles.p}>

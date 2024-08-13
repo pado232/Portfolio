@@ -5,8 +5,10 @@ import FlagFile from "../../components/FlagFile/FlagFile";
 import Container from "../../components/utils/Container/Container";
 import styles from "./Project.module.css";
 import { useProject } from "../../root/store/reducers/ProjectContext";
+import usePageTitle from "../../hook/usePageTitle";
 
 const Project = () => {
+  usePageTitle(`[PROJECT] DONY Protfolio`);
   const menuItems = ["Team Project", "Personal Project"];
   const menuRef = useRef([]);
   const [activeIndex, setActiveIndex] = useState(0);

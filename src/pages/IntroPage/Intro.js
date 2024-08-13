@@ -5,8 +5,10 @@ import AboutMe from "./components/AboutMe/AboutMe";
 import Skill from "./components/Skill/Skill";
 
 import styles from "./intro.module.css";
+import usePageTitle from "../../hook/usePageTitle";
 
 const Intro = () => {
+  usePageTitle(`[INTRO] DONY Protfolio`);
   const menuItems = ["About Me", "Skills"];
   const menuRef = useRef([]);
   const [activeIndex, setActiveIndex] = useState(0);

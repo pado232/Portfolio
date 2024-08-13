@@ -2,8 +2,10 @@ import { useRef, useState } from "react";
 import Main from "../../components/Main/Main";
 import SendEmail from "./SendEmail/SendEmail";
 import MenuSub from "../../components/MenuSub/MenuSub";
+import usePageTitle from "../../hook/usePageTitle";
 
 const Context = () => {
+  usePageTitle(`[CONTACT] DONY Protfolio`);
   const menuItems = ["Contact with me"];
   const menuRef = useRef([]);
   const [activeIndex, setActiveIndex] = useState(0);

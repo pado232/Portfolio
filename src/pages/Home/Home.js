@@ -7,6 +7,7 @@ import Toggle from "../../components/utils/Toggle/Toggle";
 import { useTheme } from "../../ThemeContext/ThemeContext";
 import { useDispatch } from "react-redux";
 import { lock, unlock } from "../../root/actions/lockAactions";
+import usePageTitle from "../../hook/usePageTitle";
 
 const numbers = [
   "`",
@@ -28,6 +29,7 @@ const middleRowAlphabets = ["A", "S", "D", "F", "G", "H", "J", "K", "L"];
 const bottomRowAlphabets = ["Z", "X", "C", "V", "B", "N", "M"];
 
 const Home = () => {
+  usePageTitle(`DONY Portfolio`);
   const navigate = useNavigate();
   const [theme] = useTheme();
   const dispatch = useDispatch();
