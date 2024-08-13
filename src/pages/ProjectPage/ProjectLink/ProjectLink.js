@@ -20,43 +20,37 @@ const ProjectLink = ({ projectKey }) => {
 
   return (
     <div className={styles.ProjectLink}>
-      <div className={styles.content_container}>
-        <table className={styles.table}>
-          <colgroup style={{ width: "12.5rem" }} />
-          <colgroup style={{ width: "auto" }} />
-          <tbody>
-            {linkData.map((link, index) => (
-              <tr key={index}>
-                <td className={styles.logo_td}>
-                  <div className={styles.icon}>
-                    {link.isIcon ? (
-                      icons[link.title] // 아이콘 이름에 해당하는 컴포넌트를 렌더링
-                    ) : (
-                      <img
-                        className={styles.image}
-                        src={link.srcOrIcon}
-                        alt="Link Icon"
-                      />
-                    )}
-                  </div>
-                </td>
-                <td className={styles.link_td}>
-                  <div className={styles.link_warpper}>
-                    <a
-                      className={styles.a}
-                      href={link.linkUrl || "#"} // 유효하지 않은 경우 기본 링크로 설정
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <p>{link.linkUrl || "No URL provided"}</p>
-                    </a>
-                  </div>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+      {linkData.map((link, index) => (
+        <div className={styles.box} key={index}>
+          <div className={styles.logo}>
+            <div className={styles.icon}>
+              {link.isIcon ? (
+                icons[link.title] // 아이콘 이름에 해당하는 컴포넌트를 렌더링
+              ) : (
+                <img
+                  className={styles.image}
+                  src={link.srcOrIcon}
+                  alt="Link Icon"
+                />
+              )}
+            </div>
+          </div>
+          <div className={styles.link}>
+            <div className={styles.link_warpper}>
+              <p>
+                <a
+                  className={styles.a}
+                  href={link.linkUrl || "#"} // 유효하지 않은 경우 기본 링크로 설정
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {link.linkUrl || "No URL provided"}
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      ))}
     </div>
   );
 };
