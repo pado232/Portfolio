@@ -11,7 +11,6 @@ const Skill = () => {
   return (
     <Container>
       <div className={styles.Skill}>
-        <h2> Skills </h2>
         <LogoSilde />
 
         <h3 className={styles.title_h3}>
