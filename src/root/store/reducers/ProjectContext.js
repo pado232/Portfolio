@@ -142,34 +142,34 @@ export const projectData = {
           type: [{ src: "/images/LogoCSS3.png", name: "CSS" }],
         },
       ],
-      detailsExp: [
-        {
-          src: "/images/Shopping-Mall-Image/Home.png",
-          title: "Home_page",
-          content: [
-            "홍보 이미지 자동 슬라이드를 구현 (인디케이터&화살표 버튼을 이용한 이미지 이동)",
-            "Best 상품을 가져오는 버튼을 이용한 페이지네이션 구현",
-            "헤더에는 상품명을 입력할 수 있는 검색창을 구현하여 검색한 상품명과 일치하는 상품에 대한 상품 목록 페이지로 이동.",
-          ],
-        },
-        {
-          src: "/images/Shopping-Mall-Image/loginPage.png",
-          title: "Login_page",
-          content: [
-            "로그인 헤더 따로 작성 useNavigate()를 사용해 이전 페이지 방문 가능하도록 구현",
-            "비밀번호 유효성 검사를 거친 로그인 구현",
-          ],
-        },
-        {
-          src: "/images/Shopping-Mall-Image/signupPage.png",
-          title: "SignUp_page",
-          content: [
-            "아이디, 비밀번호, 이메일 input값 유효성 검사 구현(숫자, 문자별 input 차별 구현)",
-            "'카카오 주소 검색 라이브러리'를 이용한 주소 검색 구현",
-            "이메일 인증을 위한 알림, 타이머 구현",
-          ],
-        },
-      ],
+      // detailsExp: [
+      //   {
+      //     src: "/images/Shopping-Mall-Image/Home.png",
+      //     title: "Home_page",
+      //     content: [
+      //       "홍보 이미지 자동 슬라이드를 구현 (인디케이터&화살표 버튼을 이용한 이미지 이동)",
+      //       "Best 상품을 가져오는 버튼을 이용한 페이지네이션 구현",
+      //       "헤더에는 상품명을 입력할 수 있는 검색창을 구현하여 검색한 상품명과 일치하는 상품에 대한 상품 목록 페이지로 이동.",
+      //     ],
+      //   },
+      //   {
+      //     src: "/images/Shopping-Mall-Image/loginPage.png",
+      //     title: "Login_page",
+      //     content: [
+      //       "로그인 헤더 따로 작성 useNavigate()를 사용해 이전 페이지 방문 가능하도록 구현",
+      //       "비밀번호 유효성 검사를 거친 로그인 구현",
+      //     ],
+      //   },
+      //   {
+      //     src: "/images/Shopping-Mall-Image/signupPage.png",
+      //     title: "SignUp_page",
+      //     content: [
+      //       "아이디, 비밀번호, 이메일 input값 유효성 검사 구현(숫자, 문자별 input 차별 구현)",
+      //       "'카카오 주소 검색 라이브러리'를 이용한 주소 검색 구현",
+      //       "이메일 인증을 위한 알림, 타이머 구현",
+      //     ],
+      //   },
+      // ],
     },
 
     // RealMomentAdmin
@@ -233,20 +233,46 @@ export const projectData = {
                 "- 데이터 통신 프로토콜: HTTP/HTTPS (RESTful API) ",
               ],
             },
-            {
-              title: "기술",
-              content: [
-                "- 프로그래밍 언어: javaScript ",
-                "- 프레임워크: React",
-                "- 통합 개발 환경(IDE): Visual Studio Code",
-                "- 버전 관리 및 협업: Git, GitHub",
-                "- 상태관리: Context API, React Router",
-                "- 스타일링: CSS",
-              ],
-            },
           ],
         },
       ],
+      detailsTech: [
+        {
+          title: "프로그래밍 언어",
+          type: [{ src: "/images/LogoJavascript.png", name: "Javascript" }],
+        },
+        {
+          title: "프레임워크",
+          type: [{ src: "/images/LogoReact.png", name: "React" }],
+        },
+        {
+          title: "통합 개발 환경(IDE)",
+          type: [{ src: "/images/LogoVSCode.png", name: "Visual Studio Code" }],
+        },
+        {
+          title: "버전 관리 및 협업",
+          type: [{ src: "/images/LogoGithub.png", name: "GitHub" }],
+        },
+        {
+          title: "상태관리",
+          type: [{ name: "Context API, React Router" }],
+        },
+        {
+          title: "스타일링",
+          type: [{ src: "/images/LogoCSS3.png", name: "CSS" }],
+        },
+      ],
+      // detailsExp: [
+      //   {
+      //     src: "/images/Admin-Image/adminHome.png",
+      //     title: "모든 페이지에 대한 설명",
+      //     content: [
+      //       "모든 페이지는 로그인을 통한 인증을 거치지 않으면 열람할 수 없음",
+      //       "",
+      //       "",
+      //     ],
+      //   },
+      // ],
     },
 
     // Portfolio
