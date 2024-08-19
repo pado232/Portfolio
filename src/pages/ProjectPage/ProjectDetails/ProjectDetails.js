@@ -63,11 +63,15 @@ const ProjectDetails = ({ projectKey }) => {
           {detailsExp.map((item, index) => (
             <div key={index} className={styles.content_box}>
               <div className={styles.img_box}>
-                <img
-                  className={styles.screen}
-                  src={process.env.PUBLIC_URL + item.src}
-                  alt={item.title}
-                />
+                {item.src ? (
+                  <img
+                    className={styles.screen}
+                    src={process.env.PUBLIC_URL + item.src}
+                    alt={item.title}
+                  />
+                ) : (
+                  ""
+                )}
               </div>
               <h3 className={styles.title}>{item.title}</h3>
               <div className={styles.detail}>

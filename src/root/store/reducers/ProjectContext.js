@@ -24,40 +24,35 @@ export const projectData = {
         {
           src: "/images/Shopping-Mall-Image/Home.png",
           name: "Home",
-          linkUrl: "https://real-moment.kro.kr/",
         },
         {
           src: "/images/Shopping-Mall-Image/loginPage.png",
           name: "Login",
-          linkUrl: "https://real-moment.kro.kr/login",
         },
         {
           src: "/images/Shopping-Mall-Image/signupPage.png",
           name: "SignUp",
-          linkUrl: "https://real-moment.kro.kr/signup",
         },
         {
           src: "/images/Shopping-Mall-Image/itemlistPage.png",
           name: "itemList",
-          linkUrl: "https://real-moment.kro.kr/item/all",
         },
         {
           src: "/images/Shopping-Mall-Image/itemdetailPage.png",
           name: "ItemDetail",
-          linkUrl: "https://real-moment.kro.kr/item/16",
         },
         {
           src: "/images/Shopping-Mall-Image/cartPage.png",
           name: "Cart",
-          linkUrl: "https://real-moment.kro.kr/cart",
         },
         {
           src: "/images/Shopping-Mall-Image/haertPage.png",
           name: "Heart",
-          linkUrl: "https://real-moment.kro.kr/heart",
         },
-
-        // 나머지 이미지도 추가
+        {
+          src: "/images/Shopping-Mall-Image/mypagePage.png",
+          name: "MyPage",
+        },
       ],
       link: [
         {
@@ -142,34 +137,66 @@ export const projectData = {
           type: [{ src: "/images/LogoCSS3.png", name: "CSS" }],
         },
       ],
-      // detailsExp: [
-      //   {
-      //     src: "/images/Shopping-Mall-Image/Home.png",
-      //     title: "Home_page",
-      //     content: [
-      //       "홍보 이미지 자동 슬라이드를 구현 (인디케이터&화살표 버튼을 이용한 이미지 이동)",
-      //       "Best 상품을 가져오는 버튼을 이용한 페이지네이션 구현",
-      //       "헤더에는 상품명을 입력할 수 있는 검색창을 구현하여 검색한 상품명과 일치하는 상품에 대한 상품 목록 페이지로 이동.",
-      //     ],
-      //   },
-      //   {
-      //     src: "/images/Shopping-Mall-Image/loginPage.png",
-      //     title: "Login_page",
-      //     content: [
-      //       "로그인 헤더 따로 작성 useNavigate()를 사용해 이전 페이지 방문 가능하도록 구현",
-      //       "비밀번호 유효성 검사를 거친 로그인 구현",
-      //     ],
-      //   },
-      //   {
-      //     src: "/images/Shopping-Mall-Image/signupPage.png",
-      //     title: "SignUp_page",
-      //     content: [
-      //       "아이디, 비밀번호, 이메일 input값 유효성 검사 구현(숫자, 문자별 input 차별 구현)",
-      //       "'카카오 주소 검색 라이브러리'를 이용한 주소 검색 구현",
-      //       "이메일 인증을 위한 알림, 타이머 구현",
-      //     ],
-      //   },
-      // ],
+      detailsExp: [
+        {
+          src: "/images/Shopping-Mall-Image/Home.png",
+          title: "Home_page",
+          content: [
+            "홍보 이미지 자동 슬라이드를 구현 (인디케이터&화살표 버튼을 이용한 이미지 이동)",
+            "Best 상품을 가져오는 버튼을 이용한 페이지네이션 구현",
+            "헤더에는 상품명을 입력할 수 있는 검색창을 구현하여 검색한 상품명과 일치하는 상품에 대한 상품 목록 페이지로 이동.",
+          ],
+        },
+        {
+          // src: "/images/Shopping-Mall-Image/loginPage.png",
+          title: "Login_page",
+          content: [
+            "로그인 헤더 따로 작성 useNavigate()를 사용해 이전 페이지 방문 가능하도록 구현",
+            "비밀번호 유효성 검사를 거친 로그인 구현",
+          ],
+        },
+        {
+          // src: "/images/Shopping-Mall-Image/signupPage.png",
+          title: "ItemList_page",
+          content: [
+            "사용자가 원하는 제품을 쉽게 찾을 수 있도록 헤더의 검색창, 카테고리 선택 통해 상품 목록 검색이 가능하고 필터, 페이지네이션 기능을 제공",
+          ],
+        },
+        {
+          // src: "/images/Shopping-Mall-Image/signupPage.png",
+          title: "ItemDetail_page",
+          content: [
+            "특정 상품에 대한 상세 정보, 구매, 장바구니에 담기, 하트함에 담기, 상세 상품에 대한 리뷰, Q&A 작성이 가능한 페이지",
+          ],
+        },
+        {
+          // src: "/images/Shopping-Mall-Image/signupPage.png",
+          title: "Cart_page",
+          content: [
+            "구매하고 싶은 상품들을 미리 담아 각각의 가격, 수량 확인할 수 있는 기능을 제공",
+            "저장한 제품들 중 체크박스로 선택한 제품들에 대해서는 삭제와 주문 가능",
+          ],
+        },
+        {
+          // src: "/images/Shopping-Mall-Image/signupPage.png",
+          title: "Heart_page",
+          content: [
+            "사용자가 관심있는 상품들을 따로 저장하고 목록으로 조회 가능",
+          ],
+        },
+        {
+          // src: "/images/Shopping-Mall-Image/signupPage.png",
+          title: "MyPage_page",
+          content: [
+            "[주문내역] - 주문 내역을 확인하고 주문상태에 따라 구매확정, 환불요청 등 사용자가 주문 후 상품에 대한 요청을 판매자에게 전달",
+            "[사용자 리뷰 및 평점] - 사용자들이 제품에 대한 리뷰 작성과 별점 부여 가능",
+            "[적립금] - 사용자는 부여 받은 멤버십에 의한 적립금 해택을 받음. 해당 적립금은 주문 시 결제금액에 적립금 금액을 차감하여 사용 가능",
+            "[사용자 1:1문의 및 Q&A] - 사용자들이 쇼핑몰이나 상품에 대한 문의할 수 있고 판매자로부터 답변 확인 가능",
+            "[배송지 관리] - 결제 시 사용자가 설정한 기본배송지를 이용하여 간편하게 주문할 수 있도록 사용자의 배송 정보를 저장할 수 있는 페이지",
+            "[개인정보] - 사용자의 개인정보 확인 시 보안을 위해 민감한 정보는 블러 처리하고 인증을 거쳐 안전하게 수정할 수 있음.",
+          ],
+        },
+      ],
     },
 
     // RealMomentAdmin
@@ -181,7 +208,6 @@ export const projectData = {
         {
           src: "/images/Admin-Image/adminHome.png",
           name: "Home",
-          linkUrl: "https://real-moment.kro.kr/",
         },
       ],
       link: [
@@ -262,17 +288,23 @@ export const projectData = {
           type: [{ src: "/images/LogoCSS3.png", name: "CSS" }],
         },
       ],
-      // detailsExp: [
-      //   {
-      //     src: "/images/Admin-Image/adminHome.png",
-      //     title: "모든 페이지에 대한 설명",
-      //     content: [
-      //       "모든 페이지는 로그인을 통한 인증을 거치지 않으면 열람할 수 없음",
-      //       "",
-      //       "",
-      //     ],
-      //   },
-      // ],
+      detailsExp: [
+        {
+          src: "/images/Admin-Image/adminHome.png",
+          title: "모든 페이지에 대한 설명",
+          content: [
+            "모든 페이지는 로그인을 통한 인증을 거치지 않으면 열람할 수 없고, 쇼핑몰에 필요한 정보를 추가, 수정, 삭제할 수 있음.",
+            "제품 관리 - 새 제품 추가, 제품 목록 조회 및 편집 가능",
+            "주문 관리 - 주문 목록 및 세부 정보 확인",
+            "회원 관리 - 회원 목록 조회",
+            "문의/평가 관리 - 1:1 문의 조회 및 답변 관리, Q&A 목록 조회 및 답변관리, 고객 리뷰 및 평가 관리",
+            "사이트 관리 - 공지사항 관리, 카테고리 및 쇼핑몰 이미지 관리, 고객 등급 관리",
+            "관리자 가입 관리 - 관리자 가입 (대표만 사원의 가입 시킬 수 있음)",
+            "마이페이지 - 로그인한 관리자에 대한 정보 조회 및 편집",
+            "로그인/로그아웃",
+          ],
+        },
+      ],
     },
 
     // Portfolio
@@ -281,18 +313,6 @@ export const projectData = {
       summary:
         "2024년 7월을 시작으로 약 1개월에 걸쳐 제작한 '나'를 표현한 포트폴리오 프로젝트입니다. 암호를 입력해서 해당 페이지들로 이동할 수 있도록 제작했고, 해당 페이지는 암호를 풀지 못하면 진입할 수 없습니다. 소개, 프로젝트, 연락에 대한 페이지로 각각 구성되어 있습니다.",
       images: [
-        // {
-        //   src: "/images/Portfolio-Image/intro.png",
-        //   name: "Intro",
-        // },
-        // {
-        //   src: "/images/Portfolio-Image/project.png",
-        //   name: "Project",
-        // },
-        // {
-        //   src: "/images/Portfolio-Image/contact.png",
-        //   name: "Contact",
-        // },
         {
           src: "/images/Portfolio-Image/home.png",
           name: "Home",
