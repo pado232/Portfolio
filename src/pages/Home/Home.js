@@ -254,11 +254,11 @@ const Home = () => {
               <TfiLock size={"1.5rem"} />
             </div>
             <input
-              className={`${styles.input}`}
+              className={styles.input}
               type="text"
               name="inputValue"
               value={inputValue}
-              onChange={setInputValue}
+              onChange={(e) => setInputValue(e.target.value)}
               autoComplete="off"
             />
 

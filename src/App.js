@@ -1,20 +1,21 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, lazy, Suspense } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "./App.css";
 import Menu from "./components/Menu/Menu";
-import Intro from "./pages/IntroPage/Intro";
-import Project from "./pages/ProjectPage/Project";
-import Contact from "./pages/ContactPage/Contact";
-import Home from "./pages/Home/Home";
 import MyFooter from "./components/MyFooter/MyFooter";
 import FixedMenuButton from "./components/utils/button/FixedMenuButton";
 import { ThemeProvider } from "./ThemeContext/ThemeContext";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 
+// 각 페이지 컴포넌트를 lazy로 동적으로 로드합니다.
+const Home = lazy(() => import("./pages/Home/Home"));
+const Intro = lazy(() => import("./pages/IntroPage/Intro"));
+const Project = lazy(() => import("./pages/ProjectPage/Project"));
+const Contact = lazy(() => import("./pages/ContactPage/Contact"));
+
 function App() {
   const location = useLocation();
-
   const [showButton, setShowButton] = useState(false);
   const isLocked = useSelector((state) => state.lock.isLocked);
 
@@ -37,18 +38,26 @@ function App() {
     <ThemeProvider>
       <div className="App">
         {location.pathname !== "/" && !isLocked && <Menu />}
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/intro" element={<PrivateRoute element={<Intro />} />} />
-          <Route
-            path="/project"
-            element={<PrivateRoute element={<Project />} />}
-          />
-          <Route
-            path="/contact"
-            element={<PrivateRoute element={<Contact />} />}
-          />
-        </Routes>
+        {/* Suspense로 감싸서 로딩 상태를 관리합니다. */}
+        <Suspense
+          fallback={<div style={{ margin: "50 auto" }}>Loading...</div>}
+        >
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route
+              path="/intro"
+              element={<PrivateRoute element={<Intro />} />}
+            />
+            <Route
+              path="/project"
+              element={<PrivateRoute element={<Project />} />}
+            />
+            <Route
+              path="/contact"
+              element={<PrivateRoute element={<Contact />} />}
+            />
+          </Routes>
+        </Suspense>
         {showButton && <FixedMenuButton />}
         {location.pathname !== "/" && !isLocked && <MyFooter />}
       </div>

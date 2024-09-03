@@ -187,4 +187,10 @@
   .key {
     font-size: 0.7rem;
   }
+  .title_h2 {
+    font-size: 1rem;
+  }
+  .input_large.action {
+    font-size: 4rem;
+  }
 }

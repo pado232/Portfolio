@@ -18,7 +18,9 @@
 
 .my_img img {
   width: 100%;
-  min-width: 11.5rem;
+  max-width: 10rem;
+  min-width: 9.5rem;
+  height: auto;
 }
 
 .content {
@@ -27,14 +29,14 @@
 }
 
 .content .h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin: 0.8rem 0;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
 }
 
 .content .h3 {
   margin: 0.5rem 0;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #e65aa0;
 }
 
@@ -87,9 +89,9 @@
     padding-bottom: 0;
   }
   .about_me {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
     .my_img {
       margin: auto;
     }
@@ -99,7 +101,8 @@
     }
     .my_img img {
       width: 100%;
-      min-width: 5rem;
+      max-width: 10rem;
+      min-width: 2rem;
     }
   }
   .table td {

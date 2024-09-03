@@ -65,6 +65,8 @@ const AboutMe = () => {
         <div className={styles.my_img}>
           <img
             src={process.env.PUBLIC_URL + `/images/myphoto.jpg`}
+            width="200"
+            height="auto"
             alt="Profile"
           />
         </div>

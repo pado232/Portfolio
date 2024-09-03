@@ -1,5 +1,6 @@
 .main {
   width: 100%;
+  min-height: 450px;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -15,7 +16,7 @@
 
 .title h1 {
   letter-spacing: 7px;
-  font-size: 4rem;
+  font-size: 3.9rem;
   margin: 0;
 }
 

@@ -1,5 +1,4 @@
 import styles from "./LogoSlide.module.css";
-// import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 const Logos = [
   { src: `${process.env.PUBLIC_URL}/images/LogoHtml5.png`, name: "HTML5" },
@@ -15,10 +14,6 @@ const Logos = [
 const LogoSlide = () => {
   return (
     <div className={styles.LogoSlide}>
-      {/* <div className={styles.arrow_icon_warpper}>
-        <IoIosArrowBack size={30} />
-      </div> */}
-
       <div className={styles.logo_container}>
         {Logos.map((logo, index) => (
           <div className={styles.logo_wrapper} key={index}>
@@ -26,16 +21,12 @@ const LogoSlide = () => {
               className={styles.logo}
               src={logo.src}
               alt={`${logo.name} Logo`}
+              width="72" /* 4.5rem = 72px */
+              height="72" /* 4.5rem = 72px */
             />
-            {/* <div className={styles.logo_name_box}>
-              <p className={styles.logo_name}>{logo.name}</p>
-            </div> */}
           </div>
         ))}
       </div>
-      {/* <div>
-        <IoIosArrowForward size={30} />
-      </div> */}
     </div>
   );
 };
