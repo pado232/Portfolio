@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import lightStyles from "./Home.module.css";
 import darkStyles from "./HomeD.module.css";
 import { useNavigate } from "react-router-dom";
@@ -34,11 +34,6 @@ const Home = () => {
   const [theme] = useTheme();
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    // 홈에 접근하면 잠궈버림
-    dispatch(lock());
-  }, [dispatch]);
-
   const [inputValue, setInputValue] = useState("");
   const [pressedKey, setPressedKey] = useState(null);
   const [largeInput, setLargeInput] = useState(false);
@@ -46,6 +41,12 @@ const Home = () => {
   const [error, setError] = useState(false);
 
   const styles = theme === "light" ? lightStyles : darkStyles;
+
+  useEffect(() => {
+    // 홈에 접근하면 잠궈버림
+    dispatch(lock());
+  }, [dispatch]);
+
   useEffect(() => {
     const titleElements = document.querySelectorAll("h2");
 
@@ -125,42 +126,7 @@ const Home = () => {
     };
   }, []);
 
-  const handleKeyPress = (char) => {
-    if (inputValue.length < 10) {
-      setInputValue((prev) => prev + char);
-      setPressedKey(char.toUpperCase());
-      setTimeout(() => {
-        setPressedKey(null);
-      }, 200);
-    } else {
-      setError(true);
-      setTimeout(() => {
-        setError(false);
-      }, 500);
-      console.log("10글자 이상 입력할 수 없습니다.");
-    }
-  };
-
-  const handleBackspace = () => {
-    setInputValue((prev) => prev.slice(0, -1));
-    setPressedKey("Backspace");
-    setTimeout(() => {
-      setPressedKey(null);
-    }, 200);
-  };
-
-  const handleEnter = (event) => {
-    event.preventDefault();
-    event.stopPropagation();
-    console.log(inputValue.trim().toUpperCase());
-    handleSubmit();
-    setPressedKey("Enter");
-    setTimeout(() => {
-      setPressedKey(null);
-    }, 200);
-  };
-
-  const handleSubmit = () => {
+  const handleSubmit = useCallback(() => {
     switch (inputValue.trim().toUpperCase()) {
       case "INTRO":
         dispatch(unlock());
@@ -169,7 +135,6 @@ const Home = () => {
         setTimeout(() => {
           navigate("/intro");
         }, 2000);
-
         break;
 
       case "PROJECT":
@@ -179,7 +144,6 @@ const Home = () => {
         setTimeout(() => {
           navigate("/project");
         }, 2000);
-
         break;
 
       case "CONTACT":
@@ -189,7 +153,6 @@ const Home = () => {
         setTimeout(() => {
           navigate("/contact");
         }, 2000);
-
         break;
 
       default:
@@ -199,21 +162,65 @@ const Home = () => {
           setError(false);
         }, 500);
     }
-  };
+  }, [inputValue, dispatch, navigate]);
+
+  const handleKeyPress = useCallback(
+    (char) => {
+      if (inputValue.length < 10) {
+        setInputValue((prev) => prev + char);
+        setPressedKey(char.toUpperCase());
+        setTimeout(() => {
+          setPressedKey(null);
+        }, 200);
+      } else {
+        setError(true);
+        setTimeout(() => {
+          setError(false);
+        }, 500);
+        console.log("10글자 이상 입력할 수 없습니다.");
+      }
+    },
+    [inputValue]
+  );
+
+  const handleBackspace = useCallback(() => {
+    setInputValue((prev) => prev.slice(0, -1));
+    setPressedKey("Backspace");
+    setTimeout(() => {
+      setPressedKey(null);
+    }, 200);
+  }, []);
+
+  const handleEnter = useCallback(
+    (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      console.log(inputValue.trim().toUpperCase());
+      handleSubmit();
+      setPressedKey("Enter");
+      setTimeout(() => {
+        setPressedKey(null);
+      }, 200);
+    },
+    [inputValue, handleSubmit]
+  );
 
   useEffect(() => {
     const handleKeyDown = (e) => {
-      console.log(inputValue);
       const key = e.key.toUpperCase(); // 키 값 대문자로
-      if (
+      const isAlpha =
         topRowAlphabets.includes(key) ||
         middleRowAlphabets.includes(key) ||
-        bottomRowAlphabets.includes(key)
-      ) {
+        bottomRowAlphabets.includes(key);
+
+      if (isAlpha) {
+        e.preventDefault(); // 기본 동작 방지
         handleKeyPress(key);
       } else if (e.key === "Backspace") {
+        e.preventDefault();
         handleBackspace();
       } else if (e.key === "Enter") {
+        e.preventDefault();
         handleEnter(e);
       }
     };
@@ -225,12 +232,11 @@ const Home = () => {
     window.addEventListener("keydown", handleKeyDown);
     window.addEventListener("keyup", handleKeyUp);
 
-    //  useEffect가 종료될 때 또는 의존성이 변경될 때 리스너를 제거
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
       window.removeEventListener("keyup", handleKeyUp);
     };
-  }, [inputValue]);
+  }, [handleBackspace, handleEnter, handleKeyPress, inputValue]);
 
   return (
     <main className={styles.main}>

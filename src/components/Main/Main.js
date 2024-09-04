@@ -93,7 +93,7 @@ const Main = ({ titleText }) => {
     } else {
       console.error("Title or Portfolio element not found");
     }
-  }, []);
+  }, [styles]);
 
   return (
     <main id="main" className={styles.main}>
