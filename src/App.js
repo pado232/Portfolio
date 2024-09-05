@@ -2,10 +2,8 @@ import React, { useState, useEffect, lazy, Suspense } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "./App.css";
-import Menu from "./components/Menu/Menu";
-import MyFooter from "./components/MyFooter/MyFooter";
-import FixedMenuButton from "./components/utils/button/FixedMenuButton";
 import { ThemeProvider } from "./ThemeContext/ThemeContext";
+import FixedMenuButton from "./components/utils/button/FixedMenuButton";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 
 // 각 페이지 컴포넌트를 lazy로 동적으로 로드합니다.
@@ -13,6 +11,10 @@ const Home = lazy(() => import("./pages/Home/Home"));
 const Intro = lazy(() => import("./pages/IntroPage/Intro"));
 const Project = lazy(() => import("./pages/ProjectPage/Project"));
 const Contact = lazy(() => import("./pages/ContactPage/Contact"));
+
+// 메뉴와 푸터 컴포넌트도 동적으로 로드
+const Menu = lazy(() => import("./components/Menu/Menu"));
+const MyFooter = lazy(() => import("./components/MyFooter/MyFooter"));
 
 function App() {
   const location = useLocation();
@@ -37,11 +39,25 @@ function App() {
   return (
     <ThemeProvider>
       <div className="App">
-        {location.pathname !== "/" && !isLocked && <Menu />}
-        {/* Suspense로 감싸서 로딩 상태를 관리합니다. */}
+        {/* 전체를 감싸는 Suspense로 로딩 상태 관리 */}
         <Suspense
-          fallback={<div style={{ margin: "50 auto" }}>Loading...</div>}
+          fallback={
+            <div
+              style={{
+                fontSize: "1.5rem",
+                height: "100vh",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                backgroundColor: "#333",
+                color: "#ccc",
+              }}
+            >
+              Loading...
+            </div>
+          }
         >
+          {location.pathname !== "/" && !isLocked && <Menu />}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route
@@ -57,9 +73,9 @@ function App() {
               element={<PrivateRoute element={<Contact />} />}
             />
           </Routes>
+          {showButton && <FixedMenuButton />}
+          {location.pathname !== "/" && !isLocked && <MyFooter />}
         </Suspense>
-        {showButton && <FixedMenuButton />}
-        {location.pathname !== "/" && !isLocked && <MyFooter />}
       </div>
     </ThemeProvider>
   );

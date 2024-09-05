@@ -150,22 +150,22 @@
 
 .key.small {
   width: 5.05%;
-  color: #ccc;
+  color: #adadad;
 }
 
 .key.mid {
   width: 10%;
-  color: #ccc;
+  color: #adadad;
 }
 
 .key.lar {
   width: 11.5%;
-  color: #ccc;
+  color: #adadad;
 }
 
 .key.lar_shift {
   width: 15%;
-  color: #ccc;
+  color: #adadad;
 }
 
 .key.spacebar {
@@ -174,7 +174,7 @@
 }
 .key.altWinCtrl {
   width: 6%;
-  color: #ccc;
+  color: #adadad;
 }
 
 .pressed {

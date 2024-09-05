@@ -8,7 +8,7 @@
   background-color: rgb(24, 24, 24);
 }
 .text {
-  color: rgb(110, 110, 110);
+  color: #929292;
 }
 .icon_container {
   margin: 0 1.4rem;
@@ -26,10 +26,10 @@
   height: 100%;
 }
 .atag {
-  color: rgb(61, 61, 61);
+  color: #4e4e4e;
 }
 .atag:hover {
-  color: rgb(110, 110, 110);
+  color: #9e9e9e;
 }
 @media (max-width: 768px) {
   .footer {

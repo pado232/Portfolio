@@ -88,7 +88,11 @@ const AboutMe = () => {
       <div className={styles.table}>
         <h3 className={styles.category}>
           Projects
-          <a className={styles.more} href={"/project"}>
+          <a
+            className={styles.more}
+            href={"/project"}
+            aria-label="PROJECT 페이지로 이동"
+          >
             자세히 보기
           </a>
         </h3>
