@@ -10,13 +10,11 @@ const ProjectFileInFolder = ({ projectKey }) => {
   const project = useProject();
   const projectDetails = project.projects[projectKey];
 
-  // console.log("projectDetails", projectDetails);
-
   if (!projectDetails) {
-    return <div>No Images ...</div>; // projectDetails가 없을 경우 로딩 상태를 표시
+    return <div>No project details available...</div>; // 프로젝트가 없을 경우 메시지 표시
   }
 
-  // console.log("pageImages", projectDetails.images);
+  const hasImages = projectDetails.images && projectDetails.images.length > 0;
 
   return (
     <div className={styles.ProjectFileInFolder}>
@@ -27,16 +25,20 @@ const ProjectFileInFolder = ({ projectKey }) => {
         </div>
 
         {/* 이미지 컴포넌트 */}
-        {projectDetails.images.length > 1 ? (
-          <ProjectImage pageImages={projectDetails.images} />
+        {hasImages ? (
+          projectDetails.images.length > 1 ? (
+            <ProjectImage pageImages={projectDetails.images} />
+          ) : (
+            <div className={styles.img_box}>
+              <img
+                className={styles.screen}
+                src={projectDetails.images[0].src}
+                alt={projectDetails.images[0].name}
+              />
+            </div>
+          )
         ) : (
-          <div className={styles.img_box}>
-            <img
-              className={styles.screen}
-              src={projectDetails.images[0].src}
-              alt={projectDetails.images[0].name}
-            />
-          </div>
+          <div>No Images Available</div> // 이미지가 없을 경우 메시지 표시
         )}
 
         <div>
@@ -47,7 +49,6 @@ const ProjectFileInFolder = ({ projectKey }) => {
           </div>
           <MyModal isOpen={isOpen} handleClose={() => setIsOpen(false)}>
             {/* 모달 안 컴포넌트 */}
-
             <ProjectDetails projectKey={projectKey} />
           </MyModal>
         </div>
