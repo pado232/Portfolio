@@ -51,7 +51,7 @@ const ProjectImage = ({ pageImages }) => {
                   }px`,
                 }}
               >
-                <img src="/images/readingGlasses.png" alt="cursor" />
+                <img src="/Images/readingGlasses.png" alt="cursor" />
               </div>
             )}
           </div>

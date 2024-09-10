@@ -34,14 +34,29 @@ const ProjectDetails = ({ projectKey }) => {
     <DetailsTech detailsTech={detailsTech} styles={styles} />
   );
 
+  const renderDetailsTechMin = (detailsTech = []) => (
+    <DetailsTechMin detailsTech={detailsTech} styles={styles} />
+  );
+
   return (
     <div className={styles.ProjectDetails}>
       <ProjectLink projectKey={projectKey} />
-      {renderAddText(projectDetails.detailsInfo)}
+      {projectDetails.detailsInfo &&
+        projectDetails.detailsInfo.length > 0 &&
+        renderAddText(projectDetails.detailsInfo)}
       <div className={styles.tech_container}>
-        {renderDetailsTech(projectDetails.detailsTech)}
+        {projectDetails.detailsTech &&
+          projectDetails.detailsTech.length > 0 &&
+          renderDetailsTech(projectDetails.detailsTech)}
       </div>
-      {renderDetailsExp(projectDetails.detailsExp)}
+      <div className={styles.tech_container_min}>
+        {projectDetails.detailsTech &&
+          projectDetails.detailsTech.length > 0 &&
+          renderDetailsTechMin(projectDetails.detailsTech)}
+      </div>
+      {projectDetails.detailsExp &&
+        projectDetails.detailsExp.length > 0 &&
+        renderDetailsExp(projectDetails.detailsExp)}
     </div>
   );
 };
@@ -140,5 +155,23 @@ const DetailsTech = ({ detailsTech, styles }) => (
     </table>
   </div>
 );
+
+const DetailsTechMin = ({ detailsTech, styles }) => {
+  return (
+    <div>
+      <h4 className={styles.h4}>기술</h4>
+      {detailsTech.map((item, index) => (
+        <div className={styles.tech_min}>
+          <strong key={index}>{item.title}</strong>
+          {item.type.map((type, i) => (
+            <div key={i}>
+              <p className={styles.tech_name}>{type.name}</p>
+            </div>
+          ))}
+        </div>
+      ))}
+    </div>
+  );
+};
 
 export default ProjectDetails;
