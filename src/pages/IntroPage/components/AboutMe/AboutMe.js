@@ -18,11 +18,6 @@ const tableTeamProject = [
     content:
       "'RealMoment' Shopping-mall - 코스메틱 쇼핑몰 웹 사이트 (프론트 영역)",
   },
-  {
-    title: "2024.01 ~ 2022.01",
-    content:
-      "Emotion Diary - '한입 크기로 잘라먹는 리액트' 강의 실습 프로젝트 내용",
-  },
 ];
 
 const tableEducation = [
@@ -64,7 +59,7 @@ const AboutMe = () => {
       <div className={styles.about_me}>
         <div className={styles.my_img}>
           <img
-            src={process.env.PUBLIC_URL + `/images/myphoto.jpg`}
+            src="/Images/myphoto.jpg"
             width="200"
             height="auto"
             alt="Profile"
@@ -72,7 +67,6 @@ const AboutMe = () => {
         </div>
         <div className={styles.content}>
           <h2 className={styles.h2}>Front Developer</h2>
-          {/* <h3 className={styles.h3}>1998 . 5 . 5</h3> */}
           <div>
             <h3 className={styles.h3}>반갑습니다, 저는 김도은입니다.</h3>
             <p className={styles.p}>

@@ -81,16 +81,29 @@ const SendEmail = () => {
 
   const [copyState, setCopyState] = useState(false);
 
-  const handleCopyEmail = async (text) => {
+  const handleCopyEmail = (text) => {
+    // 임시 textarea 요소 생성
+    const textarea = document.createElement("textarea");
+    textarea.value = text;
+    document.body.appendChild(textarea);
+    textarea.select();
+
     try {
-      await navigator.clipboard.writeText(text);
-      setCopyState(true);
-      setTimeout(() => {
-        setCopyState(false);
-      }, 1000); // 1초 후에 copyState를 false로 설정
-    } catch (e) {
-      setCopyState(false);
+      // 복사 명령 실행
+      const successful = document.execCommand("copy");
+      if (successful) {
+        setCopyState(true);
+        setTimeout(() => setCopyState(false), 1000);
+        console.log("Email copied successfully!");
+      } else {
+        console.error("Failed to copy email.");
+      }
+    } catch (err) {
+      console.error("Error copying email: ", err);
     }
+
+    // 임시 textarea 제거
+    document.body.removeChild(textarea);
   };
 
   return (
@@ -102,6 +115,7 @@ const SendEmail = () => {
               <MdEmail size={"1.9rem"} style={{ verticalAlign: -9 }} />
             </div>
             <button
+              type="button"
               onClick={() => {
                 handleCopyEmail("ehsilver98@gmail.com");
               }}

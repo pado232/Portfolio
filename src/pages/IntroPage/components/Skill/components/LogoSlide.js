@@ -1,14 +1,14 @@
 import styles from "./LogoSlide.module.css";
 
 const Logos = [
-  { src: `${process.env.PUBLIC_URL}/images/LogoHtml5.png`, name: "HTML5" },
-  { src: `${process.env.PUBLIC_URL}/images/LogoCSS3.png`, name: "CSS3" },
+  { src: `/Images/LogoHtml5.png`, name: "HTML5" },
+  { src: `/Images/LogoCSS3.png`, name: "CSS3" },
   {
-    src: `${process.env.PUBLIC_URL}/images/LogoJavascript.png`,
+    src: `/Images/LogoJavascript.png`,
     name: "JavaScript",
   },
-  { src: `${process.env.PUBLIC_URL}/images/LogoReact.png`, name: "React" },
-  { src: `${process.env.PUBLIC_URL}/images/LogoGithub.png`, name: "Git" },
+  { src: `/Images/LogoReact.png`, name: "React" },
+  { src: `/Images/LogoGithub.png`, name: "Git" },
 ];
 
 const LogoSlide = () => {

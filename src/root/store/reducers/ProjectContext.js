@@ -22,35 +22,35 @@ export const projectData = {
         "2023년 12월을 시작으로 7개월에 걸쳐 제작한 코스메틱 웹 사이트입니다. 상품 목록을 조회, 결제할 수 있고, Route를 이용한 페이지 이동을 구현하고, bar 메뉴의 카테고리 선택과 header의 상품명 검색에 모든 페이지에서 나타나고 동작합니다.",
       images: [
         {
-          src: "/images/Shopping-Mall-Image/Home.png",
+          src: "/Images/Shopping-Mall-Image/Home.png",
           name: "Home",
         },
         {
-          src: "/images/Shopping-Mall-Image/loginPage.png",
+          src: "/Images/Shopping-Mall-Image/loginPage.png",
           name: "Login",
         },
         {
-          src: "/images/Shopping-Mall-Image/signupPage.png",
+          src: "/Images/Shopping-Mall-Image/signupPage.png",
           name: "SignUp",
         },
         {
-          src: "/images/Shopping-Mall-Image/itemlistPage.png",
+          src: "/Images/Shopping-Mall-Image/itemlistPage.png",
           name: "itemList",
         },
         {
-          src: "/images/Shopping-Mall-Image/itemdetailPage.png",
+          src: "/Images/Shopping-Mall-Image/itemdetailPage.png",
           name: "ItemDetail",
         },
         {
-          src: "/images/Shopping-Mall-Image/cartPage.png",
+          src: "/Images/Shopping-Mall-Image/cartPage.png",
           name: "Cart",
         },
         {
-          src: "/images/Shopping-Mall-Image/haertPage.png",
+          src: "/Images/Shopping-Mall-Image/haertPage.png",
           name: "Heart",
         },
         {
-          src: "/images/Shopping-Mall-Image/mypagePage.png",
+          src: "/Images/Shopping-Mall-Image/mypagePage.png",
           name: "MyPage",
         },
       ],
@@ -58,7 +58,7 @@ export const projectData = {
         {
           title: "RealMoment",
           isIcon: false,
-          srcOrIcon: "/images/RealMomentLogo.png",
+          srcOrIcon: "/Images/RealMomentLogo.png",
           linkUrl: "https://real-moment.kro.kr/",
         },
         {
@@ -114,19 +114,19 @@ export const projectData = {
       detailsTech: [
         {
           title: "프로그래밍 언어",
-          type: [{ src: "/images/LogoJavascript.png", name: "Javascript" }],
+          type: [{ src: "/Images/LogoJavascript.png", name: "Javascript" }],
         },
         {
           title: "프레임워크",
-          type: [{ src: "/images/LogoReact.png", name: "React" }],
+          type: [{ src: "/Images/LogoReact.png", name: "React" }],
         },
         {
           title: "통합 개발 환경(IDE)",
-          type: [{ src: "/images/LogoVSCode.png", name: "Visual Studio Code" }],
+          type: [{ src: "/Images/LogoVSCode.png", name: "Visual Studio Code" }],
         },
         {
           title: "버전 관리 및 협업",
-          type: [{ src: "/images/LogoGithub.png", name: "GitHub" }],
+          type: [{ src: "/Images/LogoGithub.png", name: "GitHub" }],
         },
         {
           title: "상태관리",
@@ -134,12 +134,12 @@ export const projectData = {
         },
         {
           title: "스타일링",
-          type: [{ src: "/images/LogoCSS3.png", name: "CSS" }],
+          type: [{ src: "/Images/LogoCSS3.png", name: "CSS" }],
         },
       ],
       detailsExp: [
         {
-          src: "/images/Shopping-Mall-Image/Home.png",
+          src: "/Images/Shopping-Mall-Image/Home.png",
           title: "Home_page",
           content: [
             "홍보 이미지 자동 슬라이드를 구현 (인디케이터&화살표 버튼을 이용한 이미지 이동)",
@@ -214,7 +214,7 @@ export const projectData = {
         "2024년 3월을 시작으로 4개월에 걸쳐 제작한 코스메틱 웹 사이트에 적용할 값들을 추가, 삭제, 수정하기 위한 웹 사이트입니다. 모든 페이지는 로그인 되지 않으면 접근 할 수 없고 판매자가 사용자에게 필요한 이미지와 텍스트를 서버에 보내기 위해 사용할 수 있습니다.",
       images: [
         {
-          src: "/images/Admin-Image/adminHome.png",
+          src: "/Images/Admin-Image/adminHome.png",
           name: "Home",
         },
       ],
@@ -233,7 +233,7 @@ export const projectData = {
       ],
       detailsInfo: [
         {
-          src: "/images/Shopping-Mall-Image/Home.png",
+          src: "/Images/Shopping-Mall-Image/Home.png",
           summary:
             "2024년 3월을 시작으로 4개월에 걸쳐 제작한 코스메틱 웹 사이트에 적용할 값들을 추가, 삭제, 수정하기 위한 웹 사이트입니다. 모든 페이지는 로그인 되지 않으면 접근 할 수 없고 판매자가 사용자에게 필요한 이미지와 텍스트를 서버에 보내기 위해 사용할 수 있습니다.",
           addText: [
@@ -273,19 +273,19 @@ export const projectData = {
       detailsTech: [
         {
           title: "프로그래밍 언어",
-          type: [{ src: "/images/LogoJavascript.png", name: "Javascript" }],
+          type: [{ src: "/Images/LogoJavascript.png", name: "Javascript" }],
         },
         {
           title: "프레임워크",
-          type: [{ src: "/images/LogoReact.png", name: "React" }],
+          type: [{ src: "/Images/LogoReact.png", name: "React" }],
         },
         {
           title: "통합 개발 환경(IDE)",
-          type: [{ src: "/images/LogoVSCode.png", name: "Visual Studio Code" }],
+          type: [{ src: "/Images/LogoVSCode.png", name: "Visual Studio Code" }],
         },
         {
           title: "버전 관리 및 협업",
-          type: [{ src: "/images/LogoGithub.png", name: "GitHub" }],
+          type: [{ src: "/Images/LogoGithub.png", name: "GitHub" }],
         },
         {
           title: "상태관리",
@@ -293,12 +293,12 @@ export const projectData = {
         },
         {
           title: "스타일링",
-          type: [{ src: "/images/LogoCSS3.png", name: "CSS" }],
+          type: [{ src: "/Images/LogoCSS3.png", name: "CSS" }],
         },
       ],
       detailsExp: [
         {
-          src: "/images/Admin-Image/adminHome.png",
+          src: "/Images/Admin-Image/adminHome.png",
           title: "관리자 웹 사이트에 대한 전체 설명",
           content: [
             "모든 페이지는 로그인 시 열람 가능하고, 권한별로 페이지에 대한 권한이 부여됨.",
@@ -361,7 +361,7 @@ export const projectData = {
         "2024년 7월을 시작으로 약 1개월에 걸쳐 제작한 '나'를 표현한 포트폴리오 프로젝트입니다. 암호를 입력해서 해당 페이지들로 이동할 수 있도록 제작했고, 해당 페이지는 암호를 풀지 못하면 진입할 수 없습니다. 소개, 프로젝트, 연락에 대한 페이지로 각각 구성되어 있습니다.",
       images: [
         {
-          src: "/images/Portfolio-Image/home.png",
+          src: "/Images/Portfolio-Image/home.png",
           name: "Home",
         },
       ],
@@ -380,7 +380,7 @@ export const projectData = {
       ],
       detailsInfo: [
         {
-          src: "/images/Portfolio-Image/home.png",
+          src: "/Images/Portfolio-Image/home.png",
           summary:
             "2024년 7월을 시작으로 약 1개월에 걸쳐 제작한 '나'를 표현한 포트폴리오 프로젝트입니다. 암호를 입력해서 해당 페이지들로 이동할 수 있도록 제작했고, 해당 페이지는 암호를 풀지 못하면 진입할 수 없습니다. 소개, 프로젝트, 연락에 대한 페이지로 각각 구성되어 있습니다.",
           addText: [
@@ -412,19 +412,19 @@ export const projectData = {
       detailsTech: [
         {
           title: "프로그래밍 언어",
-          type: [{ src: "/images/LogoJavascript.png", name: "Javascript" }],
+          type: [{ src: "/Images/LogoJavascript.png", name: "Javascript" }],
         },
         {
           title: "프레임워크",
-          type: [{ src: "/images/LogoReact.png", name: "React" }],
+          type: [{ src: "/Images/LogoReact.png", name: "React" }],
         },
         {
           title: "통합 개발 환경(IDE)",
-          type: [{ src: "/images/LogoVSCode.png", name: "Visual Studio Code" }],
+          type: [{ src: "/Images/LogoVSCode.png", name: "Visual Studio Code" }],
         },
         {
           title: "버전 관리",
-          type: [{ src: "/images/LogoGithub.png", name: "GitHub" }],
+          type: [{ src: "/Images/LogoGithub.png", name: "GitHub" }],
         },
         {
           title: "상태관리",
@@ -432,12 +432,12 @@ export const projectData = {
         },
         {
           title: "스타일링",
-          type: [{ src: "/images/LogoCSS3.png", name: "CSS Module" }],
+          type: [{ src: "/Images/LogoCSS3.png", name: "CSS Module" }],
         },
       ],
       detailsExp: [
         {
-          src: "/images/Portfolio-Image/home.png",
+          src: "/Images/Portfolio-Image/home.png",
           title: "Home_page",
           content: [
             "암호를 입력해서 들어갈 수 있게 제작, 암호를 풀지 않고 페이지 이동하거나 다시 LOCK이 걸리면 해당 페이지에는 접근할 수 없다는 안내를 띄움",
@@ -446,7 +446,7 @@ export const projectData = {
           ],
         },
         {
-          src: "/images/Portfolio-Image/intro.png",
+          src: "/Images/Portfolio-Image/intro.png",
           title: "Intro_page",
           content: [
             "[동일] 페이지 상단 - 해당 페이지에 대한 글자가 튀어오르는 애니메이션, 메뉴, 잠금(홈으로 이동), 푸터, 고정 메뉴 바(페이지 이동, 최상단으로 이동, 다크모드), 섹션 이동 메뉴 바 ",
@@ -454,7 +454,7 @@ export const projectData = {
           ],
         },
         {
-          src: "/images/Portfolio-Image/project.png",
+          src: "/Images/Portfolio-Image/project.png",
           title: "Project_page",
           content: [
             "[동일] 페이지 상단 - 해당 페이지에 대한 글자가 튀어오르는 애니메이션, 메뉴, 잠금(홈으로 이동), 푸터, 고정 메뉴 바(페이지 이동, 최상단으로 이동, 다크모드), 섹션 이동 메뉴 바",
@@ -463,7 +463,7 @@ export const projectData = {
           ],
         },
         {
-          src: "/images/Portfolio-Image/contact.png",
+          src: "/Images/Portfolio-Image/contact.png",
           title: "Contact_page",
           content: [
             "[동일] 페이지 상단 - 해당 페이지에 대한 글자가 튀어오르는 애니메이션, 메뉴, 잠금(홈으로 이동), 푸터, 고정 메뉴 바(페이지 이동, 최상단으로 이동, 다크모드), 섹션 이동 메뉴 바 ",
@@ -480,15 +480,15 @@ export const projectData = {
         "2023년 1월을 시작으로 1개월에 걸쳐 제작한 첫 프로젝트 입니다. 인프런 한입 크기로 잘라먹는 리액트 강의 내용으로 첫 리액트 프레임워크를 이용한 감정을 기록하는 다이어리입니다.",
       images: [
         {
-          src: "/images/emotion/emotionHome.png",
+          src: "/Images/emotion/emotionHome.png",
           name: "Home",
         },
         {
-          src: "/images/emotion/viewPage.png",
+          src: "/Images/emotion/viewPage.png",
           name: "View",
         },
         {
-          src: "/images/emotion/writePage.png",
+          src: "/Images/emotion/writePage.png",
           name: "Create & Edit",
         },
       ],
@@ -497,7 +497,7 @@ export const projectData = {
       ],
       detailsInfo: [
         {
-          src: "/images/Shopping-Mall-Image/Home.png",
+          src: "/Images/Shopping-Mall-Image/Home.png",
           summary:
             "2023년 1월을 시작으로 1개월에 걸쳐 제작한 첫 프로젝트 입니다. 인프런 한입 크기로 잘라먹는 리액트 강의 내용으로 첫 리액트 프레임워크를 이용한 감정을 기록하는 다이어리입니다.",
           addText: [
@@ -521,19 +521,19 @@ export const projectData = {
       detailsTech: [
         {
           title: "프로그래밍 언어",
-          type: [{ src: "/images/LogoJavascript.png", name: "Javascript" }],
+          type: [{ src: "/Images/LogoJavascript.png", name: "Javascript" }],
         },
         {
           title: "프레임워크",
-          type: [{ src: "/images/LogoReact.png", name: "React" }],
+          type: [{ src: "/Images/LogoReact.png", name: "React" }],
         },
         {
           title: "통합 개발 환경(IDE)",
-          type: [{ src: "/images/LogoVSCode.png", name: "Visual Studio Code" }],
+          type: [{ src: "/Images/LogoVSCode.png", name: "Visual Studio Code" }],
         },
         {
           title: "버전 관리",
-          type: [{ src: "/images/LogoGithub.png", name: "GitHub" }],
+          type: [{ src: "/Images/LogoGithub.png", name: "GitHub" }],
         },
         {
           title: "상태관리",
@@ -541,7 +541,7 @@ export const projectData = {
         },
         {
           title: "스타일링",
-          type: [{ src: "/images/LogoCSS3.png", name: "CSS Module" }],
+          type: [{ src: "/Images/LogoCSS3.png", name: "CSS Module" }],
         },
       ],
     },
@@ -550,12 +550,3 @@ export const projectData = {
   teamProjects: ["RealMoment", "RealMomentAdmin"],
   personalProjects: ["Portfolio", "emotionDiary"],
 };
-
-// const projectReducer = (state = initialState, action) => {
-//   switch (action.type) {
-//     default:
-//       return state;
-//   }
-// };
-
-// export default projectReducer;

@@ -51,10 +51,7 @@ const ProjectImage = ({ pageImages }) => {
                   }px`,
                 }}
               >
-                <img
-                  src={`${process.env.PUBLIC_URL}/images/readingGlasses.png`}
-                  alt="cursor"
-                />
+                <img src="/images/readingGlasses.png" alt="cursor" />
               </div>
             )}
           </div>
