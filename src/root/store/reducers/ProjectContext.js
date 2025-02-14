@@ -354,6 +354,124 @@ export const projectData = {
       ],
     },
 
+    // YEET
+    Yeet: {
+      title: "YEET",
+      summary:
+        "2024년 11월을 시작으로 3개월에 걸쳐 제작한 주사위 게임 웹 사이트입니다. 단일 페이지로 구성 되어있으며, STOMP를 사용해 실시간으로 서버와 데이터를 주고 받을 수 있습니다.",
+      images: [
+        {
+          src: "/Images/Yeet-Images/GameplayImg.png",
+          name: "GamePlay",
+        },
+      ],
+      link: [
+        {
+          title: "RealMoment",
+          isIcon: false,
+          srcOrIcon: "/Images/Yeet-Images/yeetLogo.png",
+          linkUrl: "http://yeet-game.kro.kr/",
+        },
+        {
+          title: "Github",
+          linkUrl: "https://github.com/pado232/yeet",
+          isIcon: true,
+        },
+        {
+          title: "Notion",
+          linkUrl:
+            "https://www.notion.so/YEET-Dice-Game-14048d596a28806b9d98c39d28cc44d6",
+          isIcon: true,
+        },
+      ],
+      detailsInfo: [
+        {
+          src: "/Images/Yeet-Images/LobbyImg.png",
+          summary:
+            "2024년 11월을 시작으로 3개월에 걸쳐 제작한 주사위 게임 웹 사이트입니다. 단일 페이지로 구성 되어있으며, STOMP를 사용해 실시간으로 서버와 데이터를 주고 받을 수 있습니다.",
+          addText: [
+            {
+              title: "개발 인원",
+              content: ["총 2명", "- 프론트엔드: 1명", "- 백엔드: 1명"],
+            },
+            {
+              title: "역할",
+              content: ["프론트 영역 전부"],
+            },
+            {
+              title: "일정",
+              content: ["- 기획: 2주", "- 개발: 3개월", "- 유지보수: 진행 중"],
+            },
+            {
+              title: "기능",
+              content: [
+                "두 플레이어가 실시간으로 5개의 주사위를 돌려 나온 주사위의 총합으로 점수판을 채워가는 게임",
+              ],
+            },
+            {
+              title: "기능의 흐름",
+              content: [
+                "- 데이터 전송방식: WebSocket (STOMP)",
+                "- 데이터의 형식: JSON 형식 (WebSocket 메시지) ",
+                "- 데이터 통신 프로토콜: HTTP, WebSocket ",
+              ],
+            },
+          ],
+        },
+      ],
+      detailsTech: [
+        {
+          title: "프로그래밍 언어",
+          type: [{ src: "/Images/LogoJavascript.png", name: "Javascript" }],
+        },
+        {
+          title: "프레임워크",
+          type: [
+            { src: "/Images/LogoReact.png", name: "React, style-components" },
+          ],
+        },
+        {
+          title: "통합 개발 환경(IDE)",
+          type: [{ src: "/Images/LogoVSCode.png", name: "Visual Studio Code" }],
+        },
+        {
+          title: "버전 관리 및 협업",
+          type: [{ src: "/Images/LogoGithub.png", name: "GitHub" }],
+        },
+        {
+          title: "상태관리",
+          type: [{ name: "Redux" }],
+        },
+        {
+          title: "스타일링",
+          type: [{ src: "/Images/LogoCSS3.png", name: "CSS" }],
+        },
+      ],
+      detailsExp: [
+        {
+          src: "/Images/Yeet-Images/LobbyImg.png",
+          title: "LOBBY 설명",
+          content: [
+            "'친구랑 하기'에서는 '방만들기'와 '참여하기'로 구성되어 있음",
+            "'방만들기'에서는 공유할 수 있는 코드를 제공하며, '참여하기'를 통해 공유한 코드를 입력해 게임을 진행함",
+            "'빠른 시작'에서는 상대를 기다리며 상대와 매칭이 이루어지면 게임을 진행함",
+            "단일 페이지로 구성 되어있으며, 서버와 소켓 통신이 이루어졌다면 서버에서 확인 값을 받아 게임 진행 페이지로 변경시킴",
+          ],
+        },
+        {
+          src: "/Images/Yeet-Images/GameplayImg.png",
+          title: "GamePlay 설명",
+          content: [
+            "두 플레이어가 실시간으로 게임을 진행할 수 있도록 STOMP를 이용해 통신함",
+            "주사위를 돌릴 수 있는 기회는 3번으로 제한되며, 주사위를 고정하여 돌리지 않을 주사위를 선택할 수 있음",
+            "주사위를 돌릴 때 마다 점수판에 입력할 수 있는 주사위 값이 표시되며, 해당 값을 선택하거나 빈칸을 클릭해 0으로 선택할 수 있음.",
+            "게임이 끝나면 모달이 등장하고 '다시하기'와 '게임종료'를 선택할 수 있음",
+            "게임 도중에 상대가 나간다면 예외처리 모달을 띄우고 게임을 종료함",
+          ],
+        },
+      ],
+    },
+
     // Portfolio
     Portfolio: {
       title: "Portfolio",
@@ -547,6 +665,6 @@ export const projectData = {
     },
     // 나머지 프로젝트에 대한 데이터도 추가
   },
-  teamProjects: ["RealMoment", "RealMomentAdmin"],
+  teamProjects: ["RealMoment", "RealMomentAdmin", "Yeet"],
   personalProjects: ["Portfolio", "emotionDiary"],
 };
